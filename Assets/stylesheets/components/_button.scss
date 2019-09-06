@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+button{
+	background: transparent;
+	border: 0;
+    cursor:pointer;
+    &:focus{
+        outline: none;
+    }
+}
+button, input {
+    border-radius: 0;
+}
+
+.btn-primary {
+    color: $white-base;
+    background: $link-color;
+    border: none;
+    @include on-event {
+        background: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+    &:focus{
+        outline: none;
+    }
+    // @media (pointer: fine) {
+    //     background: $link-hover-color;
+    // }
+}
+
+.btn-link {
+    color: $brand-color;
+    @include on-event {
+        color: $brand-color-darker;
+    }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+    color: $link-color;
+    background-color: $white-base;
+    border-color: $brand-color;
+}
+
+
+.btn[disabled] {
+	background: #e6e6e6;
+	pointer-events: none
+}
+@media (pointer: fine) {
+	.btn[disabled]:hover {
+		background: $link-hover-color;
+		pointer-events: none
+	}
+}
+
+
+.btn--big {
+	position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 0.25rem;
+    transition: background-color 0.15s ease-out 0s, color 0.15s ease-out 0s;
+    padding: 0.75rem 1.5rem 0.8125rem;
+}
+

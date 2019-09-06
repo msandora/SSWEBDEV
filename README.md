@@ -1,2 +1,4 @@
 # SheerScience
-Stack: JQuery, Sass, CSS, Bootstrap
+Created this template for True Earth Health
+Stack:  JQuery, Sass, Bootstrap
+        7 in 1 folder structure

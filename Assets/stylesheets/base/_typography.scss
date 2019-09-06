@@ -1,0 +1,26 @@
+/**
+* Basic typography style for copy text
+*/
+body {
+	@include font-size(14px);
+	color: $text-color;
+}
+
+
+.fonts__barlow-light {
+	font-style: normal;
+	font-weight: 300;
+	font-family: 'Barlow', Helvetica, Arial, sans-serif
+}
+
+.fonts__barlow-regular {
+	font-style: normal;
+	font-weight: 400;
+	font-family: 'Barlow', Helvetica, Arial, sans-serif
+}
+
+.fonts__barlow-medium {
+	font-style: normal;
+	font-weight: 500;
+	font-family: 'Barlow', Helvetica, Arial, sans-serif
+}

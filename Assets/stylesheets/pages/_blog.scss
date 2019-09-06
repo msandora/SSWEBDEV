@@ -1,0 +1,140 @@
+.blog-article-bg {
+    background: url($base-url + "media/1243/ss_homepage_banner_1400x300.jpg") no-repeat center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    max-width: 100%;
+    color: $white-base;
+    position: relative;
+    height: 300px;
+    overflow:hidden;
+    .gradient:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.7) 85%);
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.7) 85%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.7) 85%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#b3000000',GradientType=0 );
+    }
+    @media (max-width: 768px) {
+        height: 350px;
+        background-position: right center;
+    }
+}
+
+.blog-article-title {
+    position: absolute;
+    bottom: 15%;
+    left: 70px;
+    width: 50%;
+    @media screen and (max-width: 768px) {
+        left: 40px;
+        width: 80%;
+        h1{
+            font-size: 250%;
+        }
+    }
+}
+
+.blog-filters {
+    .form-group, label {
+        margin-bottom:0;
+    }
+    input[type=checkbox] {
+        height:25px;
+    }
+    .card-header {
+        padding:0;
+        &:after {
+            font-family: 'FontAwesome';
+            content: "\f068";
+            position: absolute;
+            right: 19px;
+            top: 10px;
+            color: $brand-color;
+        }
+        &.collapsed:after {
+            content: "\f067"; 
+            color: $brand-color;
+        }
+    }
+    .btn-link:hover {
+        text-decoration: none;
+    }
+}
+
+
+.blog-results{
+    .card-body {
+        padding: 0.7rem;
+    }
+    /* Fix extra spacing on firefox  */
+    .card-columns {
+        column-gap:0;
+    }
+}
+
+.pagination{
+    .page-link{
+        color: $brand-color;
+    }
+}
+
+
+/* blog-article */
+.blog-article {
+    .img-circle{
+        border-radius: 50%;
+        border: 1px solid $brand-color;
+        height: 2.5rem;
+    }
+    .media-body {
+        padding-left: 1rem;
+        strong {
+            color: $brand-color;
+        }
+        p {
+            line-height: 1.2rem;
+            padding: 0 4rem 0 0;
+        }
+    }
+}
+
+.blog-sidebar {
+    .recent-posts {
+        h4 {
+            margin: 1.25rem 0;
+        }
+    }
+    .related-post-thumbnail-container {
+        float: left;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        overflow: hidden;
+        margin: 0 15px 15px 0;
+        img {
+            float: left;
+            width: 110px;
+            height: auto;
+            margin: -26px 0 0 -24px;
+        }
+    }
+    .related-post-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 60px;
+        h4 {
+            line-height: 18px;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+input {
+	&.checkbox {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+	&:checked ~ .checkmark {
+		background-color: $brand-color;
+		&:after {
+			display: block;
+		}
+	}
+}
+.checkmark {
+	margin: 2px;
+	height: 20px;
+	width: 20px;
+	background-color: $brand-color-light;
+	&:after {
+		content: "";
+		position: relative;
+		display: none;
+		right: -8px;
+		top: 4px;
+		width: 5px;
+		height: 10px;
+		border: solid $white-base;
+		border-width: 0 3px 3px 0;
+		transform: rotate(45deg);
+	}
+}
+* :hover input ~ .checkmark {
+	background-color: $brand-color-mid;
+}
