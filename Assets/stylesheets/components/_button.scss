@@ -46,7 +46,6 @@ button, input {
     border-color: $brand-color;
 }
 
-
 .btn[disabled] {
 	background: #e6e6e6;
 	pointer-events: none
@@ -57,7 +56,6 @@ button, input {
 		pointer-events: none
 	}
 }
-
 
 .btn--big {
 	position: relative;
