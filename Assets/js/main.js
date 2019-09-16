@@ -1,7 +1,7 @@
 /*----------------------------------------------------
 Sheer Science Redesign
 -----------------------------------------------------*/
-
+console.log("All Systems Go!");
 
 jQuery(document).ready(function () {
     // Open/Close Mobile Navigation
@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
         $('#NavOverlay').toggleClass("Header__overlay-visible").toggleClass("layout__visually-hidden");
     });
 
-
+    
 
     //Mobile Navigation Dropdowns
     $('.ProductListMobile__nav-menu-item').click(function () {
@@ -60,7 +60,7 @@ jQuery(document).ready(function () {
     });
 
 
-
+    
     // Cart Drawer
     $('.CartIcon__cart-icon, .Cart__hide-button').on('click', function () {  
       $('.Modal__overlay--cart').toggleClass("Modal__overlay--hidden").toggleClass("Modal__overlay--visible");

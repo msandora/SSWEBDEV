@@ -1,7 +1,9 @@
 .carousel {
 	margin-bottom: 1rem;
 	.carousel-item {
-		height:300px;
+		@include respond-to('min-sm') {
+			height: 270px;
+		}
 		source {
 			display: none;
 		}
@@ -12,10 +14,21 @@
 			margin-right: auto;
 			display: block;
 		}
+		@include respond-to('max-sm') {
+			&:before{
+				background: rgba(0, 0, 0, 0.7);
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				display: block;
+			}
+		}
 	}
 	.carousel-caption {
 		text-align: left;
-		top: 3%;
+		top: 0;
+		bottom: 0;
 		text-transform: capitalize;
 		h2 {
 			color: $brand-color;

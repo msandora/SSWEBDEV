@@ -79,45 +79,18 @@ $font-secondary: 'medio', 'Courier New', 'Bitstream Vera Sans Mono', 'Monaco', m
 // $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 
-
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// Breakpoints map 
 $breakpoints: (
-    "phone":        400px,
-    "phone-wide":   480px,
-    "phablet":      560px,
-    "tablet-small": 640px,
-    "tablet":       768px,
-    "tablet-wide":  1024px,
-    "desktop":      1248px,
-    "desktop-wide": 1440px
-);
-@mixin mq($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
-    }
-}
-// Usage
-// .site-header {
-//   padding: 2rem;
-//   font-size: 1.8rem;
-//   @include mq('tablet-wide') {
-//       padding-top: 4rem;
-//       font-size: 2.4rem;
-//   }
-// }
+    'min-xs':  ( min-width:  480px ),
+    'max-xs':  ( max-width:  480px ),
+    'min-sm':  ( min-width:  768px ),
+    'max-sm':  ( max-width:  768px ),
+    'min-md':  ( min-width:  992px ),
+    'max-md':  ( max-width:  992px ),
+    'min-lg':  ( min-width:  1200px ),
+    'max-lg':  ( max-width:  1200px )
+) !default;
+
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

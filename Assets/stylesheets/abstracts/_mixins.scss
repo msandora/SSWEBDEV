@@ -63,27 +63,28 @@
   &::-webkit-input-placeholder { @content; }
 }
 
-//Might want to use this if we remove bootstrap
-@mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-      $width: map_get($breakpoints, $width);
-      @if $type == max {
-          $width: $width - 1px;
-      }
-      @media only screen and (#{$type}-width: $width) {
-          @content;
-      }
+
+/// Mixin to manage responsive breakpoints
+/// BReakpoints can be found in _variables.scss
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
-//Usage
-// .site-header {
-//   padding: 2rem;
-//   font-size: 1.8rem;
-//   @include mq('tablet-wide') {
-//       padding-top: 4rem;
-//       font-size: 2.4rem;
-//   }
-// }
+
 
 // Truncate stuff on front end
 @mixin truncate($truncation-boundary) {

@@ -8,6 +8,7 @@
 	color: $white-base;
     background-color: $brand-primary;
     @include font-size(14px);
+    margin-top: 1rem;
 	.Footer__main { 
 		padding-top: 1.75rem;
 		padding-bottom: 1.75rem;
@@ -36,7 +37,7 @@
         width: 11rem;
 
         @media(max-width: 600px) {
-            width: 50%;
+            width: 100%;
             @include font-size(13px);
         }
         @media(min-width: 1050px) and(max-width: 1423px) {
@@ -48,19 +49,14 @@
 
 .Footer__column-heading {
     @include font-size(17px);
-    @media(min-width: 768px) {
+    @include respond-to('min-sm') {
         margin-bottom: 1.25rem;
     }
 }
 .Footer__column-links {
-    @media(min-width: 1024px) {
-        width: 10rem;
-    }
-    @media(min-width: 350px) {
-        max-width: 9.25rem;
-    }
+    width: 100%;
     .Footer__link {
-        display: inline-block;
+        display: block;
         margin-bottom: .5rem;
         color: $white_70;
         transition: opacity .15s ease-out;
@@ -93,23 +89,27 @@
 
 .BottomNav__container {
     background-color: $brand-color-mid;
+
     .BottomNav__container-inner {
         display: flex;
         padding-top: 1rem;
-        padding-bottom: 2.5rem;
-        border-top:1px solid $brand-color;
-        
-        @media(min-width: 560px) {
-            padding-bottom: 1rem;
-        }
-        @media(min-width: 1024px) {
+        padding-bottom: 1rem;
+        border-top: 1px solid $brand-color;
+        @include respond-to('min-xs') {
             justify-content: center;
+            text-align: center;
         }
         .BottomNav__copyright {
             display: inline-block;
+            padding-bottom: 1rem;
+
             &:not(:last-child) {
                 margin-right: 1rem;
             }
+        }
+        .BottomNav__disclaimer {
+            @include font-size(12px);
+            max-width: 27rem;
         }
         .BottomNav__link {
             display: inline-block;

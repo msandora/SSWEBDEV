@@ -49,7 +49,7 @@
 		-webkit-transform: translateY(-100%);
 		-ms-transform: translateY(-100%);
 		transform: translateY(-100%);
-		@media screen and (min-width: 768px) {
+		@include respond-to('min-sm') {
 			-webkit-transform: translateY(-2rem);
 			-ms-transform: translateY(-2rem);
 			transform: translateY(-2rem);
@@ -68,7 +68,7 @@
 		z-index: 103;
 		border-bottom: 1px solid $gray-lighter;
 		border-top: 1px solid $gray-lighter;
-		@media screen and (min-width: 768px) {
+		@include respond-to('min-sm') {
 			padding-right: .75rem;
 			padding-left: .75rem;
 		}
@@ -86,7 +86,7 @@
 	align-items: center;
 	height: 100%;
 	background: $brand-color;
-	@media screen and (min-width: 768px) {
+	@include respond-to('min-sm') {
 		display: none;
 	}
 	.Header__menu-button {
@@ -157,6 +157,7 @@
 	-ms-flex-align: center;
 	align-items: center;
 	height: 100%;
+	width: 30%;
 	.Header__logo-img{
 		width: 9rem;
 		margin-bottom: .25rem;
@@ -183,7 +184,7 @@
 	-o-transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
 	transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
 	will-change: opacity, visibility;
-	@media screen and (min-width: 768px) {
+	@include respond-to('min-sm') {
 		height: calc(100vh + 5.625rem);
 		-webkit-transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
 		-o-transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
@@ -208,7 +209,7 @@
 	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 100%;
-	@media screen and (min-width: 768px) {
+	@include respond-to('min-sm') {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: row;
@@ -288,6 +289,7 @@
 	-ms-flex: none;
 	flex: none;
 	height: 100%;
+	width: 30%;
 	@media screen and (max-width: 767px) {
 		position: absolute;
 		top: 0;
@@ -311,6 +313,7 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	margin-left: auto;
 }
 
 
@@ -324,6 +327,9 @@
 	align-items: center;
 	height: 100%;
 	padding: 0 0.7rem;
+	@include respond-to('min-sm') {
+		display:none;
+	}
 	@media (min-width: 1024px) {
 		padding: 0 1rem;
 	}
@@ -340,6 +346,34 @@
 	}
 }
 
+.Header__action--keyword {
+	padding: 0.4rem 0;
+	.Header__action--searchForm {
+		@include respond-to('max-sm') {
+			display:none;
+		}
+	}
+	input {
+		width:90%;
+		float:right;
+		@include font-size(13px);
+		@include input-placeholder {
+			color: $gray;
+		}
+	}
+	.Header__action--keyword-icon{
+		top: -2.3rem;
+		float: right;
+		position: relative;
+		right: 0;
+		color: $brand-primary;
+		padding: 0.7rem;
+		font-size: 1rem;
+		z-index: 100;
+		pointer-events: none;
+	  }
+}
+
 // X Icon for keyword search dismissal
 .Header__close-button {
 	position: absolute;
@@ -352,7 +386,8 @@
 	transition: transform .25s ease-in-out, visibility .25s ease-in-out, -webkit-transform .25s ease-in-out;
 	&.Header__close-button--hidden {
 		visibility: hidden;
-		opacity: 0;    display: none;
+		opacity: 0;    
+		display: none;
 		-webkit-transform: translateY(-100%);
 		-ms-transform: translateY(-100%);
 		transform: translateY(-100%);
@@ -363,7 +398,7 @@
 		height: .875rem;
 		fill: $gray-dark;
 	}
-	@media screen and (min-width: 768px) {
+	@include respond-to('min-sm') {
 		display: none;
 	}
 }
@@ -371,7 +406,7 @@
 // Experimenting with this
 .Header__underline {
 	display: none;
-	@media (min-width: 768px) {
+	@include respond-to('min-sm') {
 		position: absolute;
 		bottom: 0;
 		left: 0;

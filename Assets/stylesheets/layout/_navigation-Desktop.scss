@@ -23,7 +23,7 @@
      -webkit-box-pack: center;
      -ms-flex-pack: center;
      justify-content: center;
-     @media screen and (min-width: 768px) {
+     @include respond-to('min-sm') {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1;
@@ -31,15 +31,14 @@
         -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
-        margin-right: 2rem;
      }
   }
 }
 
 .HeaderNavMenu__link {
   height: 100%;
-  @media (min-width: 768px) {
-        padding: 0 .75rem;
+  @include respond-to('min-sm') {
+      padding: 0 .75rem;
   }
   @media (min-width: 1024px) {
         padding: 0 1.25rem;
@@ -59,8 +58,8 @@
   -ms-user-select: none;
    user-select: none;
    @media screen and (min-width: 768px) and (max-width: 1023px) {
-     @include font-size(13px);
-  }
+      @include font-size(13px);
+   }
 
   @include on-event {
    color: $brand-color-darker;
@@ -69,13 +68,13 @@
 
 }
 .header__header-utility-link {
-   @media (min-width: 768px) {
-     font-size: .875rem;
-     letter-spacing: .01875rem;
-     color: #525252;
-     -webkit-transition: color .15s ease-out;
-     -o-transition: color .15s ease-out;
-     transition: color .15s ease-out
+   @include respond-to('min-sm') {
+      font-size: .875rem;
+      letter-spacing: .01875rem;
+      color: #525252;
+      -webkit-transition: color .15s ease-out;
+      -o-transition: color .15s ease-out;
+      transition: color .15s ease-out;
    }
   @media (min-width: 1024px) {
      @include on-event {
@@ -144,11 +143,10 @@
    }
 }
 
-
-
-
-
-@media(min-width: 768px) {
+@include respond-to('min-sm') {
+   .HeaderNavMenu__item{
+      height:100%;
+   }
   .HeaderNavMenu__dropdown--hover {
      position: absolute;
      top: 100%;
@@ -157,7 +155,6 @@
      visibility: hidden;
      opacity: 0;
      width: 100%;
-     height: 25rem;
      overflow: hidden;
      background-color: $white-base;
      pointer-events: auto;
@@ -181,13 +178,11 @@
   }
 }
 
-
-
 .HeaderNavMenu__dropdown {
 //   pointer-events: none;  Breaks hover?
   border-top: 1px solid $gray-lighter;
   border-bottom: 1px solid $gray-lighter;
-  @media(min-width: 768px) {
+  @include respond-to('min-sm') {
      .HeaderNavMenu__dropdown--hover {
         position: absolute;
         top: 100%;
@@ -215,7 +210,6 @@
   }
 }
 
-
 .HeaderNavLink__link--main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,7 +219,7 @@
   align-items: center;
   height: 100%;
   padding: 0 0.7rem;
-  @media (min-width: 768px) {
+  @include respond-to('min-sm') {
      padding: 0 .75rem;
   }
   @media (min-width: 1024px) {
@@ -236,14 +230,12 @@
   }
 }
 
-
-
 // Dropdown Containment
 .ProductList__nav-primary--dropdown {
    width: 100%;
    max-width: 59rem;
    height: 100%;
-   padding: 1rem 2rem 0;
+   padding: 1rem 2rem;
    .ProductList__dropdown-container {
       display: flex;
       margin-left: -1rem;
@@ -259,7 +251,7 @@
    width: 100%;
    .ProductNavGroup__category {
       padding: 1rem 1.5625rem 1.25rem;
-      @media (min-width: 768px) {
+      @include respond-to('min-sm') {
          padding: 0 0 2.25rem
       }
    }
@@ -270,14 +262,14 @@
       @media (min-width: 768px) and (max-width: 1023px) {
          @include font-size(16px);
       }
-      @media (min-width: 768px) {
+      @include respond-to('min-sm') {
             padding-top: 0;
       }
    }
    .ProductNavGroup__category--product-item {
       padding: .5rem 0;
       @include font-size(16px);
-      @media (min-width: 768px) {
+      @include respond-to('min-sm') {
          padding: .4375rem 0;
          @include font-size(15px);
       }
@@ -292,7 +284,7 @@
             font-style: normal;
             font-weight: 400;
          }
-         @media (min-width: 768px) {
+         @include respond-to('min-sm') {
             padding-left: 0;
             -webkit-transition: padding-left .15s ease-in, color .15s ease-out;
             -o-transition: padding-left .15s ease-in, color .15s ease-out;
