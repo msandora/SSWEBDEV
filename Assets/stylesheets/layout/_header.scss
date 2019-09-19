@@ -49,7 +49,7 @@
 		-webkit-transform: translateY(-100%);
 		-ms-transform: translateY(-100%);
 		transform: translateY(-100%);
-		@include respond-to('min-sm') {
+		@include respond-to('tablet-portrait') {
 			-webkit-transform: translateY(-2rem);
 			-ms-transform: translateY(-2rem);
 			transform: translateY(-2rem);
@@ -68,7 +68,7 @@
 		z-index: 103;
 		border-bottom: 1px solid $gray-lighter;
 		border-top: 1px solid $gray-lighter;
-		@include respond-to('min-sm') {
+		@include respond-to('tablet-portrait') {
 			padding-right: .75rem;
 			padding-left: .75rem;
 		}
@@ -86,7 +86,7 @@
 	align-items: center;
 	height: 100%;
 	background: $brand-color;
-	@include respond-to('min-sm') {
+	@include respond-to('tablet-portrait') {
 		display: none;
 	}
 	.Header__menu-button {
@@ -184,7 +184,7 @@
 	-o-transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
 	transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
 	will-change: opacity, visibility;
-	@include respond-to('min-sm') {
+	@include respond-to('tablet-portrait') {
 		height: calc(100vh + 5.625rem);
 		-webkit-transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
 		-o-transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
@@ -209,7 +209,7 @@
 	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 100%;
-	@include respond-to('min-sm') {
+	@include respond-to('tablet-portrait') {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: row;
@@ -290,6 +290,7 @@
 	flex: none;
 	height: 100%;
 	width: 30%;
+
 	@media screen and (max-width: 767px) {
 		position: absolute;
 		top: 0;
@@ -308,6 +309,9 @@
 			pointer-events: none
 		}
 	}
+	.CartIcon {
+		margin-left: auto;
+	}
 }
 .Header__nav-actions--to-hide {
 	display: -webkit-box;
@@ -319,16 +323,16 @@
 
 .Header__action-button {
 	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	display:none;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
 	height: 100%;
 	padding: 0 0.7rem;
-	@include respond-to('min-sm') {
-		display:none;
+	@include respond-to('phone-only') {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
 	}
 	@media (min-width: 1024px) {
 		padding: 0 1rem;
@@ -348,8 +352,8 @@
 
 .Header__action--keyword {
 	padding: 0.4rem 0;
-	.Header__action--searchForm {
-		@include respond-to('max-sm') {
+	@include respond-to('phone-only') {
+		.Header__action--searchForm {
 			display:none;
 		}
 	}
@@ -398,7 +402,7 @@
 		height: .875rem;
 		fill: $gray-dark;
 	}
-	@include respond-to('min-sm') {
+	@include respond-to('tablet-portrait') {
 		display: none;
 	}
 }
@@ -406,7 +410,7 @@
 // Experimenting with this
 .Header__underline {
 	display: none;
-	@include respond-to('min-sm') {
+	@include respond-to('tablet-portrait') {
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -435,11 +439,11 @@
 	border-radius: .75rem;
 	background-color: $brand-color;
 	.NewIcon__container {
-	   font-size: .6875rem;
-	   color: $white-base;
+		font-size: .6875rem;
+		color: $white-base;
 	}
- }
- .ProductList__new-icon-container {
+}
+.ProductList__new-icon-container {
 	position: relative;
 	top: -.125rem;
 	display: inline-block;
@@ -449,4 +453,4 @@
 	background-color: $brand-color;
 	border-radius: .75rem;
 	color: $white-base;
- }
+}

@@ -23,7 +23,7 @@
      -webkit-box-pack: center;
      -ms-flex-pack: center;
      justify-content: center;
-     @include respond-to('min-sm') {
+     @include respond-to('tablet-portrait') {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1;
@@ -37,7 +37,7 @@
 
 .HeaderNavMenu__link {
   height: 100%;
-  @include respond-to('min-sm') {
+  @include respond-to('tablet-portrait') {
       padding: 0 .75rem;
   }
   @media (min-width: 1024px) {
@@ -50,13 +50,13 @@
 }
 .header__header-link {
    @include font-size(15px);
-  letter-spacing: .033125rem;
-  white-space: nowrap;
-  color: $brand-color;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-   user-select: none;
+   letter-spacing: .033125rem;
+   white-space: nowrap;
+   color: $brand-color;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+      user-select: none;
    @media screen and (min-width: 768px) and (max-width: 1023px) {
       @include font-size(13px);
    }
@@ -68,7 +68,7 @@
 
 }
 .header__header-utility-link {
-   @include respond-to('min-sm') {
+   @include respond-to('tablet-portrait') {
       font-size: .875rem;
       letter-spacing: .01875rem;
       color: #525252;
@@ -76,11 +76,11 @@
       -o-transition: color .15s ease-out;
       transition: color .15s ease-out;
    }
-  @media (min-width: 1024px) {
-     @include on-event {
-      color: $link-hover-color;
-     }
-  }
+   @media (min-width: 1024px) {
+      @include on-event {
+         color: $link-hover-color;
+      }
+   }
 }
 .Header__nav-mobile-menu--active {
    color: $brand-color-darker;
@@ -109,19 +109,14 @@
       left: 0;
       z-index: -1;
       width: 100%;
-      height: 25rem;
+      height: 22rem;
       background-color: $white-base;
       transform: scaleY(0);
       transform-origin: top;
       pointer-events: none;
       transition: transform .3s ease-out;
       will-change: transform;
-      @media(min-width: 1024px) {
-            height: 29rem;
-      }
-      @media(--tablet-half-up) {
-            height: 26.875rem;
-      }
+
    }
    &.ProductList__nav-primary--container-dropdown-visible {
       &:before {
@@ -143,7 +138,7 @@
    }
 }
 
-@include respond-to('min-sm') {
+@include respond-to('tablet-portrait') {
    .HeaderNavMenu__item{
       height:100%;
    }
@@ -177,12 +172,25 @@
      transition-delay: .15s;
   }
 }
+@media (pointer: fine) {
+.HeaderNavMenu__item--hover:hover .HeaderNavMenu__dropdown--hover {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .3s ease,visibility .3s ease;
+    -o-transition: opacity .3s ease,visibility .3s ease;
+    transition: opacity .3s ease,visibility .3s ease;
+    -webkit-transition-delay: .15s;
+    -o-transition-delay: .15s;
+    transition-delay: .15s;
+}
+}
+
 
 .HeaderNavMenu__dropdown {
 //   pointer-events: none;  Breaks hover?
   border-top: 1px solid $gray-lighter;
   border-bottom: 1px solid $gray-lighter;
-  @include respond-to('min-sm') {
+  @include respond-to('tablet-portrait') {
      .HeaderNavMenu__dropdown--hover {
         position: absolute;
         top: 100%;
@@ -219,7 +227,7 @@
   align-items: center;
   height: 100%;
   padding: 0 0.7rem;
-  @include respond-to('min-sm') {
+  @include respond-to('tablet-portrait') {
      padding: 0 .75rem;
   }
   @media (min-width: 1024px) {
@@ -250,10 +258,7 @@
 .ProductList__category-wrapper {
    width: 100%;
    .ProductNavGroup__category {
-      padding: 1rem 1.5625rem 1.25rem;
-      @include respond-to('min-sm') {
-         padding: 0 0 2.25rem
-      }
+      padding: 0 1.5625rem;
    }
    .ProductNavGroup__category--headline {
       padding: .5rem 0;
@@ -262,14 +267,14 @@
       @media (min-width: 768px) and (max-width: 1023px) {
          @include font-size(16px);
       }
-      @include respond-to('min-sm') {
+      @include respond-to('tablet-portrait') {
             padding-top: 0;
       }
    }
    .ProductNavGroup__category--product-item {
       padding: .5rem 0;
       @include font-size(16px);
-      @include respond-to('min-sm') {
+      @include respond-to('tablet-portrait') {
          padding: .4375rem 0;
          @include font-size(15px);
       }
@@ -284,7 +289,7 @@
             font-style: normal;
             font-weight: 400;
          }
-         @include respond-to('min-sm') {
+         @include respond-to('tablet-portrait') {
             padding-left: 0;
             -webkit-transition: padding-left .15s ease-in, color .15s ease-out;
             -o-transition: padding-left .15s ease-in, color .15s ease-out;
@@ -306,15 +311,12 @@
 // Dropdown right side with image
 .ProductList__dropdown-content--visual {
   width: 66.66667%;
-  padding-left: 1rem;
+  padding: 0rem 1.5625rem;
   .ProductList__visual--headline {
      display: block;
      padding: 0 0 .75rem;
      @include font-size(16px);
      color: $brand-color;
-     @media(min-width: 768px) and(max-width: 1023px) {
-        @include font-size(14px);
-     }
   }
   .ProductList__visual {
      display: flex;
@@ -340,6 +342,7 @@
         position: absolute;
         top: .4375rem;
         left: -.125rem;
+        height: 1.2rem;
         z-index: 1;
         display: block;
         padding-left: .5rem;
@@ -364,6 +367,7 @@
         overflow: hidden;
         .ProductList__visual-image--img {
           transition: transform .3s ease-out;
+          max-height: 300px;
        }
      }
   }
@@ -373,9 +377,6 @@
      padding: .75rem 0 .25rem;
      @include font-size(15px);
      letter-spacing: .0375rem;
-     @media(min-width: 768px) and(max-width: 1023px) {
-          @include font-size(13px);
-     }
   }
   .ProductList__visual--description {
      display: block;

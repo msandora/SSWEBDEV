@@ -31,7 +31,7 @@ $gray-light:              lighten($black-base, 46.7%) !default; // #777
 $gray-lighter:            lighten($black-base, 93.5%) !default; // #eee
 
 //## Brand colors
-$brand-color:             #6281af !default;//#526599 !default;
+$brand-color:             #6281af !default;//#6281af !default;
 $brand-color-darker:      darken($brand-color, 20%) !default; 
 $brand-color-dark:        darken($brand-color, 13.5%) !default; 
 $brand-color-mid:         lighten($brand-color, 13.5%) !default; 
@@ -64,7 +64,7 @@ $link-hover-decoration:   underline !default;
 //
 //## Font, Font Size
 $font-primary: 'Barlow', 'Helvetica', 'Arial', sans-serif !default;
-$font-secondary: 'medio', 'Courier New', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$font-secondary: 'Helvetica Neue', 'Helvetica', 'Courier New', 'Monaco', monospace !default;
 
 // Did not need this but good trick to know
 // $font-size-base:          14px !default;
@@ -81,14 +81,11 @@ $font-secondary: 'medio', 'Courier New', 'Bitstream Vera Sans Mono', 'Monaco', m
 
 /// Breakpoints map 
 $breakpoints: (
-    'min-xs':  ( min-width:  480px ),
-    'max-xs':  ( max-width:  480px ),
-    'min-sm':  ( min-width:  768px ),
-    'max-sm':  ( max-width:  768px ),
-    'min-md':  ( min-width:  992px ),
-    'max-md':  ( max-width:  992px ),
-    'min-lg':  ( min-width:  1200px ),
-    'max-lg':  ( max-width:  1200px )
+    'phone-only':  ( max-width:  576px ),
+    'tablet-portrait':  ( min-width:  768px ),
+    'tablet-landscape':  ( min-width:  992px ),
+    'desktop':  ( min-width:  1200px ),
+    'big-desktop':  ( min-width: 1800px )
 ) !default;
 
 
