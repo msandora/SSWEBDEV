@@ -14,45 +14,11 @@ main {
  }
 
 
-.jumbotron {
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-position: center center;
-	color: $white-base;
-	position: relative;
-	height: 300px;
-	overflow: hidden;
-	border-radius: 0 !important;
-	.jumbo-text {
-		position: absolute;
-		bottom: 5%;
-		left: 0;
-		width: 100%;
-		padding: 0 5%;
-	}
-	.gradient:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0,0,0,0.7);
-	}
-}
-@media(max-width: 576px) {
-	.jumbotron {
-		padding: 0 1rem 100%;
-	}
-}
-
-
 .card-product {
 	.img-wrap {
 		border-radius: 3px 3px 0 0;
 		overflow: hidden;
 		position: relative;
-		height: 220px;
 		text-align: center;
 		img {
 			max-height: 100%;
@@ -143,7 +109,7 @@ main {
 			padding-right: 2.5rem;
 			padding-left: 2.5rem;
 		}
-		@include respond-to('min-sm') {
+		@include respond-to('tablet-portrait') {
 			padding-right: 3rem;
 			padding-left: 3rem;
 		}
@@ -223,7 +189,7 @@ main {
 		width: 14rem
 	}
 }
-@include respond-to('min-sm') {
+@include respond-to('tablet-portrait') {
 	.layout__two-or-three-cols {
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
@@ -239,7 +205,7 @@ main {
 	@media (max-width: 767px) {
 			width: 100%;
 	}
-	@include respond-to('min-sm') {
+	@include respond-to('tablet-portrait') {
 			width: calc(50% - .5rem);
 	}
 }
@@ -249,7 +215,7 @@ main {
 		margin-top: 7rem
 	}
 }
-@include respond-to('min-sm') {
+@include respond-to('tablet-portrait') {
 	.layout__two-cols-only:last-of-type {
 		margin-left: 1rem
 	}

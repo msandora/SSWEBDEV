@@ -13,7 +13,7 @@
     -o-transition: transform .25s ease-in-out, visibility .25s ease-in-out;
     transition: transform .25s ease-in-out, visibility .25s ease-in-out;
     transition: transform .25s ease-in-out, visibility .25s ease-in-out, -webkit-transform .25s ease-in-out;
-    @include respond-to('min-sm') {
+    @include respond-to('tablet-portrait') {
         display: none;
     } 
     &.Header__nav-group--collapsed {
@@ -29,12 +29,6 @@
         overflow-x: hidden;
     }  
 }
-
-
-
-
-
-
 
 
 .ProductListMobile__mobile-nav-container {
@@ -113,12 +107,12 @@
 		align-items: center;
 		width: 50%;
         height: 100%;
-		@include respond-to('min-sm') {
+		@include respond-to('tablet-portrait') {
             width: auto;
         }
         &:last-child {
             padding-left: .5rem;
-            @include respond-to('min-sm') {
+            @include respond-to('tablet-portrait') {
                 padding-left: 0;
             }
         }
@@ -144,8 +138,11 @@
             color: #151515;
         }
         .ProductNavGroup__category--product-item-btn {
-            padding-top: 1.5rem;
+            padding-top: 0.5rem;
             text-align: center;
+            .ProductNavGroup__category--img {
+                width: 100%;
+            }
         }
         &.ProductListMobile__nav-group--is-hidden{
             display: none;

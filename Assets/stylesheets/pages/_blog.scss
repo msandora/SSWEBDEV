@@ -1,43 +1,3 @@
-.blog-article-bg {
-    background: url($base-url + "media/1243/ss_homepage_banner_1400x300.jpg") no-repeat center center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    max-width: 100%;
-    color: $white-base;
-    position: relative;
-    height: 300px;
-    overflow:hidden;
-    .gradient:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.7);
-    }
-    @media (max-width: 768px) {
-        height: 350px;
-        background-position: right center;
-    }
-}
-
-.blog-article-title {
-    position: absolute;
-    bottom: 15%;
-    left: 70px;
-    width: 50%;
-    @media screen and (max-width: 768px) {
-        left: 40px;
-        width: 80%;
-        h1{
-            font-size: 250%;
-        }
-    }
-}
-
 .blog-filters {
     .form-group, label {
         margin-bottom:0;
@@ -64,7 +24,6 @@
         text-decoration: none;
     }
 }
-
 
 .blog-results{
     .card-body {

@@ -48,12 +48,16 @@ jQuery(document).ready(function () {
 
     // Adds/Dismisses overlay when hovering nav buttons on desktop
     $(".HeaderNavMenu__item--hover").hover(function(){
+      $(".ProductList__nav-primary--container").addClass('ProductList__nav-primary--container-hover ProductList__nav-primary--container-dropdown-visible');
+
       $(this).find( ".HeaderNavMenu__link" ).addClass('HeaderNavMenu__link--active');
 
       setTimeout(function() { // Add
         $('#NavOverlay').toggleClass("Header__overlay-visible").toggleClass("layout__visually-hidden");
       }, 200);
     }, function () {  // Dismiss
+      $(".ProductList__nav-primary--container").removeClass('ProductList__nav-primary--container-hover ProductList__nav-primary--container-dropdown-visible');
+
       $('#NavOverlay').toggleClass("Header__overlay-visible").toggleClass("layout__visually-hidden");
       $(this).find( ".HeaderNavMenu__link" ).removeClass('HeaderNavMenu__link--active');
 
