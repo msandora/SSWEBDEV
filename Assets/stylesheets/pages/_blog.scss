@@ -26,11 +26,14 @@
 }
 
 .blog-results{
+    .card {
+        height: 96%;
+    }
     .card-body {
         padding: 0.7rem;
     }
-    /* Fix extra spacing on firefox  */
     .card-columns {
+        /* Fix extra spacing on firefox  */
         column-gap:0;
     }
 }

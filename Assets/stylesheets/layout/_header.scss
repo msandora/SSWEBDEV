@@ -15,7 +15,10 @@
 	.MarketingContainer__promotion--content {
 		margin: 0 2vw;
 		@include font-size(14px);
-		a{color:$white-base;}
+		color: $white-base;
+		a{
+			color: $white-base;
+		}
 	}
 }
 
