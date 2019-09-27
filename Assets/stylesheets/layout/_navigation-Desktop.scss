@@ -86,22 +86,11 @@
    color: $brand-color-darker;
    text-decoration: $link-hover-decoration;
 }
+
 .ProductList__nav-primary--container {
    display: flex;
    align-items: center;
    height: 100%;
-   &:before {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 103;
-      opacity: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #e6e6e6;
-      transition: opacity .3s ease;
-   }
    &:after {
       content: "";
       position: absolute;
@@ -116,7 +105,7 @@
       pointer-events: none;
       transition: transform .3s ease-out;
       will-change: transform;
-
+      border-bottom: 1px solid $gray-lighter;
    }
    &.ProductList__nav-primary--container-dropdown-visible {
       &:before {
@@ -173,23 +162,23 @@
   }
 }
 @media (pointer: fine) {
-.HeaderNavMenu__item--hover:hover .HeaderNavMenu__dropdown--hover {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: opacity .3s ease,visibility .3s ease;
-    -o-transition: opacity .3s ease,visibility .3s ease;
-    transition: opacity .3s ease,visibility .3s ease;
-    -webkit-transition-delay: .15s;
-    -o-transition-delay: .15s;
-    transition-delay: .15s;
-}
+   .HeaderNavMenu__item--hover:hover .HeaderNavMenu__dropdown--hover {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: opacity .3s ease,visibility .3s ease;
+      -o-transition: opacity .3s ease,visibility .3s ease;
+      transition: opacity .3s ease,visibility .3s ease;
+      -webkit-transition-delay: .15s;
+      -o-transition-delay: .15s;
+      transition-delay: .15s;
+   }
 }
 
 
 .HeaderNavMenu__dropdown {
 //   pointer-events: none;  Breaks hover?
   border-top: 1px solid $gray-lighter;
-  border-bottom: 1px solid $gray-lighter;
+  
   @include respond-to('tablet-portrait') {
      .HeaderNavMenu__dropdown--hover {
         position: absolute;
@@ -238,21 +227,118 @@
   }
 }
 
+
+
+
+// .NavDesktop__subMenu {
+//    display: grid;
+//    justify-content: center;
+//    position: absolute;
+//    left: 0;
+//    width: 100%;
+//    margin-left: 0;
+//    padding: 2rem;
+//    background-color: hsla(0,0%,100%,.9666);
+//    overflow: hidden;
+//    opacity: 1;
+//    .NavDesktop__subMenuGrid {
+//       display: grid;
+//       width: auto;
+//       margin: 0;
+//       &.NavDesktop__subMenuGrid--2col {
+//          grid-template-columns: repeat(4,auto);
+//       }
+//       &>li:not(:last-child) {
+//          margin-right: 2.5rem;
+//       }
+//    }
+// }
+
+// .NavDesktop__subMenuList {
+//    color: $brand-color;
+//    a {
+//       display: inline-block;
+//    }
+//    .NavDesktop__subMenuHeader{
+//       padding: .5rem 0;
+//       @include font-size(16px);
+//       @include respond-to('tablet-portrait') {
+//             padding-top: 0;
+//       }
+//    }
+//    .NavDesktop-subSubMenu {
+//       margin-left: 0;
+//       a {
+//          position: relative;
+//          opacity: .9;
+//          transition: .1s;
+//       }
+//       .NavDesktop__category--product-link {
+//          padding: .5rem 0;
+//          @include font-size(15px);
+//          @include respond-to('tablet-portrait') {
+//             padding: .4375rem 0;
+//          }
+//          @media (min-width: 1024px) {
+//             padding: .375rem 0;
+//          }
+//       }
+      
+//    }
+
+// }
+
+
+// .NavDesktop__subMenu .NavDesktop-subSubMenu a:after {
+//    content: "";
+//    position: absolute;
+//    left: 0;
+//    right: 0;
+//    bottom: -3px;
+//    width: 100%;
+//    height: 1px;
+//    background-color: #999b9e;
+//    opacity: 0;
+//    transform: translateY(.25rem);
+//    transition: transform,opacity;
+//    transition-duration: .2s;
+//    transition-timing-function: cubic-bezier(.605,.045,.13,1.065);
+// }
+// .NavDesktop__subMenu .NavDesktop__subMenuPromo {
+//    align-self: stretch;
+//    img {
+//       display: block;
+//       max-width: 100%;
+//       max-height: 300px;
+//       line-height: 0;
+//       -webkit-backface-visibility: hidden;
+//       backface-visibility: hidden;
+//       transform: translateZ(0);
+//       opacity: 1;
+//       transition: .2s;
+//    }
+// }
+
+
+
+
+
+
 // Dropdown Containment
 .ProductList__nav-primary--dropdown {
    width: 100%;
-   max-width: 59rem;
+   max-width: 55rem;
    height: 100%;
    padding: 1rem 2rem;
    .ProductList__dropdown-container {
       display: flex;
-      margin-left: -1rem;
       .ProductList__dropdown-content--category {
          width: 33.33333%;
          padding-left: 1rem;
       }
    }
 }
+
 
 // Dropdown Left side with List
 .ProductList__category-wrapper {
@@ -262,25 +348,21 @@
    }
    .ProductNavGroup__category--headline {
       padding: .5rem 0;
-      font-size: 1.25rem;
+      @include font-size(16px);
       color: $brand-color;
-      @media (min-width: 768px) and (max-width: 1023px) {
-         @include font-size(16px);
-      }
+
       @include respond-to('tablet-portrait') {
             padding-top: 0;
       }
    }
    .ProductNavGroup__category--product-item {
       padding: .5rem 0;
-      @include font-size(16px);
+      @include font-size(15px);
       @include respond-to('tablet-portrait') {
          padding: .4375rem 0;
-         @include font-size(15px);
       }
       @media (min-width: 1024px) {
          padding: .375rem 0;
-         @include font-size(16px);
       }
       .ProductNavGroup__category--product-link {
          display: inline-block;
@@ -300,7 +382,6 @@
             color: #1e306e
          }
       }
-
    }
    .ProductNavGroup__category--product-item-btn {
       padding-top: 0.5rem;
@@ -310,7 +391,7 @@
 
 // Dropdown right side with image
 .ProductList__dropdown-content--visual {
-  width: 66.66667%;
+//   width: 66.66667%;
   padding: 0rem 1.5625rem;
   .ProductList__visual--headline {
      display: block;
@@ -330,14 +411,13 @@
 
 .ProductList__visual--link {
   display: block;
-  text-decoration: none;
-  &:hover .ProductList__visual-image--img {
-     transform: scale(1.04);
+  @include on-event {
+   text-decoration: none;
+   color: $brand-color;
   }
   .ProductList__visual--image {
      position: relative;
      width: 100%;
-     background-color: $gray-lighter;
      .ProductList__visual--tag {
         position: absolute;
         top: .4375rem;
@@ -366,9 +446,13 @@
      .ProductList__visual-image--container {
         overflow: hidden;
         .ProductList__visual-image--img {
-          transition: transform .3s ease-out;
-          max-height: 300px;
-       }
+           max-height: 240px;
+        }
+     }
+     &:hover{
+      -webkit-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+      transform: scale(1.04);
      }
   }
 

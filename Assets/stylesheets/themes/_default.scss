@@ -3,13 +3,15 @@
 // default one.
 // -----------------------------------------------------------------------------
 
-
+// I did not know where to put this stuff so its here for now
 main {
-   padding-top: 5rem;
-   &.flex {
+	&.Header__site-padding-top {
+		padding-top: 5rem;
+	}
+   	&.flex {
        min-height: calc(100vh - 21.125rem);
        flex: 1 0 auto;
-       flex-flow: column nowrap;
+	   flex-flow: column nowrap;
     }
  }
 

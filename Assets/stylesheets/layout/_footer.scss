@@ -31,29 +31,29 @@
 	flex: 1;
 	flex-wrap: wrap;
 	.Footer__column {
-		margin-top: 1.25rem;
 		margin-bottom: 1.25rem;
-		// width: 11rem;
-		width:33%;
+		width: 50%;
+		@include respond-to('tablet-portrait') {
+			width: 25%;
+		}
 		@include respond-to('phone-only') {
 			width: 100%;
 			@include font-size(13px);
 		}
-		// @media(min-width: 1050px) and(max-width: 1423px) {
-		// 	width: 11rem;
-		// }
 	}
 }
 
 .Footer__column-heading {
 	@include font-size(17px);
+	margin-top: 0;
 	margin-bottom: 0.5rem;
 	@include respond-to('tablet-portrait') {
-		margin-bottom: 1.25rem;
+		margin-bottom: 1rem;
 	}
 }
 .Footer__column-links {
 	width: 100%;
+	line-height: 20px;
 	.Footer__link {
 		display: block;
 		margin-bottom: .5rem;

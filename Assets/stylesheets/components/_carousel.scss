@@ -1,11 +1,14 @@
-.carousel {
-	margin-bottom: 1rem;
-	background: #eee;
-
+#carouselId {
+	&.carousel {
+		background: #eee;
+	}
 	.carousel-item {
 		height: 300px;
-
+		@include respond-to('desktop') {
+			height: 350px;
+		}
 		img {
+			min-height: 300px;
 			height: 100%;
 			margin-left: auto;
 			margin-right: auto;
@@ -13,8 +16,6 @@
 			display: block;
 			@include respond-to('phone-only') {
 				width: 100%;
-				height: unset;
-				min-height: 300px;
 			}
 			@include respond-to('desktop') {
 				width: 100%;
@@ -32,6 +33,13 @@
 		}
 	}
 	.carousel-caption {
+		@include font-size(16px);      
+		@include respond-to('tablet-portrait') {
+			@include font-size(20px);      
+		}
+		@include respond-to('desktop') {
+			@include font-size(24px);      
+		}
 		text-align: left;
 		top: 0;
 		bottom: 0;
@@ -53,6 +61,9 @@
 			@include respond-to('tablet-portrait') {
 				@include font-size(40px);      
 			}
+			@include respond-to('desktop') {
+				@include font-size(50px);      
+			}
 		}
 		p {
 			font-weight: 100;
@@ -71,8 +82,18 @@
 	.carousel-control-prev {
 		width: 10%;
 	}
+	&.blogBanner .alignment {
+		vertical-align: bottom !important;
+	}
+	.btn-outline-secondary {
+		color: #FFF !important;
+		border-color: #FFF !important;
+	}
 }
 
-.blogBanner .alignment {
-    vertical-align: bottom !important;
+
+#reviewContainer {
+	.carousel-caption {
+		color:#000;
+	}
 }

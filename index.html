@@ -21,12 +21,11 @@
 
 <body>
 
-  <div id="app" class="app">
+  <div id="app" class="wrapper">
     <div>
-      <div class="lets-flex">
         <!-- Header -->
         <header class="Header__container Header__container--headroom">
-            <div id="NavOverlay" class="Header__overlay layout__visually-hidden" role="presentation"></div>
+            <div id="NavOverlay" class="Header__overlay layout__visually-hidden" data-status="closed"></div>
 
             <div class="MarketingContainer__marketing-container" aria-hidden="false">
                 <div class="MarketingContainer__promotion--content fonts__barlow-medium">
@@ -96,7 +95,7 @@
                         <div class="HeaderNavMenu__dropdown-content">
                           <div class="ProductList__nav-primary--dropdown layout__margin-auto">
                             <div class="ProductList__dropdown-container">
-                              <div class="ProductList__dropdown-content--category">
+                              <div class="ProductList__dropdown-content--category layout__margin-auto">
                                 <div class="ProductList__category-wrapper">
                                   <ul class="ProductNavGroup__category">
                                     <li class="ProductNavGroup__category--headline fonts__barlow-medium">Brands</li>
@@ -126,7 +125,8 @@
                                   </ul>
                                 </div>
                               </div>
-                              <div class="ProductList__dropdown-content--visual"><span class="ProductList__visual--headline fonts__barlow-medium">Products backed by Science</span>
+                              <div class="ProductList__dropdown-content--visual layout__margin-auto">
+                                <span class="ProductList__visual--headline fonts__barlow-medium">Products backed by Science</span>
                                 <div class="ProductList__visual">
                                   <div class="ProductList__visual--container">
                                     <a class="ProductList__visual--link" href="/Brands/">
@@ -452,8 +452,7 @@
         <!-- Header -->
 
         <!-- Content -->
-        <main class="flex" role="main">
-
+        <main class="flex  Header__site-padding-top" role="main">
           <!-- Carousel -->
           <div id="carouselId" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -466,7 +465,7 @@
                 <picture>
                     <source sizes="(max-width: 650px)" srcset="
                     https://via.placeholder.com/1500x400?text=First%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block w-100" src="https://via.placeholder.com/1500x400?text=First%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="First Slide">
+                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=First%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="First Slide">
                 </picture>
                 <div class="carousel-caption">
                   <h2>Happy Labor Day!</h2>
@@ -480,7 +479,7 @@
                 <picture>
                     <source sizes="(max-width: 650px)" srcset="
                     https://via.placeholder.com/1500x400?text=Second%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block w-100" src="https://via.placeholder.com/1500x400?text=Second%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Second Slide">
+                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=Second%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Second Slide">
                 </picture>
                 <div class="carousel-caption">
                   <h2>NEW!</h2>
@@ -499,7 +498,7 @@
                 <picture>
                     <source sizes="(max-width: 650px)" srcset="
                     https://via.placeholder.com/1500x400?text=Third%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block w-100" src="https://via.placeholder.com/1500x400?text=Third%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Third Slide">
+                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=Third%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Third Slide">
                 </picture>
                 <div class="carousel-caption">
                   <h2>NEW!</h2>
@@ -524,73 +523,70 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-
-
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <figure class="card card-product">
-                    <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                    <figcaption class="info-wrap">
-                      <h4 class="title fonts__barlow-medium fonts__barlow-regular">PLEXADERM® RAPID REDUCTION SERUM™</h4>
+          <div class="container pt-4">
+            <div class="row">
+              <div class="col-md-4">
+                <figure class="card card-product">
+                  <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
+                  <figcaption class="info-wrap">
+                    <h4 class="title fonts__barlow-medium fonts__barlow-regular">PLEXADERM® RAPID REDUCTION SERUM™</h4>
+                    <p class="desc">Some small description goes here</p>
+                    <div class="rating-wrap">
+                      <div class="label-rating">132 reviews</div>
+                      <div class="label-rating">154 orders </div>
+                    </div> <!-- rating-wrap.// -->
+                  </figcaption>
+                  <div class="bottom-wrap">
+                    <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
+                    <div class="price-wrap h5">
+                      <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                    </div> <!-- price-wrap.// -->
+                  </div> <!-- bottom-wrap.// -->
+                </figure>
+              </div> <!-- col // -->
+              <div class="col-md-4">
+                <figure class="card card-product">
+                  <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
+                  <figcaption class="info-wrap">
+                      <h4 class="title">PLEX PERFECT DAILY MOISTURIZER</h4>
                       <p class="desc">Some small description goes here</p>
                       <div class="rating-wrap">
                         <div class="label-rating">132 reviews</div>
                         <div class="label-rating">154 orders </div>
                       </div> <!-- rating-wrap.// -->
-                    </figcaption>
-                    <div class="bottom-wrap">
+                  </figcaption>
+                  <div class="bottom-wrap">
                       <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
                       <div class="price-wrap h5">
                         <span class="price-new">$1280</span> <del class="price-old">$1980</del>
                       </div> <!-- price-wrap.// -->
-                    </div> <!-- bottom-wrap.// -->
-                  </figure>
-                </div> <!-- col // -->
-                <div class="col-md-4">
-                  <figure class="card card-product">
+                  </div> <!-- bottom-wrap.// -->
+                </figure>
+              </div> <!-- col // -->
+              <div class="col-md-4">
+                <figure class="card card-product">
                     <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
                     <figcaption class="info-wrap">
-                        <h4 class="title">PLEX PERFECT DAILY MOISTURIZER</h4>
-                        <p class="desc">Some small description goes here</p>
-                        <div class="rating-wrap">
-                          <div class="label-rating">132 reviews</div>
-                          <div class="label-rating">154 orders </div>
-                        </div> <!-- rating-wrap.// -->
-                    </figcaption>
-                    <div class="bottom-wrap">
-                        <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
-                        <div class="price-wrap h5">
-                          <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                        </div> <!-- price-wrap.// -->
-                    </div> <!-- bottom-wrap.// -->
-                  </figure>
-                </div> <!-- col // -->
-                <div class="col-md-4">
-                  <figure class="card card-product">
-                      <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                      <figcaption class="info-wrap">
-                        <h4 class="title">PLEXADERM HYALURONIC MOISTURIZER</h4>
-                        <p class="desc">Some small description goes here</p>
-                        <div class="rating-wrap">
-                          <div class="label-rating">132 reviews</div>
-                          <div class="label-rating">154 orders </div>
-                        </div> <!-- rating-wrap.// -->
-                    </figcaption>
-                    <div class="bottom-wrap">
-                        <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
-                        <div class="price-wrap h5">
-                          <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                        </div> <!-- price-wrap.// -->
-                    </div> <!-- bottom-wrap.// -->
-                  </figure>
-                </div> <!-- col // -->
-              </div> <!-- row.// -->             
-            </div> 
-            <!--container.//-->
-      
+                      <h4 class="title">PLEXADERM HYALURONIC MOISTURIZER</h4>
+                      <p class="desc">Some small description goes here</p>
+                      <div class="rating-wrap">
+                        <div class="label-rating">132 reviews</div>
+                        <div class="label-rating">154 orders </div>
+                      </div> <!-- rating-wrap.// -->
+                  </figcaption>
+                  <div class="bottom-wrap">
+                      <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
+                      <div class="price-wrap h5">
+                        <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                      </div> <!-- price-wrap.// -->
+                  </div> <!-- bottom-wrap.// -->
+                </figure>
+              </div> <!-- col // -->
+            </div> <!-- row.// -->             
+          </div> 
+          <!--container.//-->
         </main>
-        <!-- Content -->
+        <!-- Content.// -->
 
         <!-- Footer -->
         <footer class="Footer__container">
@@ -607,21 +603,22 @@
                       <a class="Footer__link" href="/about-sheer-science/">Mission</a>
                     </li>
                     <li>
-                      <span class="fonts__barlow-medium">Address</span>
-                      <p>260 Smith Street, Farmingdale, NY 11735</p>
+                      <a class="Footer__link" href="/privacy-policy/">Privacy Policy</a>
                     </li>
                     <li>
-                      <span class="fonts__barlow-medium">Shipping & Returns</span>
-                      <a class="Footer__link" href="/return-policy/">Return Policy</a>
+                      <a class="Footer__link" href="/about-sheer-science/">Satisfaction Guarantee</a>
                     </li>
                     <li>
-                      <a class="Footer__link" href="/return-policy/">Shipping Policy</a>
+                      <a class="Footer__link" href="/terms-conditions/">Terms & Conditions</a>
                     </li>
                   </ul>
                 </div>
                 <div class="Footer__column">
                     <h4 class="Footer__column-heading fonts__barlow-regular">Community</h4>
                     <ul aria-label="Community" class="Footer__column-links">
+                      <li>
+                        <a class="Footer__link" href="/sheer-voice-blog/">Blog</a>
+                      </li>
                       <li>
                         <a class="Footer__link" href="/faq/">FAQs</a>
                       </li>
@@ -631,33 +628,53 @@
                     </ul>
                 </div>
                 <div class="Footer__column">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Support</h4>
-                  <ul aria-label="Support" class="Footer__column-links">
+                  <h4 class="Footer__column-heading fonts__barlow-regular">Shipping & Returns</h4>
+                  <ul aria-label="Shipping and Returns" class="Footer__column-links">
                     <li>
-                      <span class="fonts__barlow-medium">Email</span>
-                      <a class="Footer__link" href="/">CustomerCare@SheerScience.com</a>
+                        <a class="Footer__link" href="/return-policy/">International Orders</a>
                     </li>
                     <li>
-                      <span class="fonts__barlow-medium">Customer Care</span>
-                      <p>Monday-Friday 8AM-7PM EST<br/> Saturday 8AM-5PM EST</p>
+                      <a class="Footer__link" href="/return-policy/">Return Policy</a>
                     </li>
                     <li>
-                      <span class="fonts__barlow-medium">Call To Order</span>
-                      <a class="Footer__link" href="tel:18006650821"><i class="pe-7s-call"></i> 1-800-665-0821</a>
+                      <a class="Footer__link" href="/return-policy/">Shipping Policy</a>
                     </li>
                     <li>
-                      <span class="fonts__barlow-medium">Service & Support</span>
-                      <a class="Footer__link" href="tel:18006652317"><i class="pe-7s-call"></i> 1-800-665-2317</a>
+                      <span class="fonts__barlow-medium">Free Shipping on all US ORDERS</span>
                     </li>
                   </ul>
+
+                </div>
+                <div class="Footer__column">
+                    <h4 class="Footer__column-heading fonts__barlow-regular">Support</h4>
+                    <ul aria-label="Support" class="Footer__column-links">
+                      <li>
+                          <span class="fonts__barlow-medium">Email</span>
+                          <a class="Footer__link" href="/">CustomerCare@SheerScience.com</a>
+                      </li>
+                      <li>
+                          <span class="fonts__barlow-medium">Customer Care</span>
+                          <p>Monday-Friday 8AM-7PM EST<br/> Saturday 8AM-5PM EST</p>
+                      </li>
+                      <li>
+                        <span class="fonts__barlow-medium">Call To Order</span>
+                        <a class="Footer__link" href="tel:18006650821"><i class="pe-7s-call"></i> 1-800-665-0821</a>
+                      </li>
+                      <li>
+                        <span class="fonts__barlow-medium">Service & Support</span>
+                        <a class="Footer__link" href="tel:18006652317"><i class="pe-7s-call"></i> 1-800-665-2317</a>
+                      </li>
+                    </ul>
                 </div>
               </div>
+
+
               <div class="Footer__signup layout__margin-auto">
-                <!-- <div class="Footer__column-heading">
+                <div class="Footer__column-heading">
                   <h4 class="Footer__column-heading fonts__barlow-regular">Sign up for news, offers & info.</h4>
-                </div> -->
+                </div>
                 <div class="Footer__signup-content">
-                  <!-- <div class="Footer__signup-column">
+                  <div class="Footer__signup-column">
                     <div>
                       <form class="Newsletter__form" novalidate="">
                         <div class="mainNewsletter__form-input-group">
@@ -669,7 +686,7 @@
                       </form>
                     </div>
                     <div class="email-signup-response-text js-email-signup-response-text"></div>
-                  </div> -->
+                  </div>
                   <div class="Footer__signup-column">
                       <a aria-label="Facebook" class="Footer__social-link" href="https://www.facebook.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-facebook" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Facebook Icon</title><desc>Sheer Science on Facebook</desc><path d="M17.996 32H12V16H8v-5.514l4-.002-.007-3.248c0-4.498 1.22-7.236 6.519-7.236h4.412v5.515h-2.757c-2.064 0-2.163.771-2.163 2.209l-.008 2.76h4.959l-.584 5.514-4.37.002-.004 16z"></path></svg></span></a>
                       <a aria-label="Twitter" class="Footer__social-link" href="https://twitter.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-twitter" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Twitter Icon</title><desc>Sheer Science on Twitter</desc><path d="M32 6.076a13.14 13.14 0 0 1-3.771 1.034 6.592 6.592 0 0 0 2.887-3.632 13.151 13.151 0 0 1-4.169 1.593 6.557 6.557 0 0 0-4.792-2.073 6.565 6.565 0 0 0-6.565 6.565c0 .515.058 1.016.17 1.496a18.64 18.64 0 0 1-13.532-6.86A6.536 6.536 0 0 0 1.339 7.5a6.563 6.563 0 0 0 2.921 5.465 6.54 6.54 0 0 1-2.974-.821l-.001.083a6.568 6.568 0 0 0 5.266 6.437 6.578 6.578 0 0 1-2.965.112 6.571 6.571 0 0 0 6.133 4.559 13.172 13.172 0 0 1-8.154 2.81c-.53 0-1.052-.031-1.566-.092a18.579 18.579 0 0 0 10.064 2.95c12.076 0 18.679-10.004 18.679-18.68 0-.285-.006-.568-.019-.849a13.347 13.347 0 0 0 3.276-3.398z"></path></svg></span></a>
@@ -695,93 +712,55 @@
             </div>
           </div>
         </footer>
-        <!-- Footer -->
+        <!-- Footer.// -->
 
-      </div>
-
-
-      <div class="Modal__overlay Modal__overlay--hidden Modal__overlay--cart" role="presentation">
-          <aside aria-describedby="description-cart" aria-modal="true" role="dialog">
-            <section class="Cart__container Cart__container--can-transition">
-              <header class="Cart__header">
-                <div class="Cart__header-info">
-                  <h2 class="Cart__heading fonts__barlow-regular" id="description-cart">Your cart</h2><span>1 Item</span>
+        <!-- Cart -->
+        <div class="Modal__overlay Modal__overlay--hidden Modal__overlay--cart" role="presentation">
+            <aside aria-describedby="description-cart" aria-modal="true" role="dialog">
+              <section class="Cart__container Cart__container--can-transition">
+                <header class="Cart__header">
+                  <div class="Cart__header-info">
+                    <h2 class="Cart__heading fonts__barlow-regular" id="description-cart">Your cart</h2><span>1 Item</span>
+                  </div>
+                  <button aria-label="Hide" class="Cart__hide-button">
+                    <span aria-hidden="true" class="Icon__icon Cart__hide-button-icon" data-icon="close-thin" data-qa="icon"><svg viewBox="0 0 14 14" class="Icon__icon-svg" role="img"><title>Close</title><g fill-rule="nonzero"><path d="M.485 1.546A.75.75 0 1 1 1.545.485L13.52 12.458a.75.75 0 0 1-1.061 1.06L.485 1.547z"></path><path d="M.485 12.458a.75.75 0 1 0 1.06 1.06L13.52 1.547A.75.75 0 0 0 12.458.485L.485 12.458z"></path></g></svg></span>
+                  </button>
+                </header>
+                <div aria-live="polite" class="Notification__container Notification__container--hidden"><span class="Notification__message"><span></span></span>
+                  <button aria-label="Close" class="Notification__close"><span aria-hidden="true" class="Icon__icon Notification__close-icon" data-icon="close" data-qa="icon"><svg viewBox="0 0 11.6 11.6" class="Icon__icon-svg" role="img"><title>Close</title><path d="M11.6 1.4L10.2 0 5.8 4.4 1.4 0 0 1.4l4.4 4.4L0 10.2l1.4 1.4 4.4-4.4 4.4 4.4 1.4-1.4-4.4-4.4z"></path></svg></span>
+                  </button>
                 </div>
-                <button aria-label="Hide" class="Cart__hide-button">
-                  <span aria-hidden="true" class="Icon__icon Cart__hide-button-icon" data-icon="close-thin" data-qa="icon"><svg viewBox="0 0 14 14" class="Icon__icon-svg" role="img"><title>Close</title><g fill-rule="nonzero"><path d="M.485 1.546A.75.75 0 1 1 1.545.485L13.52 12.458a.75.75 0 0 1-1.061 1.06L.485 1.547z"></path><path d="M.485 12.458a.75.75 0 1 0 1.06 1.06L13.52 1.547A.75.75 0 0 0 12.458.485L.485 12.458z"></path></g></svg></span>
-                </button>
-              </header>
-              <div aria-live="polite" class="Notification__container Notification__container--hidden"><span class="Notification__message"><span></span></span>
-                <button aria-label="Close" class="Notification__close"><span aria-hidden="true" class="Icon__icon Notification__close-icon" data-icon="close" data-qa="icon"><svg viewBox="0 0 11.6 11.6" class="Icon__icon-svg" role="img"><title>Close</title><path d="M11.6 1.4L10.2 0 5.8 4.4 1.4 0 0 1.4l4.4 4.4L0 10.2l1.4 1.4 4.4-4.4 4.4 4.4 1.4-1.4-4.4-4.4z"></path></svg></span>
-                </button>
-              </div>
 
-              <div class="Cart__cart-content">
-                <div class="Cart__cart-content-wrapper">
-                  <div class="Cart__empty-cart visually-hidden">
-                    <h2 class="Cart__empty-cart-heading">Your cart is empty</h2>
-                    <a href="/index.html" class="btn--big fonts__barlow-regular btn-primary">Shop now</a>
-                  </div>
-    
-                  <div class="Cart_line-item--container">
-                    <div data-line-item="true" class="LineItemCard">
-                      <div class="ProductImageContainer">
-                        <img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
-                      </div>
-                      <div data-qa="product-info" class="ProductInfoContainer">
-                        <div class="DescriptionContainer">
-                          <h4 class="ProductName">GoFlo Prostate</h4>
-                          <span class="OptionText-wdax5f-4 cxVSoJ">Size: Bottle</span>
-                        </div>
-                        <div class="QuantityContainer">
-                          <span class="QuantityControl">
-                          <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
-                            <span class="QuantityIcon QuantityIconDecrease">-</span>
-                            </button>
-                            <output class="QuantityCount">1</output>
-                            <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
-                          </button>
-                          </span>
-                        </div>
-                        <div class="SummaryContainer">
-                          <div class="PriceContainer">
-                            <output class="Price">$29.95</output>
-                          </div>
-                          <div class="ShipsByContainer">
-                            <output></output>
-                          </div>
-                          <button aria-label="Remove" data-remove-button="true" class="RemoveButton">
-                            <img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
-                            <span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
-                          </button>
-                        </div>
-                      </div>
+                <div class="Cart__cart-content">
+                  <div class="Cart__cart-content-wrapper">
+                    <div class="Cart__empty-cart visually-hidden">
+                      <h2 class="Cart__empty-cart-heading">Your cart is empty</h2>
+                      <a href="/index.html" class="btn--big fonts__barlow-regular btn-primary">Shop now</a>
                     </div>
-                  </div>
-
-                  <div class="Cart_line-item--container">
+      
+                    <div class="Cart_line-item--container">
                       <div data-line-item="true" class="LineItemCard">
                         <div class="ProductImageContainer">
                           <img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
                         </div>
                         <div data-qa="product-info" class="ProductInfoContainer">
                           <div class="DescriptionContainer">
-                            <h4 class="ProductName">Kerafy Hair Building Fibers</h4>
-                            <span class="OptionText">Buy 2 get 1 free</span>
+                            <h4 class="ProductName">GoFlo Prostate</h4>
+                            <span class="OptionText-wdax5f-4 cxVSoJ">Size: Bottle</span>
                           </div>
                           <div class="QuantityContainer">
                             <span class="QuantityControl">
                             <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
                               <span class="QuantityIcon QuantityIconDecrease">-</span>
                               </button>
-                              <output class="QuantityCount">2</output>
+                              <output class="QuantityCount">1</output>
                               <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
                             </button>
                             </span>
                           </div>
                           <div class="SummaryContainer">
                             <div class="PriceContainer">
-                              <output class="Price">$59.90</output>
+                              <output class="Price">$29.95</output>
                             </div>
                             <div class="ShipsByContainer">
                               <output></output>
@@ -794,6 +773,7 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="Cart_line-item--container">
                         <div data-line-item="true" class="LineItemCard">
                           <div class="ProductImageContainer">
@@ -801,24 +781,24 @@
                           </div>
                           <div data-qa="product-info" class="ProductInfoContainer">
                             <div class="DescriptionContainer">
-                              <h4 class="ProductName">Plexaderm Rapid Reduction Serum</h4>
-                              <span class="OptionText">1 Bottle</span>
+                              <h4 class="ProductName">Kerafy Hair Building Fibers</h4>
+                              <span class="OptionText">Buy 2 get 1 free</span>
                             </div>
                             <div class="QuantityContainer">
                               <span class="QuantityControl">
                               <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
                                 <span class="QuantityIcon QuantityIconDecrease">-</span>
                                 </button>
-                                <output class="QuantityCount">1</output>
+                                <output class="QuantityCount">2</output>
                                 <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
                               </button>
                               </span>
                             </div>
                             <div class="SummaryContainer">
                               <div class="PriceContainer">
-                                <output class="Price">$59.95</output>
+                                <output class="Price">$59.90</output>
                               </div>
-                              <div class="ShipsByContainer-wdax5f-18 bGmvME">
+                              <div class="ShipsByContainer">
                                 <output></output>
                               </div>
                               <button aria-label="Remove" data-remove-button="true" class="RemoveButton">
@@ -829,43 +809,77 @@
                           </div>
                         </div>
                       </div>
+                      <div class="Cart_line-item--container">
+                          <div data-line-item="true" class="LineItemCard">
+                            <div class="ProductImageContainer">
+                              <img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
+                            </div>
+                            <div data-qa="product-info" class="ProductInfoContainer">
+                              <div class="DescriptionContainer">
+                                <h4 class="ProductName">Plexaderm Rapid Reduction Serum</h4>
+                                <span class="OptionText">1 Bottle</span>
+                              </div>
+                              <div class="QuantityContainer">
+                                <span class="QuantityControl">
+                                <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
+                                  <span class="QuantityIcon QuantityIconDecrease">-</span>
+                                  </button>
+                                  <output class="QuantityCount">1</output>
+                                  <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
+                                </button>
+                                </span>
+                              </div>
+                              <div class="SummaryContainer">
+                                <div class="PriceContainer">
+                                  <output class="Price">$59.95</output>
+                                </div>
+                                <div class="ShipsByContainer-wdax5f-18 bGmvME">
+                                  <output></output>
+                                </div>
+                                <button aria-label="Remove" data-remove-button="true" class="RemoveButton">
+                                  <img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
+                                  <span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-                  <div class="Container__Summary">
-                    <ul class="Container__Summary-list">
-                      <li data-summary-item="subtotal" class="SummaryItem">
-                        <span class="SummaryItemLabel">Subtotal</span>
-                        <span class="SummaryItemValue">$195.00</span>
-                      </li>
-                      <li data-summary-item="discount" class="SummaryItem">
-                        <span class="SummaryItemLabel">Discount<span class="SummaryDiscountCode">(LABOR19)</span></span>
-                        <span class="SummaryItemValue">-$10.00</span>
-                      </li>
-                      <li data-summary-item="shipping" class="SummaryItem">
-                        <span class="SummaryItemLabel">Shipping</span>
-                        <span class="SummaryItemValue">Free</span>
-                      </li>
-                      <li data-summary-item="total" class="SummaryItem">
-                        <span class="SummaryItemLabel">Estimated total</span>
-                        <span class="SummaryItemValue">$195.00</span>
-                      </li>
-                    </ul>
+                    <div class="Container__Summary">
+                      <ul class="Container__Summary-list">
+                        <li data-summary-item="subtotal" class="SummaryItem">
+                          <span class="SummaryItemLabel">Subtotal</span>
+                          <span class="SummaryItemValue">$195.00</span>
+                        </li>
+                        <li data-summary-item="discount" class="SummaryItem">
+                          <span class="SummaryItemLabel">Discount<span class="SummaryDiscountCode">(LABOR19)</span></span>
+                          <span class="SummaryItemValue">-$10.00</span>
+                        </li>
+                        <li data-summary-item="shipping" class="SummaryItem">
+                          <span class="SummaryItemLabel">Shipping</span>
+                          <span class="SummaryItemValue">Free</span>
+                        </li>
+                        <li data-summary-item="total" class="SummaryItem">
+                          <span class="SummaryItemLabel">Estimated total</span>
+                          <span class="SummaryItemValue">$195.00</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-qa="checkout-cta" class="CheckoutCTAContainer">
+                      <a href="/checkout/" class="btn btn--big fonts__barlow-regular btn-primary">
+                        <svg viewBox="0 0 13 16" class="CheckoutLockIcon Icon__icon--small">
+                          <title>lock</title>
+                          <desc>Created with Sketch.</desc>
+                          <path fill="#FFF" fill-rule="nonzero" d="M8.92 5.333v-1.17A2.383 2.383 0 0 0 6.539 1.78h-.155A2.383 2.383 0 0 0 4 4.163v1.168c-.598.048-1.194.112-1.789.192V4.162A4.169 4.169 0 0 1 6.391 0h.155a4.169 4.169 0 0 1 4.164 4.163v1.362a30.542 30.542 0 0 0-1.79-.192zM.939 7.205a29.751 29.751 0 0 1 11.064 0c.49.093.844.523.84 1.021v6.278a.933.933 0 0 1-.757.916l-.567.107a27.149 27.149 0 0 1-10.097 0l-.57-.107a.933.933 0 0 1-.76-.916V8.133c.001-.448.32-.833.76-.916l.087-.012zm4.487 5.859a2.87 2.87 0 0 0 2.086 0 .231.231 0 0 0 .135-.298l-.543-1.532a1.021 1.021 0 1 0-1.268 0l-.543 1.532a.231.231 0 0 0 .133.298z"></path>
+                        </svg>Checkout</a>
+                    </div>
                   </div>
-                  <div data-qa="checkout-cta" class="CheckoutCTAContainer">
-                    <a href="/checkout/" class="btn btn--big fonts__barlow-regular btn-primary">
-                      <svg viewBox="0 0 13 16" class="CheckoutLockIcon Icon__icon--small">
-                        <title>lock</title>
-                        <desc>Created with Sketch.</desc>
-                        <path fill="#FFF" fill-rule="nonzero" d="M8.92 5.333v-1.17A2.383 2.383 0 0 0 6.539 1.78h-.155A2.383 2.383 0 0 0 4 4.163v1.168c-.598.048-1.194.112-1.789.192V4.162A4.169 4.169 0 0 1 6.391 0h.155a4.169 4.169 0 0 1 4.164 4.163v1.362a30.542 30.542 0 0 0-1.79-.192zM.939 7.205a29.751 29.751 0 0 1 11.064 0c.49.093.844.523.84 1.021v6.278a.933.933 0 0 1-.757.916l-.567.107a27.149 27.149 0 0 1-10.097 0l-.57-.107a.933.933 0 0 1-.76-.916V8.133c.001-.448.32-.833.76-.916l.087-.012zm4.487 5.859a2.87 2.87 0 0 0 2.086 0 .231.231 0 0 0 .135-.298l-.543-1.532a1.021 1.021 0 1 0-1.268 0l-.543 1.532a.231.231 0 0 0 .133.298z"></path>
-                      </svg>Checkout</a>
-                  </div>
+
                 </div>
-
-              </div>
-            </section>
-          </aside>
-      </div>
-
-
+              </section>
+            </aside>
+        </div>
+        <!-- Cart.// -->
     </div>
   </div>
   

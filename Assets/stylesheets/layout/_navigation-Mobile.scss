@@ -59,6 +59,10 @@
         -webkit-transition: background-color .15s ease-out;
         -o-transition: background-color .15s ease-out;
         transition: background-color .15s ease-out;
+         @include on-event {
+            color: $brand-color;
+            text-decoration: none;
+        }
         .ProductListMobile__nav-menu-item--toggler {
             position: relative;
             -ms-flex-item-align: center;
