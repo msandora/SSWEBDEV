@@ -5,7 +5,10 @@
 
 // I did not know where to put this stuff so its here for now
 main {
-	&.Header__site-padding-top {
+	&.Header__site-padding-top-without-promo {
+		padding-top: 3rem;
+	}
+	&.Header__site-padding-top-with-promo {
 		padding-top: 5rem;
 	}
    	&.flex {

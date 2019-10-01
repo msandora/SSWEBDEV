@@ -34,3 +34,11 @@ input {
 * :hover input ~ .checkmark {
 	background-color: $brand-color-mid;
 }
+.radio label {
+    width: 100%;
+}
+.radio .option-text {
+	width: 80%;
+    line-height: 23px;
+    padding: 0 0 0 10px;
+}

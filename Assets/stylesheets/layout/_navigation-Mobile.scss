@@ -31,20 +31,20 @@
 }
 
 
-.ProductListMobile__mobile-nav-container {
+.MenuListMobile__mobile-nav-container {
     width: 100%;
-    .ProductListMobile__nav-menu-item {
+    .MenuListMobile__nav-menu-item {
         border-bottom: 1px solid #e6e6e6;
         background-color: $white-base;
         -webkit-transition: background-color .15s ease-out;
         -o-transition: background-color .15s ease-out;
         transition: background-color .15s ease-out;
-        &.ProductListMobile__nav-menu-item--is-active {
+        &.MenuListMobile__nav-menu-item--is-active {
             background-color: $off-white;
         }
     }
 
-    .ProductListMobile__nav-menu-item-header {
+    .MenuListMobile__nav-menu-item-header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -54,24 +54,24 @@
         width: 100%;
         padding: 1.125rem 1.5625rem;
         font-size: 1.5rem;
-        line-height: 1;
+        line-height: 1; 
         color: $brand-color;
         -webkit-transition: background-color .15s ease-out;
         -o-transition: background-color .15s ease-out;
         transition: background-color .15s ease-out;
          @include on-event {
             color: $brand-color;
-            text-decoration: none;
+            text-decoration: none; 
         }
-        .ProductListMobile__nav-menu-item--toggler {
+        .MenuListMobile__nav-menu-item--toggler {
             position: relative;
             -ms-flex-item-align: center;
             align-self: center;
             width: .625rem;
             height: .625rem;
             margin-left: auto;
-            .ProductListMobile__icon-contract,
-            .ProductListMobile__icon-expand {
+            .MenuListMobile__icon-contract,
+            .MenuListMobile__icon-expand {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -89,8 +89,8 @@
 }
 
 
-.ProductListMobile__nav-menu-item--is-active{
-    .ProductListMobile__icon-expand {
+.MenuListMobile__nav-menu-item--is-active{
+    .MenuListMobile__icon-expand {
         display: none;
     }  
 }
@@ -129,26 +129,23 @@
 	}
 }
 
-.ProductListMobile__mobile-nav-container {
+.MenuListMobile__mobile-nav-container {
 
-    .ProductNavGroup__category {
+    .MenuNavGroup__category {
         padding: 0 1.5625rem 1.25rem;
-        .ProductNavGroup__category--product-item {
+        .MenuNavGroup__category--product-item {
             padding: .5rem 0;
             font-size: 1.25rem;
         }
-        .ProductNavGroup__category--product-link {
+        .MenuNavGroup__category--product-link {
             display: inline-block;
             color: #151515;
         }
-        .ProductNavGroup__category--product-item-btn {
+        .MenuNavGroup__category--product-item-btn {
             padding-top: 0.5rem;
             text-align: center;
-            .ProductNavGroup__category--img {
-                width: 100%;
-            }
         }
-        &.ProductListMobile__nav-group--is-hidden{
+        &.MenuListMobile__nav-group--is-hidden{
             display: none;
         }
     }

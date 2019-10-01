@@ -93,3 +93,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+// Apply grdient
+@mixin gradient($top_color, $bottom_color) {
+  background-image: -webkit-linear-gradient(top, $top_color 0%, $bottom_color 100%);
+  background-image: linear-gradient(to bottom, $top_color 0%, $bottom_color 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($top_color)}', endColorstr='#{ie-hex-str($bottom_color)}', GradientType=0); // IE9 and down
+}
