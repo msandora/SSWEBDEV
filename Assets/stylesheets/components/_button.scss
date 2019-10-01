@@ -19,6 +19,7 @@ button, input {
     color: $white-base;
     background: $link-color;
     border: none;
+    padding: 0.65rem 1rem;
     @include on-event {
         background: $link-hover-color;
         text-decoration: $link-hover-decoration;

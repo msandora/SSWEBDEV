@@ -3,7 +3,102 @@ Sheer Science Redesign
 -----------------------------------------------------*/
 console.log("All Systems Go!");
 
+
+function create_custom_dropdowns() {
+  $('.swatch-dropdown select').each(function(i, select) {
+    if (!$(this).next().hasClass('dropdown')) {
+      $(this).after('<div class="dropdown ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><span class="active-swatch"></span><div class="list"><ul></ul></div></div>');
+      var dropdown = $(this).next();
+      var options = $(select).find('option');
+      var selected = $(this).find('option:selected');
+      dropdown.find('.current').html(selected.data('display-text') || selected.text());
+      options.each(function(j, o) {
+        var display = $(o).data('display-text') || '';
+        var swatch = $(o).val().replace(/\s+/g, '-').toLowerCase();
+        if (display != 'Select Color') {
+          dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '<img class="swatch-color" src="/SheerScience/Assets/img/' + swatch + '-swatch.png"></li>');
+        }
+      });
+    }
+  });
+}
+
+// Event listeners
+
+// Open/close
+$(document).on('click', '.swatch-dropdown .dropdown', function(event) {
+  $('.dropdown').not($(this)).removeClass('open');
+  $(this).toggleClass('open');
+  if ($(this).hasClass('open')) {
+    $(this).find('.option').attr('tabindex', 0);
+    $(this).find('.selected').focus();
+  } else {
+    $(this).find('.option').removeAttr('tabindex');
+    $(this).focus();
+  }
+});
+// Close when clicking outside
+$(document).on('click', function(event) {
+  if ($(event.target).closest('.dropdown').length === 0) {
+    $('.dropdown').removeClass('open');
+    $('.dropdown .option').removeAttr('tabindex');
+  }
+  event.stopPropagation();
+});
+// Option click
+$(document).on('click', '.dropdown .option', function(event) {
+  $(this).closest('.list').find('.selected').removeClass('selected');
+  $(this).addClass('selected');
+  var text = $(this).data('display-text') || $(this).text();
+  $(this).closest('.dropdown').find('.current').text(text);
+  $(this).closest('.dropdown').prev('select').val($(this).data('value')).trigger('change');
+  var currentSwatch = $(this).children('span').attr('class');
+   $('<span class="swatch-color swatch-' + currentSwatch + '"></span>').appendTo(".active-swatch");
+  //  $('<span class="swatch-color ' + currentSwatch + '"></span>').appendTo($(this).parent('.dropdown').find(".active-swatch"));
+});
+
+// Keyboard events
+$(document).on('keydown', '.dropdown', function(event) {
+  var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+  // Space or Enter
+  if (event.keyCode == 32 || event.keyCode == 13) {
+    if ($(this).hasClass('open')) {
+      focused_option.trigger('click');
+    } else {
+      $(this).trigger('click');
+    }
+    return false;
+    // Down
+  } else if (event.keyCode == 40) {
+    if (!$(this).hasClass('open')) {
+      $(this).trigger('click');
+    } else {
+      focused_option.next().focus();
+    }
+    return false;
+    // Up
+  } else if (event.keyCode == 38) {
+    if (!$(this).hasClass('open')) {
+      $(this).trigger('click');
+    } else {
+      var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+      focused_option.prev().focus();
+    }
+    return false;
+  // Esc
+  } else if (event.keyCode == 27) {
+    if ($(this).hasClass('open')) {
+      $(this).trigger('click');
+    }
+    return false;
+  }
+});
+
+
 jQuery(document).ready(function () {
+    // Initialize custom dropdown field for swatch picker
+    create_custom_dropdowns();
+
     // Open/Close Mobile Navigation
     $('.Header__nav-mobile-menu').on('click', function () {   
         var status = $('.Header__nav-group--mobile').attr('aria-hidden');
@@ -23,24 +118,24 @@ jQuery(document).ready(function () {
     
 
     //Mobile Navigation Dropdowns
-    $('.ProductListMobile__nav-menu-item').click(function () {
-      var status = $(this).children(".ProductListMobile__nav-group").attr('data-status');
+    $('.MenuListMobile__nav-menu-item').click(function () {
+      var status = $(this).children(".MenuListMobile__nav-group").attr('data-status');
   
       // close everything first
-      $(".ProductListMobile__nav-group").attr('data-status', 'closed');
-      $('.ProductListMobile__nav-menu-item').removeClass('ProductListMobile__nav-menu-item--is-active');
-      $('.ProductListMobile__mobile-nav-container').find('ul.ProductListMobile__nav-group').addClass('ProductListMobile__nav-group--is-hidden');
+      $(".MenuListMobile__nav-group").attr('data-status', 'closed');
+      $('.MenuListMobile__nav-menu-item').removeClass('MenuListMobile__nav-menu-item--is-active');
+      $('.MenuListMobile__mobile-nav-container').find('ul.MenuListMobile__nav-group').addClass('MenuListMobile__nav-group--is-hidden');
 
       if (status == 'closed') {
           // open it
-          $(this).children(".ProductListMobile__nav-group").attr('data-status', 'open');
-          $(this).addClass('ProductListMobile__nav-menu-item--is-active');
-          $(this).find('ul').removeClass('ProductListMobile__nav-group--is-hidden');
+          $(this).children(".MenuListMobile__nav-group").attr('data-status', 'open');
+          $(this).addClass('MenuListMobile__nav-menu-item--is-active');
+          $(this).find('ul').removeClass('MenuListMobile__nav-group--is-hidden');
       } else {
           // close it
-          $(this).children(".ProductListMobile__nav-group").attr('data-status', 'closed');
-          $(this).removeClass('ProductListMobile__nav-menu-item--is-active');
-          $(this).find('ul').addClass('ProductListMobile__nav-group--is-hidden');
+          $(this).children(".MenuListMobile__nav-group").attr('data-status', 'closed');
+          $(this).removeClass('MenuListMobile__nav-menu-item--is-active');
+          $(this).find('ul').addClass('MenuListMobile__nav-group--is-hidden');
       }
     });
 
@@ -53,7 +148,7 @@ jQuery(document).ready(function () {
 
       if (status == 'closed') {
         $('#NavOverlay').addClass("Header__overlay-visible").removeClass("layout__visually-hidden");
-        $(".ProductList__nav-primary--container").addClass('ProductList__nav-primary--container-hover ProductList__nav-primary--container-dropdown-visible');
+        $(".MenuList__nav-primary--container").addClass('MenuList__nav-primary--container-hover MenuList__nav-primary--container-dropdown-visible');
         $(".Header__overlay").attr('data-status', 'open');
       }
     }, function () {  // Dismiss
@@ -62,13 +157,11 @@ jQuery(document).ready(function () {
 
       if (status == 'open') {
         $('#NavOverlay').removeClass("Header__overlay-visible").addClass("layout__visually-hidden");
-        $(".ProductList__nav-primary--container").removeClass('ProductList__nav-primary--container-hover ProductList__nav-primary--container-dropdown-visible');
+        $(".MenuList__nav-primary--container").removeClass('MenuList__nav-primary--container-hover MenuList__nav-primary--container-dropdown-visible');
         $(".Header__overlay").attr('data-status', 'closed');
       }
     });
 
-
-    
     // Cart Drawer
     $('.CartIcon__cart-icon, .Cart__hide-button').on('click', function () {  
       $('.Modal__overlay--cart').toggleClass("Modal__overlay--hidden").toggleClass("Modal__overlay--visible");
