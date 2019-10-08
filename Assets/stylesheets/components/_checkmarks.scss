@@ -16,7 +16,7 @@ input {
 .checkmark {
 	margin: 2px;
 	height: 20px;
-	width: 20px;
+	min-width: 20px;
 	background-color: $brand-color-light;
 	&:after {
 		content: "";
@@ -35,10 +35,9 @@ input {
 	background-color: $brand-color-mid;
 }
 .radio label {
-    width: 100%;
+	display: inline-flex;
 }
 .radio .option-text {
-	width: 80%;
     line-height: 23px;
-    padding: 0 0 0 10px;
+    margin: 0 0 0 10px;
 }

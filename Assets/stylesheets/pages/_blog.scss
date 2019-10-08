@@ -69,6 +69,10 @@
         h4 {
             margin: 1.25rem 0;
         }
+        a {
+            display:block;
+            margin: 1.25rem 0;
+        }
     }
     .related-post-thumbnail-container {
         float: left;
@@ -76,12 +80,11 @@
         height: 60px;
         border-radius: 60px;
         overflow: hidden;
-        margin: 0 15px 15px 0;
+        margin: 0 15px 0 0;
         img {
             float: left;
-            width: 110px;
+            width: 60px;
             height: auto;
-            margin: -26px 0 0 -24px;
         }
     }
     .related-post-container {

@@ -27,15 +27,16 @@
 // 5. Components
 @import 'components/button',
         'components/carousel',
-        'components/checkmarks',
-        'components/newsletter',
         'components/keyword-search',
-        'components/cart';
+        'components/cart',
+        'components/newsletter',
+        'components/checkmarks';
+;
 
 // 6. Page-specific styles
 @import 'pages/home',
-        'pages/blog',
-        'pages/kerafy-swatches';
+        'pages/kerafy-swatches',
+        'pages/blog';
 
 // 7. Themes
 @import 'themes/default';
