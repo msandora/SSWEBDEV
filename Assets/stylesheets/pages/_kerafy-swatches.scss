@@ -1,17 +1,16 @@
 .dropdown { 
   @include gradient(rgba(255,255,255,.25), rgba(255,255,255,0));
   background-color: $gray_lighter;
-  border-radius: $border_radius;
+  border-radius: $border-radius;
   border: solid 1px $gray_light; 
   box-shadow: 0 1px 0 rgba(0,0,0,0.0075);
   box-sizing: border-box;
   cursor: pointer;
   display: block;
   float: left;
-  font-size: 14px;
   font-weight: normal;
-  height: $input_height;
-  line-height: $input_height - 2;
+  height: $input-height;
+  line-height: $input-height - 2;
   outline: none;
   padding-left: 15px;
   padding-right: 45px;
@@ -87,7 +86,7 @@
     transform-origin: 50% 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .09);
     background-color: #fff;
-    border-radius: $border_radius;
+    border-radius: $border-radius;
     margin-top: 4px;
     padding: 3px 0;
     opacity: 0;
@@ -103,7 +102,7 @@
   .option {
     cursor: default;
     font-weight: 400;
-    line-height: $input_height - 2;
+    line-height: $input-height - 2;
     outline: none;
     padding-left: 15px;
     padding-right: 45px;
@@ -137,16 +136,9 @@
 			color: #666;
 		}
   }
-  
-	.swatch-black {background-color: #000;}
-	.swatch-dark-brown {background-color: #23120B;}
-	.swatch-medium-brown {background-color: rgb(82, 48, 28);}
-	.swatch-light-brown {background-color: #9d6044;}
-	.swatch-brown {background-color: #5A3825;}
-	.swatch-auburn {background-color: #912e17;}
-	.swatch-medium-blonde {background-color: #f1e49e;}
-	.swatch-blonde {background-color: #faf0be;}
-	.swatch-light-grey {background-color: #e0e3e3;}
-
 }
 
+.outofstock-message {
+  display: block;
+  padding: 0.5rem;
+}

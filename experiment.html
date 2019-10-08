@@ -22,16 +22,11 @@
 <body>
 
   <div id="app" class="wrapper">
-    <div>
         <!-- Header -->
         <header class="Header__container Header__container--headroom">
             <div id="NavOverlay" class="Header__overlay layout__visually-hidden" data-status="closed"></div>
 
-            <div class="MarketingContainer__marketing-container" aria-hidden="false">
-                <div class="MarketingContainer__promotion--content fonts__barlow-medium">
-                  <span><a href="#" title="Promotion">Free Shipping on all US Orders</a></span>
-                </div>
-            </div>
+
             <section class="Header__inner">
               <div class="Header__nav-mobile-menu">
                 <button aria-controls="mobile-menu" aria-expanded="true" aria-label="Close Menu" class="Header__menu-button">
@@ -377,180 +372,11 @@
         <!-- Header -->
 
         <!-- Content -->
-        <main class="flex  Header__site-padding-top-with-promo" role="main">
-          <!-- Carousel -->
-          <div id="carouselId" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselId" data-slide-to="1"></li>
-              <li data-target="#carouselId" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <picture>
-                    <source sizes="(max-width: 576px)" srcset="
-                    https://via.placeholder.com/576x576?text=MobileFirst%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=First%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="First Slide">
-                </picture>
-                <div class="carousel-caption">
-                  <h2>Happy Labor Day!</h2>
-                  <h6>Celebrate with Savings</h6>
-                  <div>
-                    <a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/sheer-science/">SHOP NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <picture>
-                    <source sizes="(max-width: 576px)" srcset="
-                    https://via.placeholder.com/576x576?text=MobileSecond%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=Second%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Second Slide">
-                </picture>
-                <div class="carousel-caption">
-                  <h2>NEW!</h2>
-                  <h6>Reset &amp; Replenish Pads </h6>
-                  <h6>
-                    <p>- Remove Dirt, Oil &amp; Makeup</p>
-                    <p>- Infused with Hyaluronic Acid</p>
-                    <p>- Hydrate &amp; Replenish the Skin</p>
-                  </h6>
-                  <div>
-                      <a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/plexaderm-reset-replenish-pads/">SHOP NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <picture>
-                    <source sizes="(max-width: 576px)" srcset="
-                    https://via.placeholder.com/576x576?text=MobileThird%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=Third%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Third Slide">
-                </picture>
-                <div class="carousel-caption">
-                  <h2>NEW!</h2>
-                  <h6>Elasta-Red Astaxanthin</h6>
-                  <h6>
-                    <p>- Powerful antioxidant †</p>
-                    <p>- Protects against free radical damage †</p>
-                    <p>- Promotes younger looking skin</p>
-                  </h6>
-                  <div>
-                    <a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/">SHOP NOW</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+        <main class="flex Header__site-padding-top-without-promo" role="main">
 
 
-          <div class="container pt-4">
-            <div class="row">
-              <div class="col-md-4">
-                <figure class="card card-product">
-                  <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                  <figcaption class="info-wrap">
-                    <h4 class="title fonts__barlow-medium fonts__barlow-regular">PLEXADERM® RAPID REDUCTION SERUM™</h4>
-                    <p class="desc">Some small description goes here</p>
-                    <div class="rating-wrap">
-                      <div class="label-rating">132 reviews</div>
-                      <div class="label-rating">154 orders </div>
-                    </div> <!-- rating-wrap.// -->
-                  </figcaption>
-                  <div class="bottom-wrap">
-                    <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
-                    <label for="Color" class="swatch-dropdown">
-                      <select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
-                        <option value="" data-display-text="Select Color">Select Color</option>
-                        <option value="Black">Black</option>
-                        <option value="Dark Brown">Dark Brown</option>
-                        <option value="Medium Brown">Medium Brown</option>
-                        <option value="Light Brown">Light Brown</option>
-                        <option value="Brown">Brown</option>
-                        <option value="Auburn">Auburn</option>
-                        <option value="Medium Blonde">Medium Blonde</option>
-                        <option value="Blonde">Blonde</option>
-                      </select>
-                    </label>
-                    <div class="price-wrap h5">
-                      <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                    </div> <!-- price-wrap.// -->
-                  </div> <!-- bottom-wrap.// -->
-                </figure>
-              </div> <!-- col // -->
-              <div class="col-md-4">
-                <figure class="card card-product">
-                  <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                  <figcaption class="info-wrap">
-                      <h4 class="title">PLEX PERFECT DAILY MOISTURIZER</h4>
-                      <p class="desc">Some small description goes here</p>
-                      <div class="rating-wrap">
-                        <div class="label-rating">132 reviews</div>
-                        <div class="label-rating">154 orders </div>
-                      </div> <!-- rating-wrap.// -->
-                  </figcaption>
-                  <div class="bottom-wrap">
-                      <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>
-                      <label for="Color" class="swatch-dropdown">
-                        <select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
-                          <option value="" data-display-text="Select Color">Select Color</option>
-                          <option value="Black">Black</option>
-                          <option value="Dark Brown">Dark Brown</option>
-                          <option value="Medium Brown">Medium Brown</option>
-                          <option value="Light Brown">Light Brown</option>
-                          <option value="Brown">Brown</option>
-                          <option value="Auburn">Auburn</option>
-                          <option value="Medium Blonde">Medium Blonde</option>
-                          <option value="Blonde">Blonde</option>
-                        </select>
-                      </label>	
-                      <div class="price-wrap h5">
-                        <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                      </div> <!-- price-wrap.// -->
-                  </div> <!-- bottom-wrap.// -->
-                </figure>
-              </div> <!-- col // -->
-              <div class="col-md-4">
-                <figure class="card card-product">
-                    <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                    <figcaption class="info-wrap">
-                      <h4 class="title">PLEXADERM HYALURONIC MOISTURIZER</h4>
-                      <p class="desc">Some small description goes here</p>
-                      <div class="rating-wrap">
-                        <div class="label-rating">132 reviews</div>
-                        <div class="label-rating">154 orders </div>
-                      </div> <!-- rating-wrap.// -->
-                  </figcaption>
-                  <div class="bottom-wrap">
-                      <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
-                      <label for="Color" class="swatch-dropdown">
-                        <select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
-                          <option value="" data-display-text="Select Color">Select Color</option>
-                          <option value="Black">Black</option>
-                          <option value="Dark Brown">Dark Brown</option>
-                          <option value="Medium Brown">Medium Brown</option>
-                          <option value="Light Brown">Light Brown</option>
-                          <option value="Brown">Brown</option>
-                          <option value="Auburn">Auburn</option>
-                          <option value="Medium Blonde">Medium Blonde</option>
-                          <option value="Blonde">Blonde</option>
-                        </select>
-                      </label>	
-                      <div class="price-wrap h5">
-                        <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                      </div> <!-- price-wrap.// -->
-                  </div> <!-- bottom-wrap.// -->
-                </figure>
-              </div> <!-- col // -->
-            </div> <!-- row.// -->             
-          </div> 
-          <!--container.//-->
+
+
         </main>
         <!-- Content.// -->
 
@@ -558,111 +384,7 @@
         <footer class="Footer__container">
           <div class="Footer__main layout__gutters container">
             <div class="Footer__content">
-              <div class="Footer__columns">
-                <div class="Footer__column">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Company</h4>
-                  <ul aria-label="Company" class="Footer__column-links">
-                    <li>
-                      <a class="Footer__link" href="/about-sheer-science/">Message from our CEO</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/about-sheer-science/">Mission</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/privacy-policy/">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/about-sheer-science/">Satisfaction Guarantee</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/terms-conditions/">Terms & Conditions</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="Footer__column">
-                    <h4 class="Footer__column-heading fonts__barlow-regular">Community</h4>
-                    <ul aria-label="Community" class="Footer__column-links">
-                      <li>
-                        <a class="Footer__link" href="/sheer-voice-blog/">Blog</a>
-                      </li>
-                      <li>
-                        <a class="Footer__link" href="/faq/">FAQs</a>
-                      </li>
-                      <li>
-                        <a class="Footer__link" href="/booking/">Talent</a>
-                      </li>
-                    </ul>
-                </div>
-                <div class="Footer__column">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Shipping & Returns</h4>
-                  <ul aria-label="Shipping and Returns" class="Footer__column-links">
-                    <li>
-                        <a class="Footer__link" href="/return-policy/">International Orders</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/return-policy/">Return Policy</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/return-policy/">Shipping Policy</a>
-                    </li>
-                    <li>
-                      <span class="fonts__barlow-medium">Free Shipping on all US ORDERS</span>
-                    </li>
-                  </ul>
 
-                </div>
-                <div class="Footer__column">
-                    <h4 class="Footer__column-heading fonts__barlow-regular">Support</h4>
-                    <ul aria-label="Support" class="Footer__column-links">
-                      <li>
-                          <span class="fonts__barlow-medium">Email</span>
-                          <a class="Footer__link" href="/">CustomerCare@SheerScience.com</a>
-                      </li>
-                      <li>
-                          <span class="fonts__barlow-medium">Customer Care</span>
-                          <p>Monday-Friday 8AM-7PM EST<br/> Saturday 8AM-5PM EST</p>
-                      </li>
-                      <li>
-                        <span class="fonts__barlow-medium">Call To Order</span>
-                        <a class="Footer__link" href="tel:18006650821"><i class="pe-7s-call"></i> 1-800-665-0821</a>
-                      </li>
-                      <li>
-                        <span class="fonts__barlow-medium">Service & Support</span>
-                        <a class="Footer__link" href="tel:18006652317"><i class="pe-7s-call"></i> 1-800-665-2317</a>
-                      </li>
-                    </ul>
-                </div>
-              </div>
-
-
-              <div class="Footer__signup">
-                <div class="Footer__column-heading layout__margin-auto">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Sign up for news, offers & info.</h4>
-                </div>
-                <div class="Footer__signup-content layout__margin-auto">
-                  <div class="Footer__signup-column">
-                    <div>
-                      <form class="Newsletter__form" novalidate="">
-                        <div class="mainNewsletter__form-input-group">
-                          <input type="email" aria-label="email" class="Newsletter__input inputs__form-input___im0ta" name="email" placeholder="Email Address" required="">
-                          <button class="btn Newsletter__button fonts__barlow-medium" name="subscribe" type="submit">Submit</button>
-                        </div>
-                        <div class="Newsletter__form-error">Please enter a valid email address.</div>
-                        <div class="Newsletter__form-thanks">Thanks! You've signed up successfully.</div>
-                      </form>
-                    </div>
-                    <div class="email-signup-response-text js-email-signup-response-text"></div>
-                  </div>
-                  <div class="Footer__signup-column">
-                      <a aria-label="Facebook" class="Footer__social-link" href="https://www.facebook.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-facebook" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Facebook Icon</title><desc>Sheer Science on Facebook</desc><path d="M17.996 32H12V16H8v-5.514l4-.002-.007-3.248c0-4.498 1.22-7.236 6.519-7.236h4.412v5.515h-2.757c-2.064 0-2.163.771-2.163 2.209l-.008 2.76h4.959l-.584 5.514-4.37.002-.004 16z"></path></svg></span></a>
-                      <a aria-label="Twitter" class="Footer__social-link" href="https://twitter.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-twitter" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Twitter Icon</title><desc>Sheer Science on Twitter</desc><path d="M32 6.076a13.14 13.14 0 0 1-3.771 1.034 6.592 6.592 0 0 0 2.887-3.632 13.151 13.151 0 0 1-4.169 1.593 6.557 6.557 0 0 0-4.792-2.073 6.565 6.565 0 0 0-6.565 6.565c0 .515.058 1.016.17 1.496a18.64 18.64 0 0 1-13.532-6.86A6.536 6.536 0 0 0 1.339 7.5a6.563 6.563 0 0 0 2.921 5.465 6.54 6.54 0 0 1-2.974-.821l-.001.083a6.568 6.568 0 0 0 5.266 6.437 6.578 6.578 0 0 1-2.965.112 6.571 6.571 0 0 0 6.133 4.559 13.172 13.172 0 0 1-8.154 2.81c-.53 0-1.052-.031-1.566-.092a18.579 18.579 0 0 0 10.064 2.95c12.076 0 18.679-10.004 18.679-18.68 0-.285-.006-.568-.019-.849a13.347 13.347 0 0 0 3.276-3.398z"></path></svg></span></a>
-                      <a aria-label="Instagram" class="Footer__social-link" href="https://instagram.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-instagram" data-qa="icon"><svg viewBox="0 0 16 16" class="Icon__icon-svg" role="img"><title>Instagram Icon</title><desc>Sheer Science on Instagram</desc><path fill-rule="evenodd" d="M7.815 2.188c1.965 0 2.198.008 2.974.043.718.033 1.107.153 1.367.254.343.133.588.293.846.55.257.258.417.503.55.847.101.259.221.649.254 1.366.035.776.043 1.009.043 2.974 0 1.965-.008 2.198-.043 2.974-.033.718-.153 1.108-.254 1.367a2.28 2.28 0 0 1-.55.846 2.28 2.28 0 0 1-.846.55c-.26.101-.65.221-1.367.254-.776.035-1.009.043-2.974.043-1.965 0-2.198-.008-2.974-.043-.718-.033-1.107-.153-1.367-.253a2.28 2.28 0 0 1-.846-.55 2.28 2.28 0 0 1-.55-.847c-.101-.26-.221-.65-.254-1.367-.035-.776-.043-1.009-.043-2.974 0-1.965.008-2.198.043-2.974.033-.717.153-1.107.254-1.366a2.28 2.28 0 0 1 .55-.847 2.28 2.28 0 0 1 .846-.55c.26-.101.65-.22 1.367-.254.776-.035 1.009-.043 2.974-.043m0-1.326c1.999 0 2.25.009 3.034.045.784.035 1.319.16 1.787.342.484.188.894.44 1.304.849.409.409.66.82.848 1.303.182.468.307 1.003.343 1.787.035.785.044 1.035.044 3.034 0 2-.009 2.25-.044 3.035-.036.783-.16 1.318-.343 1.786-.188.484-.44.895-.848 1.304-.41.409-.82.66-1.304.849-.468.182-1.003.306-1.787.342-.785.036-1.035.044-3.034.044-1.999 0-2.25-.008-3.035-.044-.783-.036-1.318-.16-1.786-.342a3.608 3.608 0 0 1-1.304-.85c-.409-.408-.66-.819-.849-1.303C.66 12.575.535 12.04.5 11.257.464 10.472.455 10.22.455 8.222S.464 5.972.5 5.188C.535 4.404.66 3.869.841 3.4c.189-.484.44-.894.85-1.303.409-.41.819-.661 1.303-.85.468-.181 1.003-.306 1.786-.341C5.565.87 5.816.862 7.815.862zm.015 3.593a3.782 3.782 0 1 0 0 7.564 3.782 3.782 0 0 0 0-7.564zm0 6.237a2.455 2.455 0 1 1 0-4.91 2.455 2.455 0 0 1 0 4.91zm4.775-6.413a.876.876 0 1 0-1.753 0 .876.876 0 0 0 1.753 0z"></path></svg></span></a>
-                      <a aria-label="Pinterest" class="Footer__social-link" href="https://www.pinterest.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-pinterest" data-qa="icon"><svg viewBox="0 0 14 16" class="Icon__icon-svg" role="img"><title>Pinterest Icon</title><desc>Visit Sheer Science on Pinterest</desc><path d="M13.148 4.449C12.712 1.287 9.56-.323 6.198.054 3.54.352.89 2.501.78 5.574c-.067 1.876.465 3.284 2.25 3.679.773-1.368-.249-1.667-.409-2.658-.655-4.05 4.672-6.816 7.462-3.986 1.931 1.96.659 7.986-2.453 7.359-2.981-.598 1.46-5.395-.919-6.336-1.934-.766-2.961 2.34-2.044 3.884C4.129 10.171 2.971 12.671 3.44 16c1.52-1.103 2.033-3.215 2.453-5.418.764.465 1.173.947 2.147 1.022 3.593.278 5.601-3.587 5.108-7.155z"></path></svg></span></a>
-                      <a aria-label="LinkedIn" class="Footer__social-link" href="https://www.linkedin.com/company/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-linkedin" data-qa="icon"><svg viewBox="0 0 13 13" class="Icon__icon-svg" role="img"><title>Linkedin Icon</title><desc>Sheer Science on Linkedin</desc><path fill-rule="evenodd" d="M.661 3.987h2.403v8.376H.661V3.987zm1.14-1.048h-.017C.914 2.94.35 2.3.35 1.49.35.66.93.032 1.818.032c.887 0 1.432.626 1.45 1.453 0 .81-.563 1.453-1.466 1.453zm10.88 9.425H9.955V8.028c0-1.134-.426-1.908-1.363-1.908-.717 0-1.116.522-1.302 1.027-.07.18-.058.431-.058.684v4.533h-2.7s.035-7.68 0-8.377h2.7v1.315c.16-.575 1.022-1.396 2.399-1.396 1.708 0 3.05 1.206 3.05 3.8v4.658z"></path></svg></span></a>
-                      <a aria-label="YouTube" class="Footer__social-link" href="https://www.youtube.com/channel/UCvjxT5R3HviugBbIJQNkToQ" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-youtube" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Youtube Icon</title><desc>Sheer Science on Youtube</desc><path d="M23.6 4.9H8.4C0 4.9 0 7.3 0 13.1v5.7C0 24.4 1.2 27 8.4 27h15.3c6.5 0 8.4-1.6 8.4-8.2v-5.7c-.1-6.1-.4-8.2-8.5-8.2zm-11.3 16V11l9.5 4.9-9.5 5z"></path></svg></span></a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="BottomNav__container">
@@ -843,7 +565,6 @@
             </aside>
         </div>
         <!-- Cart.// -->
-    </div>
   </div>
   
 </body>

@@ -5,18 +5,24 @@
 
 // I did not know where to put this stuff so its here for now
 main {
+	&.Header__site-padding-top-none {
+		padding-top: 0rem;
+	}
 	&.Header__site-padding-top-without-promo {
-		padding-top: 3rem;
+		padding-top: $header-height;
 	}
 	&.Header__site-padding-top-with-promo {
-		padding-top: 5rem;
+		padding-top: $header-height + $promo-height;
+	}
+	&.Header__site-padding-top-only-promo {
+		padding-top: $promo-height;
 	}
    	&.flex {
-       min-height: calc(100vh - 21.125rem);
+       min-height: calc(100vh - 16rem);
        flex: 1 0 auto;
 	   flex-flow: column nowrap;
     }
- }
+}
 
 
 .card-product {

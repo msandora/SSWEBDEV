@@ -134,12 +134,13 @@
     .MenuNavGroup__category {
         padding: 0 1.5625rem 1.25rem;
         .MenuNavGroup__category--product-item {
-            padding: .5rem 0;
+            padding: .8rem 0;
             font-size: 1.25rem;
         }
         .MenuNavGroup__category--product-link {
             display: inline-block;
             color: #151515;
+            width: 100%;
         }
         .MenuNavGroup__category--product-item-btn {
             padding-top: 0.5rem;
