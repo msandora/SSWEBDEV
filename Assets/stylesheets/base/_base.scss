@@ -21,6 +21,19 @@ body {
 	font-family: $font-primary;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -41,7 +54,7 @@ a {
   text-decoration: none;
   @include on-event {
     color: $text-color;
-    text-decoration: $link-hover-decoration;
+    text-decoration: none;
   }
 }
 

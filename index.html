@@ -20,832 +20,835 @@
 </head>
 
 <body>
+	<div id="app" class="wrapper">
+		<div class="content">
+			<!-- Header -->
+			<header class="Header__container Header__container--headroom">
+					<div id="NavOverlay" class="Header__overlay layout__visually-hidden" data-status="closed"></div>
 
-  <div id="app" class="wrapper">
-    <div>
-        <!-- Header -->
-        <header class="Header__container Header__container--headroom">
-            <div id="NavOverlay" class="Header__overlay layout__visually-hidden" data-status="closed"></div>
+					<div class="MarketingContainer__marketing-container">
+						<div class="MarketingContainer__promotion--content fonts__barlow-medium">
+							<span><a href="#" title="Promotion"><span>Free Shipping on all orders within the contiguous Unites States*</span></a></span>
+						</div>
+					</div>
+					<section class="Header__inner">
+						
+					<div class="Header__nav-mobile-menu">
+						<button aria-controls="mobile-menu" aria-expanded="true" aria-label="Close Menu" class="Header__menu-button">
+							<span class="Header__menu-button--container">
+								<span class="Header__menu-button--item"></span>
+								<span class="Header__menu-button--item"></span>
+								<span class="Header__menu-button--item"></span>
+								<span class="Header__menu-button--item"></span>
+							</span>
+						</button>
+					</div>
+					<button aria-label="Close" class="Header__close-button Header__action-button Header__close-button--hidden">
+						<span aria-hidden="true" class="Icon__icon Header__close-icon" data-icon="close-thin" data-qa="icon">
+						<svg viewBox="0 0 14 14" class="Icon__icon-svg" role="img"><title>Close</title><g fill-rule="nonzero"><path d="M.485 1.546A.75.75 0 1 1 1.545.485L13.52 12.458a.75.75 0 0 1-1.061 1.06L.485 1.547z"></path><path d="M.485 12.458a.75.75 0 1 0 1.06 1.06L13.52 1.547A.75.75 0 0 0 12.458.485L.485 12.458z"></path></g></svg></span>
+					</button>  
+					<a href="/SheerScience/index.html" aria-label="Sheer Science" class="Header__logo">
+							<svg class="Icon__icon Header__logo-img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 228.3 39.7" style="enable-background:new 0 0 228.3 39.7;" xml:space="preserve">
+							<path class="st0" d="M13.6,34c-2-0.1-3.8-0.7-5.3-1.8l1-1.1c1.4,1,2.9,1.5,4.5,1.5c1.9,0,3.3-0.3,4.3-1.1s1.5-1.7,1.5-3
+							c0-1.1-0.3-2-1-2.7s-2.1-1.6-4.2-2.8c-2.4-1.3-4-2.4-4.6-3.3s-1-1.9-1-3.1c0-1.6,0.7-2.9,2-4s3.1-1.6,5.3-1.6
+							c2,0.1,3.8,0.7,5.3,1.8l-1,1.1c-1.4-1-2.9-1.5-4.5-1.5S13,12.8,12,13.5c-0.9,0.8-1.4,1.7-1.4,2.9c0,1.1,0.3,2,1,2.7
+							s2.1,1.6,4.2,2.7c2.2,1.2,3.7,2.2,4.5,3.1s1.1,2,1.1,3.2c0,1.7-0.6,3.1-1.9,4.2C18,33.5,16.1,34.1,13.6,34z" />
+							<path class="st0" d="M39.5,33.7V23H25.7v10.7h-1.6V11.4h1.6v10.2h13.7V11.4H41v22.2h-1.5V33.7z" />
+							<path class="st0" d="M44.6,33.7V11.4h11.2v1.4h-9.5v8.9h8.9v1.4h-8.9v9.1h10.1v1.4H44.6V33.7z" />
+							<path class="st0" d="M58.6,33.7V11.4h11.2v1.4h-9.5v8.9h8.9v1.4h-8.9v9.1h10.1v1.4H58.6V33.7z" />
+							<path class="st0" d="M84.7,33.7l-6-9.9h-4.6v9.9h-1.7V11.4h6.7c2.1,0,3.8,0.5,5,1.6s1.8,2.5,1.8,4.2c0,1.6-0.5,2.9-1.5,4
+							S82,23,80.2,23.3v0.1l6.3,10.3H84.7L84.7,33.7z M74.1,12.9v9.5h4.1c1.8,0,3.3-0.4,4.4-1.3s1.6-2.1,1.6-3.7c0-1.4-0.5-2.5-1.5-3.3
+							s-2.4-1.2-4.2-1.2C78.6,12.9,74.1,12.9,74.1,12.9z" />
+							<path class="st0" d="M104.4,34c-2-0.1-3.8-0.7-5.3-1.8l1-1.1c1.4,1,2.9,1.5,4.5,1.5c1.9,0,3.3-0.3,4.3-1.1s1.5-1.7,1.5-3
+							c0-1.1-0.3-2-1-2.7s-2.1-1.6-4.2-2.8c-2.4-1.3-4-2.4-4.6-3.3s-1-1.9-1-3.1c0-1.6,0.7-2.9,2-4s3.1-1.6,5.3-1.6
+							c2,0.1,3.8,0.7,5.3,1.8l-1,1.1c-1.4-1-2.9-1.5-4.5-1.5s-2.9,0.4-3.9,1.1c-0.9,0.8-1.4,1.7-1.4,2.9c0,1.1,0.3,2,1,2.7
+							s2.1,1.6,4.2,2.7c2.2,1.2,3.7,2.2,4.5,3.1s1.1,2,1.1,3.2c0,1.7-0.6,3.1-1.9,4.2C108.9,33.5,106.9,34.1,104.4,34z" />
+							<path class="st0" d="M125.6,34.1c-3.3,0-5.9-1-8-3.1s-3.1-4.7-3.1-8c0-3.6,1.1-6.5,3.4-8.7s5.1-3.3,8.5-3.3c2.6,0,4.7,0.8,6.5,2.2
+							l-1.3,1.1c-1.5-1.2-3.2-1.9-5.2-1.9c-3,0-5.5,0.9-7.3,2.8s-2.8,4.4-2.8,7.6c0,3,0.9,5.4,2.7,7.2c1.8,1.8,4.1,2.6,6.8,2.6
+							c2,0,3.7-0.6,5.2-1.9l1.3,1.1C130.5,33.3,128.2,34,125.6,34.1z" />
+							<path class="st0" d="M137.3,11.4v22.2h-1.7V11.4H137.3z" />
+							<path class="st0" d="M140.9,33.7V11.4h11.2v1.4h-9.6v8.9h8.9v1.4h-8.9v9.1h10.1v1.4h-11.7V33.7z" />
+							<path class="st0" d="M171.8,33.7l-14.3-18c-0.3-0.4-0.6-0.7-0.8-1.1l-0.2-0.3h-0.1c0,0.3,0,0.6,0,1v18.4h-1.7V11.4h1.3l14.2,17.8
+							c0.3,0.4,0.6,0.9,1,1.4h0.1c-0.1-0.7-0.1-1.3-0.1-1.9V11.4h1.7v22.2h-1.1V33.7z" />
+							<path class="st0" d="M187.1,34.1c-3.3,0-5.9-1-8-3.1s-3.1-4.7-3.1-8c0-3.6,1.1-6.5,3.4-8.7s5.1-3.3,8.5-3.3c2.6,0,4.7,0.8,6.5,2.2
+							l-1.3,1.1c-1.5-1.2-3.2-1.9-5.2-1.9c-3,0-5.5,0.9-7.3,2.8c-1.9,1.9-2.8,4.4-2.8,7.6c0,3,0.9,5.4,2.7,7.2s4.1,2.6,6.9,2.6
+							c2,0,3.7-0.6,5.2-1.9l1.3,1.1C191.9,33.3,189.7,34,187.1,34.1z" />
+							<path class="st0" d="M197.2,33.7V11.4h11.2v1.4h-9.6v8.9h8.9v1.4h-8.9v9.1h10.1v1.4h-11.7V33.7z" />
+							<path class="st0" d="M223,6.9c0.6,0.3,1.2,0.7,1.7,1.1c0.5,0.5,0.9,1,1.1,1.7c0.3,0.6,0.4,1.3,0.4,2.1c0,0.8-0.1,1.4-0.4,2.1
+							c-0.3,0.6-0.6,1.2-1.1,1.7c-0.5,0.5-1,0.9-1.7,1.1s-1.3,0.4-2.1,0.4s-1.4-0.1-2.1-0.4c-0.6-0.3-1.2-0.6-1.7-1.1s-0.9-1-1.1-1.7
+							c-0.3-0.6-0.4-1.3-0.4-2.1s0.1-1.4,0.4-2.1s0.6-1.2,1.1-1.7s1-0.8,1.7-1.1s1.3-0.4,2.1-0.4C221.7,6.5,222.4,6.6,223,6.9z
+								M219.2,7.6c-0.6,0.2-1,0.6-1.4,1s-0.7,0.9-0.9,1.4c-0.2,0.6-0.3,1.1-0.3,1.8c0,0.6,0.1,1.2,0.3,1.8s0.5,1,0.9,1.4s0.9,0.7,1.4,1
+							c0.5,0.3,1.1,0.4,1.8,0.4c0.6,0,1.2-0.1,1.8-0.4c0.6-0.2,1-0.6,1.4-1s0.7-0.9,0.9-1.4s0.3-1.1,0.3-1.8c0-0.6-0.1-1.2-0.3-1.8
+							s-0.5-1-0.9-1.4s-0.9-0.7-1.4-1c-0.6-0.2-1.1-0.4-1.8-0.4C220.3,7.2,219.7,7.4,219.2,7.6z M219,14.9V8.7h2.4c0.7,0,1.2,0.1,1.5,0.4
+							s0.5,0.7,0.5,1.3c0,0.3,0,0.5-0.1,0.7s-0.2,0.4-0.3,0.5s-0.3,0.2-0.5,0.3s-0.4,0.1-0.6,0.2l1.8,2.7h-0.9l-1.7-2.7h-1.3v2.7
+							L219,14.9L219,14.9z M221.5,11.5c0.2,0,0.4-0.1,0.6-0.1s0.3-0.2,0.4-0.3s0.2-0.4,0.2-0.6c0-0.2,0-0.4-0.1-0.5s-0.2-0.2-0.3-0.3
+							s-0.3-0.1-0.5-0.2c-0.2,0-0.4,0-0.5,0h-1.4v2.1h1C221,11.5,221.2,11.5,221.5,11.5z" />
+							</svg> 
+					</a>
+					<div class="Header__nav-group--desktop">
+						<div class="Header__nav-primary">
+							<div class="Header__nav-primary--container">
 
-            <div class="MarketingContainer__marketing-container" aria-hidden="false">
-                <div class="MarketingContainer__promotion--content fonts__barlow-medium">
-                  <span><a href="#" title="Promotion">Free Shipping on all US Orders</a></span>
-                </div>
-            </div>
-            <section class="Header__inner">
-              <div class="Header__nav-mobile-menu">
-                <button aria-controls="mobile-menu" aria-expanded="true" aria-label="Close Menu" class="Header__menu-button">
-                  <span class="Header__menu-button--container">
-                    <span class="Header__menu-button--item"></span>
-                    <span class="Header__menu-button--item"></span>
-                    <span class="Header__menu-button--item"></span>
-                    <span class="Header__menu-button--item"></span>
-                  </span>
-                </button>
-              </div>
-              <button aria-label="Close" class="Header__close-button Header__action-button Header__close-button--hidden">
-                <span aria-hidden="true" class="Icon__icon Header__close-icon" data-icon="close-thin" data-qa="icon">
-                  <svg viewBox="0 0 14 14" class="Icon__icon-svg" role="img"><title>Close</title><g fill-rule="nonzero"><path d="M.485 1.546A.75.75 0 1 1 1.545.485L13.52 12.458a.75.75 0 0 1-1.061 1.06L.485 1.547z"></path><path d="M.485 12.458a.75.75 0 1 0 1.06 1.06L13.52 1.547A.75.75 0 0 0 12.458.485L.485 12.458z"></path></g></svg></span>
-              </button>  
-              <a href="/SheerScience/index.html" aria-label="Sheer Science" class="Header__logo">
-                  <svg class="Icon__icon Header__logo-img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 228.3 39.7" style="enable-background:new 0 0 228.3 39.7;" xml:space="preserve">
-                    <path class="st0" d="M13.6,34c-2-0.1-3.8-0.7-5.3-1.8l1-1.1c1.4,1,2.9,1.5,4.5,1.5c1.9,0,3.3-0.3,4.3-1.1s1.5-1.7,1.5-3
-                    c0-1.1-0.3-2-1-2.7s-2.1-1.6-4.2-2.8c-2.4-1.3-4-2.4-4.6-3.3s-1-1.9-1-3.1c0-1.6,0.7-2.9,2-4s3.1-1.6,5.3-1.6
-                    c2,0.1,3.8,0.7,5.3,1.8l-1,1.1c-1.4-1-2.9-1.5-4.5-1.5S13,12.8,12,13.5c-0.9,0.8-1.4,1.7-1.4,2.9c0,1.1,0.3,2,1,2.7
-                    s2.1,1.6,4.2,2.7c2.2,1.2,3.7,2.2,4.5,3.1s1.1,2,1.1,3.2c0,1.7-0.6,3.1-1.9,4.2C18,33.5,16.1,34.1,13.6,34z" />
-                    <path class="st0" d="M39.5,33.7V23H25.7v10.7h-1.6V11.4h1.6v10.2h13.7V11.4H41v22.2h-1.5V33.7z" />
-                    <path class="st0" d="M44.6,33.7V11.4h11.2v1.4h-9.5v8.9h8.9v1.4h-8.9v9.1h10.1v1.4H44.6V33.7z" />
-                    <path class="st0" d="M58.6,33.7V11.4h11.2v1.4h-9.5v8.9h8.9v1.4h-8.9v9.1h10.1v1.4H58.6V33.7z" />
-                    <path class="st0" d="M84.7,33.7l-6-9.9h-4.6v9.9h-1.7V11.4h6.7c2.1,0,3.8,0.5,5,1.6s1.8,2.5,1.8,4.2c0,1.6-0.5,2.9-1.5,4
-                    S82,23,80.2,23.3v0.1l6.3,10.3H84.7L84.7,33.7z M74.1,12.9v9.5h4.1c1.8,0,3.3-0.4,4.4-1.3s1.6-2.1,1.6-3.7c0-1.4-0.5-2.5-1.5-3.3
-                    s-2.4-1.2-4.2-1.2C78.6,12.9,74.1,12.9,74.1,12.9z" />
-                    <path class="st0" d="M104.4,34c-2-0.1-3.8-0.7-5.3-1.8l1-1.1c1.4,1,2.9,1.5,4.5,1.5c1.9,0,3.3-0.3,4.3-1.1s1.5-1.7,1.5-3
-                    c0-1.1-0.3-2-1-2.7s-2.1-1.6-4.2-2.8c-2.4-1.3-4-2.4-4.6-3.3s-1-1.9-1-3.1c0-1.6,0.7-2.9,2-4s3.1-1.6,5.3-1.6
-                    c2,0.1,3.8,0.7,5.3,1.8l-1,1.1c-1.4-1-2.9-1.5-4.5-1.5s-2.9,0.4-3.9,1.1c-0.9,0.8-1.4,1.7-1.4,2.9c0,1.1,0.3,2,1,2.7
-                    s2.1,1.6,4.2,2.7c2.2,1.2,3.7,2.2,4.5,3.1s1.1,2,1.1,3.2c0,1.7-0.6,3.1-1.9,4.2C108.9,33.5,106.9,34.1,104.4,34z" />
-                    <path class="st0" d="M125.6,34.1c-3.3,0-5.9-1-8-3.1s-3.1-4.7-3.1-8c0-3.6,1.1-6.5,3.4-8.7s5.1-3.3,8.5-3.3c2.6,0,4.7,0.8,6.5,2.2
-                    l-1.3,1.1c-1.5-1.2-3.2-1.9-5.2-1.9c-3,0-5.5,0.9-7.3,2.8s-2.8,4.4-2.8,7.6c0,3,0.9,5.4,2.7,7.2c1.8,1.8,4.1,2.6,6.8,2.6
-                    c2,0,3.7-0.6,5.2-1.9l1.3,1.1C130.5,33.3,128.2,34,125.6,34.1z" />
-                    <path class="st0" d="M137.3,11.4v22.2h-1.7V11.4H137.3z" />
-                    <path class="st0" d="M140.9,33.7V11.4h11.2v1.4h-9.6v8.9h8.9v1.4h-8.9v9.1h10.1v1.4h-11.7V33.7z" />
-                    <path class="st0" d="M171.8,33.7l-14.3-18c-0.3-0.4-0.6-0.7-0.8-1.1l-0.2-0.3h-0.1c0,0.3,0,0.6,0,1v18.4h-1.7V11.4h1.3l14.2,17.8
-                    c0.3,0.4,0.6,0.9,1,1.4h0.1c-0.1-0.7-0.1-1.3-0.1-1.9V11.4h1.7v22.2h-1.1V33.7z" />
-                    <path class="st0" d="M187.1,34.1c-3.3,0-5.9-1-8-3.1s-3.1-4.7-3.1-8c0-3.6,1.1-6.5,3.4-8.7s5.1-3.3,8.5-3.3c2.6,0,4.7,0.8,6.5,2.2
-                    l-1.3,1.1c-1.5-1.2-3.2-1.9-5.2-1.9c-3,0-5.5,0.9-7.3,2.8c-1.9,1.9-2.8,4.4-2.8,7.6c0,3,0.9,5.4,2.7,7.2s4.1,2.6,6.9,2.6
-                    c2,0,3.7-0.6,5.2-1.9l1.3,1.1C191.9,33.3,189.7,34,187.1,34.1z" />
-                    <path class="st0" d="M197.2,33.7V11.4h11.2v1.4h-9.6v8.9h8.9v1.4h-8.9v9.1h10.1v1.4h-11.7V33.7z" />
-                    <path class="st0" d="M223,6.9c0.6,0.3,1.2,0.7,1.7,1.1c0.5,0.5,0.9,1,1.1,1.7c0.3,0.6,0.4,1.3,0.4,2.1c0,0.8-0.1,1.4-0.4,2.1
-                    c-0.3,0.6-0.6,1.2-1.1,1.7c-0.5,0.5-1,0.9-1.7,1.1s-1.3,0.4-2.1,0.4s-1.4-0.1-2.1-0.4c-0.6-0.3-1.2-0.6-1.7-1.1s-0.9-1-1.1-1.7
-                    c-0.3-0.6-0.4-1.3-0.4-2.1s0.1-1.4,0.4-2.1s0.6-1.2,1.1-1.7s1-0.8,1.7-1.1s1.3-0.4,2.1-0.4C221.7,6.5,222.4,6.6,223,6.9z
-                      M219.2,7.6c-0.6,0.2-1,0.6-1.4,1s-0.7,0.9-0.9,1.4c-0.2,0.6-0.3,1.1-0.3,1.8c0,0.6,0.1,1.2,0.3,1.8s0.5,1,0.9,1.4s0.9,0.7,1.4,1
-                    c0.5,0.3,1.1,0.4,1.8,0.4c0.6,0,1.2-0.1,1.8-0.4c0.6-0.2,1-0.6,1.4-1s0.7-0.9,0.9-1.4s0.3-1.1,0.3-1.8c0-0.6-0.1-1.2-0.3-1.8
-                    s-0.5-1-0.9-1.4s-0.9-0.7-1.4-1c-0.6-0.2-1.1-0.4-1.8-0.4C220.3,7.2,219.7,7.4,219.2,7.6z M219,14.9V8.7h2.4c0.7,0,1.2,0.1,1.5,0.4
-                    s0.5,0.7,0.5,1.3c0,0.3,0,0.5-0.1,0.7s-0.2,0.4-0.3,0.5s-0.3,0.2-0.5,0.3s-0.4,0.1-0.6,0.2l1.8,2.7h-0.9l-1.7-2.7h-1.3v2.7
-                    L219,14.9L219,14.9z M221.5,11.5c0.2,0,0.4-0.1,0.6-0.1s0.3-0.2,0.4-0.3s0.2-0.4,0.2-0.6c0-0.2,0-0.4-0.1-0.5s-0.2-0.2-0.3-0.3
-                    s-0.3-0.1-0.5-0.2c-0.2,0-0.4,0-0.5,0h-1.4v2.1h1C221,11.5,221.2,11.5,221.5,11.5z" />
-                  </svg> 
-              </a>
-              <div class="Header__nav-group--desktop">
-                <div class="Header__nav-primary">
-                  <div class="Header__nav-primary--container">
+							<div class="HeaderNavMenu__item HeaderNavMenu__item--hover">
+								<button aria-controls="dropdown-Brands" aria-expanded="false" aria-label="Brands" class="MenuList__nav-primary--item HeaderNavMenu__link header__header-link fonts__barlow-regular">Brands</button>
+								<div id="dropdown-Brands" class="HeaderNavMenu__dropdown HeaderNavMenu__dropdown--hover">
+									<div class="NavDesktop__subMenu">
+									<ul class="NavDesktop__subMenuGrid NavDesktop__subMenuGrid--2col">
+										<li class="NavDesktop__subMenuList">
+											<a class="NavDesktop__subMenuHeader fonts__barlow-medium">Brands</a>
+											<ul class="NavDesktop-subSubMenu fonts__barlow-light">
+													<li>
+													<a class="NavDesktop__category--product-link" href="/plexaderm/"><span>Plexaderm</span></a>
+													</li>
+													<li>
+													<a class="NavDesktop__category--product-link" href="/power-swabs/"><span>Power Swabs</span></a>
+													</li>
+													<li>
+													<a class="NavDesktop__category--product-link" href="/dekliderm/"><span>Dekliderm</span></a>
+													</li>
+													<li>
+													<a class="NavDesktop__category--product-link" href="/kerafy/"><span>Kerafy</span></a>
+													</li>
+													<li>
+													<a class="NavDesktop__category--product-link" href="/goflo/"><span>GoFlo</span></a>
+													</li>
+													<li>
+													<a class="NavDesktop__category--product-link" href="/sheer-science/"><span>Sheer Science</span></a>
+													</li>
+											</ul>
+										</li>
+										<li class="NavDesktop__subMenuPromo">
+											<span class="NavDesktop__subMenuPromo--headline fonts__barlow-medium">Look Good, Feel Good</span>
+											<a class="NavDesktop__visual--link" href="#">
+												<div class="NavDesktop__visual--image">
+													<div class="NavDesktop__visual--tag">
+													<span class="NavDesktop__visual-tag--title fonts__barlow-regular">Most Popular</span>
+													</div>
+													<img alt="Sheer Science" class="NavDesktop__subMenuPromo--img" 
+													src="https://via.placeholder.com/500x300?text=Placeholder&amp;auto=compress%2Cformat&amp;q=65&amp;w=624">
+												</div>  
+											</a>
+											<span class="NavDesktop__subMenuPromo--subheadline fonts__barlow-regular">Sheer Science Brand</span><span class="NavDesktop__subMenuPromo--description">Works right in front of your eyes </span><span class="NavDesktop__subMenuPromo--footnote fonts__barlow-regular">Starting at <em>$75</em></span>
+										</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+							<div class="HeaderNavMenu__item HeaderNavMenu__item--hover">
+								<button aria-controls="dropdown-Shop" aria-expanded="false" aria-label="Shop" class="MenuList__nav-primary--item HeaderNavMenu__link header__header-link fonts__barlow-regular">Shop</button>
+								<div id="dropdown-Shop" class="HeaderNavMenu__dropdown HeaderNavMenu__dropdown--hover">
+									<div class="NavDesktop__subMenu">
+										<ul class="NavDesktop__subMenuGrid NavDesktop__subMenuGrid--2col">
+										<li class="NavDesktop__subMenuList">
+												<a class="NavDesktop__subMenuHeader fonts__barlow-medium">Shop</a>
+												<ul class="NavDesktop-subSubMenu fonts__barlow-light">
+													<li>
+														<a class="NavDesktop__category--product-link" href="/kits-and-bundles/"><span>Kits & Bundles</span>
+														</a>
+													</li>
+													<li>
+														<a class="NavDesktop__category--product-link" href="/plexaderm/"><span>Skin Care</span></a>
+													</li>
+													<li>
+														<a class="NavDesktop__category--product-link" href="/power-swabs/"><span>Teeth Whitening</span></a>
+													</li>
+													<li>
+														<a class="NavDesktop__category--product-link" href="/dekliderm/"><span>Makeup</span></a>
+													</li>
+													<li>
+														<a class="NavDesktop__category--product-link" href="/kerafy/"><span>Hair Care</span></a>
+													</li>
+													<li>
+														<a class="NavDesktop__category--product-link" href="/sheer-science/"><span>Antioxidants</span></a>
+													</li>
+													<li>
+														<a class="NavDesktop__category--product-link" href="/goflo/"><span>Men's Health</span></a>
+													</li>
+												</ul>
+										</li>
+										<li class="NavDesktop__subMenuPromo">
+												<span class="NavDesktop__subMenuPromo--headline fonts__barlow-medium">Shop Headline</span>
+												<a class="NavDesktop__visual--link" href="#">
+												<div class="NavDesktop__visual--image">
+													<div class="NavDesktop__visual--tag">
+														<span class="NavDesktop__visual-tag--title fonts__barlow-regular">Most Popular</span>
+													</div>
+													<img alt="Sheer Science" class="NavDesktop__subMenuPromo--img" 
+													src="https://via.placeholder.com/500x300?text=Placeholder&amp;auto=compress%2Cformat&amp;q=65&amp;w=624">
+												</div>  
+												</a>
+												<span class="NavDesktop__subMenuPromo--subheadline fonts__barlow-regular">Sheer Science Shop</span><span class="NavDesktop__subMenuPromo--description">Shop Description</span><span class="NavDesktop__subMenuPromo--footnote fonts__barlow-regular">Shop <em>Footnote</em></span>
+										</li>
+										</ul>	
+									</div>
+								</div>
+							</div>
+							<div class="HeaderNavMenu__item">
+								<a class="MenuList__nav-primary--item HeaderNavLink__link--main-nav header__header-link" href="/SheerScience/">
+									<span>Company</span>
+								</a>
+							</div>
+							<div class="HeaderNavMenu__item">
+								<a class="MenuList__nav-primary--item HeaderNavLink__link--main-nav header__header-link" href="/SheerScience/blog/index.html">
+									<span>Blog</span>
+								</a>
+							</div>
 
+							</div>
+						</div>
+					</div>
+					<div aria-hidden="false" class="Header__nav-actions">
+						<div class="Header__action--keyword">
+							<form class="Header__action--searchForm" action="/search" method="get" role="search" aria-label="Keyword Search" >
+								<div>
+									<input type="hidden" name="type" value="product">
+									<input class="form-control" type="text" name="q" placeholder="Search" required="" autocorrect="off" autocomplete="off" title="What are you looking for?">
+									<i class="Header__action--keyword-icon fa fa-search"></i>
+								</div>
+							</form>
 
-                    <div class="HeaderNavMenu__item HeaderNavMenu__item--hover">
-                      <button aria-controls="dropdown-Brands" aria-expanded="false" aria-label="Brands" class="MenuList__nav-primary--item HeaderNavMenu__link header__header-link fonts__barlow-regular">Brands</button>
-                      <div id="dropdown-Brands" class="HeaderNavMenu__dropdown HeaderNavMenu__dropdown--hover">
-                        <div class="NavDesktop__subMenu">
-                          <ul class="NavDesktop__subMenuGrid NavDesktop__subMenuGrid--2col">
-                            <li class="NavDesktop__subMenuList">
-                                <a class="NavDesktop__subMenuHeader fonts__barlow-medium">Brands</a>
-                                <ul class="NavDesktop-subSubMenu fonts__barlow-light">
-                                    <li>
-                                      <a class="NavDesktop__category--product-link" href="/plexaderm/"><span>Plexaderm</span></a>
-                                    </li>
-                                    <li>
-                                      <a class="NavDesktop__category--product-link" href="/power-swabs/"><span>Power Swabs</span></a>
-                                    </li>
-                                    <li>
-                                      <a class="NavDesktop__category--product-link" href="/dekliderm/"><span>Dekliderm</span></a>
-                                    </li>
-                                    <li>
-                                      <a class="NavDesktop__category--product-link" href="/kerafy/"><span>Kerafy</span></a>
-                                    </li>
-                                    <li>
-                                      <a class="NavDesktop__category--product-link" href="/goflo/"><span>GoFlo</span></a>
-                                    </li>
-                                    <li>
-                                      <a class="NavDesktop__category--product-link" href="/sheer-science/"><span>Sheer Science</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="NavDesktop__subMenuPromo">
-                                <span class="NavDesktop__subMenuPromo--headline fonts__barlow-medium">Look Good, Feel Good</span>
-                                <a class="NavDesktop__visual--link" href="#">
-                                  <div class="NavDesktop__visual--image">
-                                    <div class="NavDesktop__visual--tag">
-                                      <span class="NavDesktop__visual-tag--title fonts__barlow-regular">Most Popular</span>
-                                    </div>
-                                    <img alt="Sheer Science" class="NavDesktop__subMenuPromo--img" 
-                                    src="https://via.placeholder.com/500x300?text=Placeholder&amp;auto=compress%2Cformat&amp;q=65&amp;w=624">
-                                  </div>  
-                                </a>
-                                <span class="NavDesktop__subMenuPromo--subheadline fonts__barlow-regular">Sheer Science Brand</span><span class="NavDesktop__subMenuPromo--description">Works right in front of your eyes </span><span class="NavDesktop__subMenuPromo--footnote fonts__barlow-regular">Starting at <em>$75</em></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="HeaderNavMenu__item HeaderNavMenu__item--hover">
-                      <button aria-controls="dropdown-Shop" aria-expanded="false" aria-label="Shop" class="MenuList__nav-primary--item HeaderNavMenu__link header__header-link fonts__barlow-regular">Shop</button>
-                      <div id="dropdown-Shop" class="HeaderNavMenu__dropdown HeaderNavMenu__dropdown--hover">
-                          <div class="NavDesktop__subMenu">
-                              <ul class="NavDesktop__subMenuGrid NavDesktop__subMenuGrid--2col">
-                                <li class="NavDesktop__subMenuList">
-                                    <a class="NavDesktop__subMenuHeader fonts__barlow-medium">Shop</a>
-                                    <ul class="NavDesktop-subSubMenu fonts__barlow-light">
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/kits-and-bundles/"><span>Kits & Bundles</span>
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/plexaderm/"><span>Skin Care</span></a>
-                                        </li>
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/power-swabs/"><span>Teeth Whitening</span></a>
-                                        </li>
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/dekliderm/"><span>Makeup</span></a>
-                                        </li>
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/kerafy/"><span>Hair Care</span></a>
-                                        </li>
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/sheer-science/"><span>Antioxidants</span></a>
-                                        </li>
-                                        <li>
-                                          <a class="NavDesktop__category--product-link" href="/goflo/"><span>Men's Health</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="NavDesktop__subMenuPromo">
-                                    <span class="NavDesktop__subMenuPromo--headline fonts__barlow-medium">Shop Headline</span>
-                                    <a class="NavDesktop__visual--link" href="#">
-                                      <div class="NavDesktop__visual--image">
-                                        <div class="NavDesktop__visual--tag">
-                                          <span class="NavDesktop__visual-tag--title fonts__barlow-regular">Most Popular</span>
-                                        </div>
-                                        <img alt="Sheer Science" class="NavDesktop__subMenuPromo--img" 
-                                        src="https://via.placeholder.com/500x300?text=Placeholder&amp;auto=compress%2Cformat&amp;q=65&amp;w=624">
-                                      </div>  
-                                    </a>
-                                    <span class="NavDesktop__subMenuPromo--subheadline fonts__barlow-regular">Sheer Science Shop</span><span class="NavDesktop__subMenuPromo--description">Shop Description</span><span class="NavDesktop__subMenuPromo--footnote fonts__barlow-regular">Shop <em>Footnote</em></span>
-                                </li>
-                              </ul>
-                            </div>
-                      </div>
-                    </div>
-                    <div class="HeaderNavMenu__item">
-                      <a class="MenuList__nav-primary--item HeaderNavLink__link--main-nav header__header-link" href="/SheerScience/blog/index.html">
-                        <span>Sheer Voice Blog</span>
-                      </a>
-                    </div>
+							<button aria-controls="calltext-drawer" aria-expanded="false" aria-label="Keyword Search" class="Header__action-button">
+								<svg class="Icon__icon Header__keyword-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.4rem" height="1.4rem" viewBox="0 0 413.112 413.112" style="enable-background:new 0 0 413.112 413.112;" xml:space="preserve">
+									<path d="M289.533,49.621c-66.142-66.156-173.765-66.156-239.916,0c-66.156,66.137-66.156,173.765,0,239.907 c63.874,63.883,166.428,66.058,232.972,6.562l13.44,13.446c-3.351,8.587-1.596,18.678,5.32,25.59l70.978,70.981 c9.334,9.334,24.465,9.334,33.785,0c9.334-9.315,9.334-24.446,0-33.78l-70.978-70.968c-6.916-6.917-17.025-8.672-25.594-5.32 l-13.446-13.455C355.614,216.04,353.42,113.485,289.533,49.621z M69.886,269.268c-54.969-54.969-54.969-144.414,0-199.382 c54.969-54.974,144.418-54.969,199.387,0s54.969,144.414,0,199.382S124.855,324.237,69.886,269.268z"/> 
+									<path d="M156.955,205.301L142.249,190.6l40.618-40.622c19.14,11.261,44.197,8.75,60.616-7.659 c19.447-19.453,19.447-51.133,0-70.585c-19.462-19.457-51.138-19.457-70.59,0c-16.41,16.409-18.916,41.467-7.664,60.602 l-71.994,71.985c-3.253,3.248-3.253,8.513,0,11.761l5.88,5.871c3.248,3.258,8.508,3.258,11.756,0l13.726-13.716l14.71,14.706 c3.249,3.258,8.518,3.248,11.761,0l5.885-5.876C160.203,213.814,160.203,208.554,156.955,205.301z M184.654,83.495 c12.975-12.97,34.084-12.97,47.049,0c12.975,12.979,12.975,34.079,0,47.054c-12.97,12.97-34.074,12.979-47.049,0 C171.675,117.579,171.675,96.474,184.654,83.495z"/>
+									<path d="M111.456,247.846l4.984,17.081l4.536-15.877c0.485-1.662,0.845-2.791,1.078-3.397c0.238-0.607,0.677-1.186,1.316-1.736 c0.639-0.542,1.526-0.831,2.646-0.831c1.139,0,2.03,0.289,2.679,0.831c0.644,0.551,1.092,1.147,1.358,1.792 c0.261,0.653,0.625,1.755,1.092,3.342l4.536,15.877l5.041-17.081c0.336-1.232,0.607-2.119,0.812-2.675 c0.206-0.56,0.551-1.045,1.036-1.465c0.49-0.42,1.186-0.626,2.101-0.626c0.915,0,1.703,0.309,2.38,0.943 c0.672,0.644,1.008,1.381,1.008,2.249c0,0.784-0.294,1.97-0.868,3.557l-6.25,18.313c-0.541,1.54-0.961,2.67-1.26,3.351 c-0.304,0.678-0.77,1.293-1.414,1.858c-0.645,0.536-1.526,0.812-2.651,0.812c-1.152,0-2.067-0.299-2.726-0.877 c-0.663-0.569-1.152-1.298-1.475-2.119c-0.317-0.84-0.663-1.928-1.036-3.285l-4.368-14.897l-4.229,14.897 c-0.56,2.081-1.167,3.64-1.82,4.681c-0.653,1.06-1.801,1.577-3.444,1.577c-0.845,0-1.554-0.158-2.142-0.49 c-0.588-0.336-1.083-0.793-1.475-1.399c-0.392-0.607-0.733-1.321-1.036-2.156c-0.299-0.831-0.527-1.493-0.695-1.975 l-6.188-18.313c-0.616-1.718-0.924-2.902-0.924-3.557c0-0.821,0.327-1.559,0.98-2.212c0.654-0.653,1.457-0.979,2.409-0.979 c1.269,0,2.128,0.359,2.576,1.087C110.471,244.877,110.952,246.105,111.456,247.846z"/> 
+									<path d="M158.075,247.846l4.985,17.081l4.536-15.877c0.49-1.662,0.845-2.791,1.078-3.397c0.238-0.607,0.677-1.186,1.316-1.736 c0.64-0.542,1.526-0.831,2.646-0.831c1.139,0,2.035,0.289,2.679,0.831c0.645,0.551,1.092,1.147,1.358,1.792 c0.261,0.653,0.625,1.755,1.092,3.342l4.537,15.877l5.041-17.081c0.336-1.232,0.606-2.119,0.812-2.675 c0.206-0.56,0.551-1.045,1.041-1.465c0.485-0.42,1.181-0.626,2.096-0.626c0.915,0,1.708,0.309,2.38,0.943 c0.672,0.644,1.008,1.381,1.008,2.249c0,0.784-0.289,1.97-0.868,3.557l-6.25,18.313c-0.537,1.54-0.957,2.67-1.26,3.351 c-0.303,0.691-0.77,1.293-1.414,1.858c-0.644,0.536-1.526,0.812-2.646,0.812c-1.158,0-2.072-0.299-2.73-0.877 c-0.658-0.569-1.153-1.298-1.47-2.119c-0.322-0.84-0.667-1.928-1.041-3.285l-4.369-14.889l-4.228,14.897 c-0.56,2.077-1.167,3.636-1.82,4.686s-1.801,1.578-3.444,1.578c-0.845,0-1.554-0.159-2.142-0.495 c-0.588-0.341-1.083-0.793-1.47-1.4c-0.392-0.606-0.737-1.315-1.041-2.156c-0.299-0.83-0.527-1.498-0.695-1.969l-6.189-18.314 c-0.616-1.717-0.924-2.902-0.924-3.556c0-0.821,0.327-1.56,0.98-2.212c0.653-0.658,1.456-0.98,2.408-0.98 c1.274,0,2.128,0.354,2.576,1.087C157.09,244.877,157.576,246.105,158.075,247.846z"/> 
+									<path d="M204.699,247.846l4.984,17.081l4.537-15.877c0.499-1.662,0.85-2.791,1.092-3.397c0.233-0.607,0.677-1.186,1.307-1.736 c0.635-0.542,1.521-0.831,2.656-0.831c1.129,0,2.029,0.289,2.674,0.831c0.648,0.551,1.097,1.147,1.358,1.792 c0.261,0.653,0.625,1.755,1.092,3.342l4.536,15.877l5.041-17.081c0.336-1.232,0.606-2.119,0.812-2.675 c0.21-0.56,0.551-1.045,1.046-1.465c0.49-0.42,1.186-0.626,2.091-0.626c0.91,0,1.703,0.309,2.38,0.943 c0.682,0.644,1.008,1.381,1.008,2.249c0,0.784-0.294,1.97-0.872,3.557l-6.254,18.313c-0.532,1.54-0.952,2.67-1.261,3.351 c-0.299,0.691-0.766,1.293-1.409,1.858c-0.653,0.536-1.53,0.812-2.655,0.812c-1.158,0-2.082-0.299-2.721-0.877 c-0.668-0.569-1.158-1.298-1.48-2.119c-0.312-0.84-0.672-1.928-1.045-3.285l-4.368-14.897l-4.229,14.897 c-0.561,2.081-1.167,3.64-1.815,4.681c-0.653,1.06-1.802,1.577-3.444,1.577c-0.84,0-1.554-0.158-2.143-0.49 c-0.588-0.336-1.078-0.793-1.47-1.399c-0.392-0.607-0.737-1.321-1.041-2.156c-0.299-0.831-0.527-1.493-0.695-1.975l-6.188-18.313 c-0.616-1.718-0.924-2.902-0.924-3.557c0-0.821,0.326-1.559,0.98-2.212c0.653-0.653,1.456-0.979,2.408-0.979 c1.274,0,2.128,0.359,2.576,1.087C203.714,244.877,204.2,246.105,204.699,247.846z"/> 
+								</svg>                      
+							</button>
+						</div>
+						<button aria-label="Cart, 8 items" class="CartIcon__cart-icon" type="button">
+							<svg class="CartIcon__cart-icon-graphic" viewBox="0 0 23.74 18.23" xmlns="http://www.w3.org/2000/svg">
+								<path class="CartIcon__cart-icon--outer" d="M9.86,19.73a1.28,1.28,0,1,1,1.27-1.29h0a1.27,1.27,0,0,1-1.26,1.28Zm10.82,0a1.28,1.28,0,1,1,1.27-1.29h0a1.27,1.27,0,0,1-1.26,1.28h0Z" transform="translate(-0.89 -1.5)"></path>
+								<path class="CartIcon__cart-icon--inner" d="M24.16,4.3a2.32,2.32,0,0,0-3-.51c-1.49.84-2.11,4-6.7,5.42a25,25,0,0,1-6,1.35l1,4.08h9.44a5.81,5.81,0,0,0,3-1.19,82,82,0,0,1,2.22-8.58Z" transform="translate(-0.89 -1.5)"></path>
+								<path class="CartIcon__cart-icon--outer" d="M20.77,14.67H9.51a1.75,1.75,0,0,1-1.75-1.29C6.94,9.8,5.59,4,5.43,3.5A.66.66,0,0,0,4.84,3H1.64a.75.75,0,1,1,0-1.5h3.2a2.08,2.08,0,0,1,2,1.5c.24.7,2.15,9.08,2.37,10,0,.13.23.13.29.13H20.77c.07,0,.42,0,.49-.23.22-.6,1.27-5.49,1.88-8.43a.75.75,0,1,1,1.47.3c-.16.79-1.61,7.75-1.94,8.65A2,2,0,0,1,20.77,14.67Z" transform="translate(-0.89 -1.5)"></path>
+							</svg>
+							<span class="CartIcon__cart-icon-counter fonts__barlow-medium">8</span>
+						</button>
+					</div>
+					
+					<span class="Header__underline" style="transform: translateX(452.625px); width: 92px; opacity: 0;"></span>
+					</section>
 
-                  </div>
-                </div>
-              </div>
-              <div aria-hidden="false" class="Header__nav-actions">
-                <div aria-hidden="false" class="Header__nav-actions--to-hide visually-hidden">
-                  <div class="Header__action--keyword">
-                    <form class="Header__action--searchForm" action="/search" method="get" role="search" aria-label="Keyword Search" >
-                      <div>
-                          <input type="hidden" name="type" value="product">
-                          <input class="form-control" type="text" name="q" placeholder="Search" required="" autocorrect="off" autocomplete="off" title="What are you looking for?">
-                          <i class="Header__action--keyword-icon fa fa-search"></i>
-                      </div>
-                    </form>
+					<section class="Header__actions-drawers" id="calltext-drawer">
+					<div class="Header__drawer">
+						<div class="KeywordSearch__container">
+							<div class="KeywordSearch">
+							<div class="KeywordSearch-wrapper">
+								<div class="KeywordSearch-formWrapper">
+									<form action="" role="search" novalidate="novalidate" class="KeywordSearch-form">
+									<input type="search" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" required="required" maxlength="512" aria-label="Search" placeholder="SEARCH" autofocus="autofocus" class="KeywordSearch-input KeywordSearch-input">
+									<button type="submit" title="Search" class="KeywordSearch-submit">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.878 25.879">
+											<path d="M10.55 19.854a9.308 9.308 0 1 1 9.308-9.308 9.318 9.318 0 0 1-9.308 9.308zm7.884-2.3l-.24.24a10.586 10.586 0 1 0-.4.4l-.24.24L25 25.879l.878-.878z"></path>
+											</svg>
+										</div>
+									</button>
+									<button type="reset" title="Reset the Search" hidden="hidden" class="KeywordSearch-reset">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.633 35.747">
+											<path d="M35.633 2.292L33.341 0 17.785 15.565 2.292.063 0 2.354l15.555 15.555L.009 33.455l2.292 2.292L17.848 20.2l15.484 15.485 2.292-2.292-15.546-15.547L35.633 2.292z"></path>
+											</svg>
+										</div>
+									</button> 
+									<span hidden="hidden" class="SearchBox-loadingIndicator">
+										<svg role="img" aria-label="Results are loading" width="16" height="16" xmlns="http://www.w3.org/2000/svg" stroke="#444" viewBox="0 0 38 38" class="KeywordSearch-loadingIcon"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle> <path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(94.9306 18 18)"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animateTransform></path></g></g></svg></span>
+									</form>
+								</div>
+								<div class="KeywordSearch-results">
+									<div class="KeywordSearch-noResults">Sorry, no results for this search</div>
+									<div class="KeywordSearch-hits visually-hidden">
+										<ol class="KeywordSearch-hitList pt-3">
+											<li class="KeywordSearch-hitListItem">
+											<h3><a href="#">Result #1</a></h3>
+											</li>
+											<li class="KeywordSearch-hitListItem">
+											<h3><a href="#">Result #2</a></h3>
+											</li>
+											<li class="KeywordSearch-hitListItem">
+											<h3><a href="#">Result #3</a></h3>
+											</li>
+											<li class="KeywordSearch-hitListItem">
+											<h3><a href="#">Result #4</a></h3>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					</section>
+					
+					<section aria-hidden="false" class="Header__nav-group--mobile Header__nav-group--collapsed">
+					<div class="Header__nav-primary">
+						<nav class="MenuListMobile__mobile-nav-container">
+							<ul class="Header__header-nav">
+							<li id="Brands" class="MenuListMobile__nav-menu-item">
+								<button aria-label="Brands" class="MenuListMobile__nav-menu-item-header fonts__barlow-regular">Brands
+									<div class="MenuListMobile__nav-menu-item--toggler">
+									<span aria-hidden="true" class="MenuListMobile__icon-expand" data-icon="plus" data-qa="icon"><svg viewBox="0 0 10.92 10.92" class="Icon__icon-svg" role="img"><title>Plus Icon</title><desc>Plus Icon</desc><path d="M10.92 4.46H6.46V0h-2v4.46H0v2h4.46v4.46h2V6.46h4.46v-2z"></path></svg></span>
+									<span aria-hidden="true" class="MenuListMobile__icon-contract" data-icon="minus" data-qa="icon"><svg viewBox="0 0 10.92 2" class="Icon__icon-svg" role="img"><title>Minus Icon</title><desc>Minus Icon</desc><path d="M0 0h10.92v2H0z"></path></svg></span>
+									</div>
+								</button>
+								<ul class="MenuNavGroup__category MenuListMobile__nav-group MenuListMobile__nav-group--is-hidden" data-status="closed">
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/plexiderm/"><span>Plexaderm</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/power-swabs/"><span>Power Swabs</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/dekliderm/"><span>Dekliderm</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/kerafy/"><span>Kerafy</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/goflo/"><span>GoFlo</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/sheer-science/"><span>Sheer Science</span></a>
+									</li>
+								</ul>
+							</li>
+							<li id="Shop" class="MenuListMobile__nav-menu-item">
+								<button aria-label="Shop" class="MenuListMobile__nav-menu-item-header fonts__barlow-regular MenuListMobile__nav-menu-item-header--list">Shop
+									<div class="MenuListMobile__nav-menu-item--toggler">
+									<span aria-hidden="true" class="MenuListMobile__icon-expand" data-icon="plus" data-qa="icon"><svg viewBox="0 0 10.92 10.92" class="Icon__icon-svg" role="img"><title>Plus Icon</title><desc>Plus Icon</desc><path d="M10.92 4.46H6.46V0h-2v4.46H0v2h4.46v4.46h2V6.46h4.46v-2z"></path></svg></span>
+									<span aria-hidden="true" class="MenuListMobile__icon-contract" data-icon="minus" data-qa="icon"><svg viewBox="0 0 10.92 2" class="Icon__icon-svg" role="img"><title>Minus Icon</title><desc>Minus Icon</desc><path d="M0 0h10.92v2H0z"></path></svg></span>
+									</div>
+								</button>
+								<ul class="MenuNavGroup__category MenuListMobile__nav-group MenuListMobile__nav-group--is-hidden" data-status="closed">
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/power-swabs/"><span>Teeth Whitening</span><div class="MenuNavGroup__new-icon-container"><div class="NewIcon__container fonts__barlow-regular NewIcon__container--redesign fonts__barlow-medium">NEW</div></div></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/dekliderm/"><span>Makeup</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/kerafy/"><span>Hair Care</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/sheer-science/"><span>Antioxidant</span></a>
+									</li>
+									<li class="MenuNavGroup__category--product-item fonts__barlow-regular">
+									<a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/goflo/"><span>Men's Health</span></a>
+									</li>
+								</ul>
+							</li>
+							<li class="MenuListMobile__nav-menu-item">
+								<a class="MenuListMobile__nav-menu-item-header fonts__barlow-regular" href="/SheerScience/blog/index.html">Sheer Voice Blog</a>
+							</li>
+							</ul>
+						</nav>
+						<div class="Header__nav-utility--mobile">
+							<div class="Header__nav-utility--groups">
+							<!-- <ul>
+								<li class="Header__nav-utility--item">
+									<div class="item item--mobile-account">
+									<a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="/login/"><span>Account</span></a>
+									</div>
+								</li>
+								<li class="Header__nav-utility--item">
+									<div class="item item--mobile-reviews">
+									<a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="/reviews/"><span>Reviews</span></a>
+									</div>
+								</li>
+							</ul> -->
+							</div>
+							<div class="Header__nav-utility--groups">
+							<!-- <ul>
+								<li class="Header__nav-utility--item">
+									<div class="item item--mobile-referral">
+									<a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="/refer/"><span>Refer &amp; Earn</span></a>
+									</div>
+								</li>
+								<li class="Header__nav-utility--item">
+									<div class="item item--mobile-phone">
+									<a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="tel:18884980003"><span>+1 800.665.2317</span></a>
+									</div>
+								</li>
+							</ul> -->
+							</div>
+						</div>
+					</div>
+					</section>
+			</header>
+			<!-- Header -->
 
-                    <button aria-controls="calltext-drawer" aria-expanded="false" aria-label="Keyword Search" class="Header__action-button">
-                      <svg class="Icon__icon Header__keyword-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.4rem" height="1.4rem" viewBox="0 0 413.112 413.112" style="enable-background:new 0 0 413.112 413.112;" xml:space="preserve">
-                        <path d="M289.533,49.621c-66.142-66.156-173.765-66.156-239.916,0c-66.156,66.137-66.156,173.765,0,239.907 c63.874,63.883,166.428,66.058,232.972,6.562l13.44,13.446c-3.351,8.587-1.596,18.678,5.32,25.59l70.978,70.981 c9.334,9.334,24.465,9.334,33.785,0c9.334-9.315,9.334-24.446,0-33.78l-70.978-70.968c-6.916-6.917-17.025-8.672-25.594-5.32 l-13.446-13.455C355.614,216.04,353.42,113.485,289.533,49.621z M69.886,269.268c-54.969-54.969-54.969-144.414,0-199.382 c54.969-54.974,144.418-54.969,199.387,0s54.969,144.414,0,199.382S124.855,324.237,69.886,269.268z"/> 
-                        <path d="M156.955,205.301L142.249,190.6l40.618-40.622c19.14,11.261,44.197,8.75,60.616-7.659 c19.447-19.453,19.447-51.133,0-70.585c-19.462-19.457-51.138-19.457-70.59,0c-16.41,16.409-18.916,41.467-7.664,60.602 l-71.994,71.985c-3.253,3.248-3.253,8.513,0,11.761l5.88,5.871c3.248,3.258,8.508,3.258,11.756,0l13.726-13.716l14.71,14.706 c3.249,3.258,8.518,3.248,11.761,0l5.885-5.876C160.203,213.814,160.203,208.554,156.955,205.301z M184.654,83.495 c12.975-12.97,34.084-12.97,47.049,0c12.975,12.979,12.975,34.079,0,47.054c-12.97,12.97-34.074,12.979-47.049,0 C171.675,117.579,171.675,96.474,184.654,83.495z"/>
-                        <path d="M111.456,247.846l4.984,17.081l4.536-15.877c0.485-1.662,0.845-2.791,1.078-3.397c0.238-0.607,0.677-1.186,1.316-1.736 c0.639-0.542,1.526-0.831,2.646-0.831c1.139,0,2.03,0.289,2.679,0.831c0.644,0.551,1.092,1.147,1.358,1.792 c0.261,0.653,0.625,1.755,1.092,3.342l4.536,15.877l5.041-17.081c0.336-1.232,0.607-2.119,0.812-2.675 c0.206-0.56,0.551-1.045,1.036-1.465c0.49-0.42,1.186-0.626,2.101-0.626c0.915,0,1.703,0.309,2.38,0.943 c0.672,0.644,1.008,1.381,1.008,2.249c0,0.784-0.294,1.97-0.868,3.557l-6.25,18.313c-0.541,1.54-0.961,2.67-1.26,3.351 c-0.304,0.678-0.77,1.293-1.414,1.858c-0.645,0.536-1.526,0.812-2.651,0.812c-1.152,0-2.067-0.299-2.726-0.877 c-0.663-0.569-1.152-1.298-1.475-2.119c-0.317-0.84-0.663-1.928-1.036-3.285l-4.368-14.897l-4.229,14.897 c-0.56,2.081-1.167,3.64-1.82,4.681c-0.653,1.06-1.801,1.577-3.444,1.577c-0.845,0-1.554-0.158-2.142-0.49 c-0.588-0.336-1.083-0.793-1.475-1.399c-0.392-0.607-0.733-1.321-1.036-2.156c-0.299-0.831-0.527-1.493-0.695-1.975 l-6.188-18.313c-0.616-1.718-0.924-2.902-0.924-3.557c0-0.821,0.327-1.559,0.98-2.212c0.654-0.653,1.457-0.979,2.409-0.979 c1.269,0,2.128,0.359,2.576,1.087C110.471,244.877,110.952,246.105,111.456,247.846z"/> 
-                        <path d="M158.075,247.846l4.985,17.081l4.536-15.877c0.49-1.662,0.845-2.791,1.078-3.397c0.238-0.607,0.677-1.186,1.316-1.736 c0.64-0.542,1.526-0.831,2.646-0.831c1.139,0,2.035,0.289,2.679,0.831c0.645,0.551,1.092,1.147,1.358,1.792 c0.261,0.653,0.625,1.755,1.092,3.342l4.537,15.877l5.041-17.081c0.336-1.232,0.606-2.119,0.812-2.675 c0.206-0.56,0.551-1.045,1.041-1.465c0.485-0.42,1.181-0.626,2.096-0.626c0.915,0,1.708,0.309,2.38,0.943 c0.672,0.644,1.008,1.381,1.008,2.249c0,0.784-0.289,1.97-0.868,3.557l-6.25,18.313c-0.537,1.54-0.957,2.67-1.26,3.351 c-0.303,0.691-0.77,1.293-1.414,1.858c-0.644,0.536-1.526,0.812-2.646,0.812c-1.158,0-2.072-0.299-2.73-0.877 c-0.658-0.569-1.153-1.298-1.47-2.119c-0.322-0.84-0.667-1.928-1.041-3.285l-4.369-14.889l-4.228,14.897 c-0.56,2.077-1.167,3.636-1.82,4.686s-1.801,1.578-3.444,1.578c-0.845,0-1.554-0.159-2.142-0.495 c-0.588-0.341-1.083-0.793-1.47-1.4c-0.392-0.606-0.737-1.315-1.041-2.156c-0.299-0.83-0.527-1.498-0.695-1.969l-6.189-18.314 c-0.616-1.717-0.924-2.902-0.924-3.556c0-0.821,0.327-1.56,0.98-2.212c0.653-0.658,1.456-0.98,2.408-0.98 c1.274,0,2.128,0.354,2.576,1.087C157.09,244.877,157.576,246.105,158.075,247.846z"/> 
-                        <path d="M204.699,247.846l4.984,17.081l4.537-15.877c0.499-1.662,0.85-2.791,1.092-3.397c0.233-0.607,0.677-1.186,1.307-1.736 c0.635-0.542,1.521-0.831,2.656-0.831c1.129,0,2.029,0.289,2.674,0.831c0.648,0.551,1.097,1.147,1.358,1.792 c0.261,0.653,0.625,1.755,1.092,3.342l4.536,15.877l5.041-17.081c0.336-1.232,0.606-2.119,0.812-2.675 c0.21-0.56,0.551-1.045,1.046-1.465c0.49-0.42,1.186-0.626,2.091-0.626c0.91,0,1.703,0.309,2.38,0.943 c0.682,0.644,1.008,1.381,1.008,2.249c0,0.784-0.294,1.97-0.872,3.557l-6.254,18.313c-0.532,1.54-0.952,2.67-1.261,3.351 c-0.299,0.691-0.766,1.293-1.409,1.858c-0.653,0.536-1.53,0.812-2.655,0.812c-1.158,0-2.082-0.299-2.721-0.877 c-0.668-0.569-1.158-1.298-1.48-2.119c-0.312-0.84-0.672-1.928-1.045-3.285l-4.368-14.897l-4.229,14.897 c-0.561,2.081-1.167,3.64-1.815,4.681c-0.653,1.06-1.802,1.577-3.444,1.577c-0.84,0-1.554-0.158-2.143-0.49 c-0.588-0.336-1.078-0.793-1.47-1.399c-0.392-0.607-0.737-1.321-1.041-2.156c-0.299-0.831-0.527-1.493-0.695-1.975l-6.188-18.313 c-0.616-1.718-0.924-2.902-0.924-3.557c0-0.821,0.326-1.559,0.98-2.212c0.653-0.653,1.456-0.979,2.408-0.979 c1.274,0,2.128,0.359,2.576,1.087C203.714,244.877,204.2,246.105,204.699,247.846z"/> 
-                      </svg>                      
-                    </button>
-                  </div>
-                </div>
-                  <button aria-label="Cart, 8 items" class="CartIcon__cart-icon" type="button">
-                    <svg class="CartIcon__cart-icon-graphic" viewBox="0 0 23.74 18.23" xmlns="http://www.w3.org/2000/svg">
-                      <path class="CartIcon__cart-icon--outer" d="M9.86,19.73a1.28,1.28,0,1,1,1.27-1.29h0a1.27,1.27,0,0,1-1.26,1.28Zm10.82,0a1.28,1.28,0,1,1,1.27-1.29h0a1.27,1.27,0,0,1-1.26,1.28h0Z" transform="translate(-0.89 -1.5)"></path>
-                      <path class="CartIcon__cart-icon--inner" d="M24.16,4.3a2.32,2.32,0,0,0-3-.51c-1.49.84-2.11,4-6.7,5.42a25,25,0,0,1-6,1.35l1,4.08h9.44a5.81,5.81,0,0,0,3-1.19,82,82,0,0,1,2.22-8.58Z" transform="translate(-0.89 -1.5)"></path>
-                      <path class="CartIcon__cart-icon--outer" d="M20.77,14.67H9.51a1.75,1.75,0,0,1-1.75-1.29C6.94,9.8,5.59,4,5.43,3.5A.66.66,0,0,0,4.84,3H1.64a.75.75,0,1,1,0-1.5h3.2a2.08,2.08,0,0,1,2,1.5c.24.7,2.15,9.08,2.37,10,0,.13.23.13.29.13H20.77c.07,0,.42,0,.49-.23.22-.6,1.27-5.49,1.88-8.43a.75.75,0,1,1,1.47.3c-.16.79-1.61,7.75-1.94,8.65A2,2,0,0,1,20.77,14.67Z" transform="translate(-0.89 -1.5)"></path>
-                    </svg>
-                    <span class="CartIcon__cart-icon-counter fonts__barlow-medium">8</span>
-                  </button>
-              </div>
-              
-              <span class="Header__underline" style="transform: translateX(452.625px); width: 92px; opacity: 0;"></span>
-            </section>
-
-            <section class="Header__actions-drawers" id="calltext-drawer">
-              <div class="Header__drawer">
-                <div class="KeywordSearch__container">
-                  <div class="KeywordSearch">
-                    <div class="KeywordSearch-wrapper">
-                      <div class="KeywordSearch-formWrapper">
-                        <form action="" role="search" novalidate="novalidate" class="KeywordSearch-form">
-                          <input type="search" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" required="required" maxlength="512" aria-label="Search" placeholder="SEARCH" autofocus="autofocus" class="KeywordSearch-input KeywordSearch-input">
-                          <button type="submit" title="Search" class="KeywordSearch-submit">
-                            <div>
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.878 25.879">
-                                <path d="M10.55 19.854a9.308 9.308 0 1 1 9.308-9.308 9.318 9.318 0 0 1-9.308 9.308zm7.884-2.3l-.24.24a10.586 10.586 0 1 0-.4.4l-.24.24L25 25.879l.878-.878z"></path>
-                              </svg>
-                            </div>
-                          </button>
-                          <button type="reset" title="Reset the Search" hidden="hidden" class="KeywordSearch-reset">
-                            <div>
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.633 35.747">
-                                <path d="M35.633 2.292L33.341 0 17.785 15.565 2.292.063 0 2.354l15.555 15.555L.009 33.455l2.292 2.292L17.848 20.2l15.484 15.485 2.292-2.292-15.546-15.547L35.633 2.292z"></path>
-                              </svg>
-                            </div>
-                          </button> 
-                          <span hidden="hidden" class="SearchBox-loadingIndicator">
-                            <svg role="img" aria-label="Results are loading" width="16" height="16" xmlns="http://www.w3.org/2000/svg" stroke="#444" viewBox="0 0 38 38" class="KeywordSearch-loadingIcon"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle> <path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(94.9306 18 18)"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animateTransform></path></g></g></svg></span>
-                        </form>
-                      </div>
-                      <div class="KeywordSearch-results">
-                        <div class="KeywordSearch-noResults">Sorry, no results for this search</div>
-                        <div class="KeywordSearch-hits visually-hidden">
-                            <ol class="KeywordSearch-hitList pt-3">
-                              <li class="KeywordSearch-hitListItem">
-                                <h3><a href="#">Result #1</a></h3>
-                              </li>
-                              <li class="KeywordSearch-hitListItem">
-                                <h3><a href="#">Result #2</a></h3>
-                              </li>
-                              <li class="KeywordSearch-hitListItem">
-                                <h3><a href="#">Result #3</a></h3>
-                              </li>
-                              <li class="KeywordSearch-hitListItem">
-                                <h3><a href="#">Result #4</a></h3>
-                              </li>
-                            </ol>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            
-            <section aria-hidden="false" class="Header__nav-group--mobile Header__nav-group--collapsed">
-              <div class="Header__nav-primary">
-                <nav class="MenuListMobile__mobile-nav-container">
-                  <ul class="Header__header-nav">
-                    <li id="Brands" class="MenuListMobile__nav-menu-item">
-                      <button aria-label="Brands" class="MenuListMobile__nav-menu-item-header fonts__barlow-regular">Brands
-                        <div class="MenuListMobile__nav-menu-item--toggler">
-                          <span aria-hidden="true" class="MenuListMobile__icon-expand" data-icon="plus" data-qa="icon"><svg viewBox="0 0 10.92 10.92" class="Icon__icon-svg" role="img"><title>Plus Icon</title><desc>Plus Icon</desc><path d="M10.92 4.46H6.46V0h-2v4.46H0v2h4.46v4.46h2V6.46h4.46v-2z"></path></svg></span>
-                          <span aria-hidden="true" class="MenuListMobile__icon-contract" data-icon="minus" data-qa="icon"><svg viewBox="0 0 10.92 2" class="Icon__icon-svg" role="img"><title>Minus Icon</title><desc>Minus Icon</desc><path d="M0 0h10.92v2H0z"></path></svg></span>
-                        </div>
-                      </button>
-                      <ul class="MenuNavGroup__category MenuListMobile__nav-group MenuListMobile__nav-group--is-hidden" data-status="closed">
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/plexiderm/"><span>Plexaderm</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/power-swabs/"><span>Power Swabs</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/dekliderm/"><span>Dekliderm</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/kerafy/"><span>Kerafy</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/goflo/"><span>GoFlo</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/sheer-science/"><span>Sheer Science</span></a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="Shop" class="MenuListMobile__nav-menu-item">
-                      <button aria-label="Shop" class="MenuListMobile__nav-menu-item-header fonts__barlow-regular MenuListMobile__nav-menu-item-header--list">Shop
-                        <div class="MenuListMobile__nav-menu-item--toggler">
-                          <span aria-hidden="true" class="MenuListMobile__icon-expand" data-icon="plus" data-qa="icon"><svg viewBox="0 0 10.92 10.92" class="Icon__icon-svg" role="img"><title>Plus Icon</title><desc>Plus Icon</desc><path d="M10.92 4.46H6.46V0h-2v4.46H0v2h4.46v4.46h2V6.46h4.46v-2z"></path></svg></span>
-                          <span aria-hidden="true" class="MenuListMobile__icon-contract" data-icon="minus" data-qa="icon"><svg viewBox="0 0 10.92 2" class="Icon__icon-svg" role="img"><title>Minus Icon</title><desc>Minus Icon</desc><path d="M0 0h10.92v2H0z"></path></svg></span>
-                        </div>
-                      </button>
-                      <ul class="MenuNavGroup__category MenuListMobile__nav-group MenuListMobile__nav-group--is-hidden" data-status="closed">
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/power-swabs/"><span>Teeth Whitening</span><div class="MenuNavGroup__new-icon-container"><div class="NewIcon__container fonts__barlow-regular NewIcon__container--redesign fonts__barlow-medium">NEW</div></div></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/dekliderm/"><span>Makeup</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/kerafy/"><span>Hair Care</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/sheer-science/"><span>Antioxidant</span></a>
-                        </li>
-                        <li class="MenuNavGroup__category--product-item fonts__barlow-regular">
-                          <a class="MenuNavGroup__category--product-link fonts__barlow-light" href="/goflo/"><span>Men's Health</span></a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="MenuListMobile__nav-menu-item">
-                      <a class="MenuListMobile__nav-menu-item-header fonts__barlow-regular" href="/SheerScience/blog/index.html">Sheer Voice Blog</a>
-                    </li>
-                  </ul>
-                </nav>
-                <div class="Header__nav-utility--mobile">
-                  <div class="Header__nav-utility--groups">
-                    <!-- <ul>
-                      <li class="Header__nav-utility--item">
-                        <div class="item item--mobile-account">
-                          <a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="/login/"><span>Account</span></a>
-                        </div>
-                      </li>
-                      <li class="Header__nav-utility--item">
-                        <div class="item item--mobile-reviews">
-                          <a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="/reviews/"><span>Reviews</span></a>
-                        </div>
-                      </li>
-                    </ul> -->
-                  </div>
-                  <div class="Header__nav-utility--groups">
-                    <!-- <ul>
-                      <li class="Header__nav-utility--item">
-                        <div class="item item--mobile-referral">
-                          <a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="/refer/"><span>Refer &amp; Earn</span></a>
-                        </div>
-                      </li>
-                      <li class="Header__nav-utility--item">
-                        <div class="item item--mobile-phone">
-                          <a class="HeaderNavLink__link--utility header__header-utility-link header__header-link fonts__barlow-regular" href="tel:18884980003"><span>+1 800.665.2317</span></a>
-                        </div>
-                      </li>
-                    </ul> -->
-                  </div>
-                </div>
-              </div>
-            </section>
-        </header>
-        <!-- Header -->
-
-        <!-- Content -->
-        <main class="flex  Header__site-padding-top-with-promo" role="main">
-          <!-- Carousel -->
-          <div id="carouselId" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselId" data-slide-to="1"></li>
-              <li data-target="#carouselId" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <picture>
-                    <source sizes="(max-width: 576px)" srcset="
-                    https://via.placeholder.com/576x576?text=MobileFirst%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=First%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="First Slide">
-                </picture>
-                <div class="carousel-caption">
-                  <h2>Happy Labor Day!</h2>
-                  <h6>Celebrate with Savings</h6>
-                  <div>
-                    <a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/sheer-science/">SHOP NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <picture>
-                    <source sizes="(max-width: 576px)" srcset="
-                    https://via.placeholder.com/576x576?text=MobileSecond%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=Second%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Second Slide">
-                </picture>
-                <div class="carousel-caption">
-                  <h2>NEW!</h2>
-                  <h6>Reset &amp; Replenish Pads </h6>
-                  <h6>
-                    <p>- Remove Dirt, Oil &amp; Makeup</p>
-                    <p>- Infused with Hyaluronic Acid</p>
-                    <p>- Hydrate &amp; Replenish the Skin</p>
-                  </h6>
-                  <div>
-                      <a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/plexaderm-reset-replenish-pads/">SHOP NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <picture>
-                    <source sizes="(max-width: 576px)" srcset="
-                    https://via.placeholder.com/576x576?text=MobileThird%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
-                    <img class="d-block" src="https://via.placeholder.com/1500x400?text=Third%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Third Slide">
-                </picture>
-                <div class="carousel-caption">
-                  <h2>NEW!</h2>
-                  <h6>Elasta-Red Astaxanthin</h6>
-                  <h6>
-                    <p>- Powerful antioxidant †</p>
-                    <p>- Protects against free radical damage †</p>
-                    <p>- Promotes younger looking skin</p>
-                  </h6>
-                  <div>
-                    <a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/">SHOP NOW</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-
-          <div class="container pt-4">
-            <div class="row">
-              <div class="col-md-4">
-                <figure class="card card-product">
-                  <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                  <figcaption class="info-wrap">
-                    <h4 class="title fonts__barlow-medium fonts__barlow-regular">PLEXADERM® RAPID REDUCTION SERUM™</h4>
-                    <p class="desc">Some small description goes here</p>
-                    <div class="rating-wrap">
-                      <div class="label-rating">132 reviews</div>
-                      <div class="label-rating">154 orders </div>
-                    </div> <!-- rating-wrap.// -->
-                  </figcaption>
-                  <div class="bottom-wrap">
-                    <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
-                    <label for="Color" class="swatch-dropdown">
-                      <select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
-                        <option value="" data-display-text="Select Color">Select Color</option>
-                        <option value="Black">Black</option>
-                        <option value="Dark Brown">Dark Brown</option>
-                        <option value="Medium Brown">Medium Brown</option>
-                        <option value="Light Brown">Light Brown</option>
-                        <option value="Brown">Brown</option>
-                        <option value="Auburn">Auburn</option>
-                        <option value="Medium Blonde">Medium Blonde</option>
-                        <option value="Blonde">Blonde</option>
-                      </select>
-                    </label>
-                    <div class="price-wrap h5">
-                      <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                    </div> <!-- price-wrap.// -->
-                  </div> <!-- bottom-wrap.// -->
-                </figure>
-              </div> <!-- col // -->
-              <div class="col-md-4">
-                <figure class="card card-product">
-                  <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                  <figcaption class="info-wrap">
-                      <h4 class="title">PLEX PERFECT DAILY MOISTURIZER</h4>
-                      <p class="desc">Some small description goes here</p>
-                      <div class="rating-wrap">
-                        <div class="label-rating">132 reviews</div>
-                        <div class="label-rating">154 orders </div>
-                      </div> <!-- rating-wrap.// -->
-                  </figcaption>
-                  <div class="bottom-wrap">
-                      <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>
-                      <label for="Color" class="swatch-dropdown">
-                        <select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
-                          <option value="" data-display-text="Select Color">Select Color</option>
-                          <option value="Black">Black</option>
-                          <option value="Dark Brown">Dark Brown</option>
-                          <option value="Medium Brown">Medium Brown</option>
-                          <option value="Light Brown">Light Brown</option>
-                          <option value="Brown">Brown</option>
-                          <option value="Auburn">Auburn</option>
-                          <option value="Medium Blonde">Medium Blonde</option>
-                          <option value="Blonde">Blonde</option>
-                        </select>
-                      </label>	
-                      <div class="price-wrap h5">
-                        <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                      </div> <!-- price-wrap.// -->
-                  </div> <!-- bottom-wrap.// -->
-                </figure>
-              </div> <!-- col // -->
-              <div class="col-md-4">
-                <figure class="card card-product">
-                    <div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
-                    <figcaption class="info-wrap">
-                      <h4 class="title">PLEXADERM HYALURONIC MOISTURIZER</h4>
-                      <p class="desc">Some small description goes here</p>
-                      <div class="rating-wrap">
-                        <div class="label-rating">132 reviews</div>
-                        <div class="label-rating">154 orders </div>
-                      </div> <!-- rating-wrap.// -->
-                  </figcaption>
-                  <div class="bottom-wrap">
-                      <a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
-                      <label for="Color" class="swatch-dropdown">
-                        <select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
-                          <option value="" data-display-text="Select Color">Select Color</option>
-                          <option value="Black">Black</option>
-                          <option value="Dark Brown">Dark Brown</option>
-                          <option value="Medium Brown">Medium Brown</option>
-                          <option value="Light Brown">Light Brown</option>
-                          <option value="Brown">Brown</option>
-                          <option value="Auburn">Auburn</option>
-                          <option value="Medium Blonde">Medium Blonde</option>
-                          <option value="Blonde">Blonde</option>
-                        </select>
-                      </label>	
-                      <div class="price-wrap h5">
-                        <span class="price-new">$1280</span> <del class="price-old">$1980</del>
-                      </div> <!-- price-wrap.// -->
-                  </div> <!-- bottom-wrap.// -->
-                </figure>
-              </div> <!-- col // -->
-            </div> <!-- row.// -->             
-          </div> 
-          <!--container.//-->
-        </main>
-        <!-- Content.// -->
-
-        <!-- Footer -->
-        <footer class="Footer__container">
-          <div class="Footer__main layout__gutters container">
-            <div class="Footer__content">
-              <div class="Footer__columns">
-                <div class="Footer__column">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Company</h4>
-                  <ul aria-label="Company" class="Footer__column-links">
-                    <li>
-                      <a class="Footer__link" href="/about-sheer-science/">Message from our CEO</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/about-sheer-science/">Mission</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/privacy-policy/">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/about-sheer-science/">Satisfaction Guarantee</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/terms-conditions/">Terms & Conditions</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="Footer__column">
-                    <h4 class="Footer__column-heading fonts__barlow-regular">Community</h4>
-                    <ul aria-label="Community" class="Footer__column-links">
-                      <li>
-                        <a class="Footer__link" href="/sheer-voice-blog/">Blog</a>
-                      </li>
-                      <li>
-                        <a class="Footer__link" href="/faq/">FAQs</a>
-                      </li>
-                      <li>
-                        <a class="Footer__link" href="/booking/">Talent</a>
-                      </li>
-                    </ul>
-                </div>
-                <div class="Footer__column">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Shipping & Returns</h4>
-                  <ul aria-label="Shipping and Returns" class="Footer__column-links">
-                    <li>
-                        <a class="Footer__link" href="/return-policy/">International Orders</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/return-policy/">Return Policy</a>
-                    </li>
-                    <li>
-                      <a class="Footer__link" href="/return-policy/">Shipping Policy</a>
-                    </li>
-                    <li>
-                      <span class="fonts__barlow-medium">Free Shipping on all US ORDERS</span>
-                    </li>
-                  </ul>
-
-                </div>
-                <div class="Footer__column">
-                    <h4 class="Footer__column-heading fonts__barlow-regular">Support</h4>
-                    <ul aria-label="Support" class="Footer__column-links">
-                      <li>
-                          <span class="fonts__barlow-medium">Email</span>
-                          <a class="Footer__link" href="/">CustomerCare@SheerScience.com</a>
-                      </li>
-                      <li>
-                          <span class="fonts__barlow-medium">Customer Care</span>
-                          <p>Monday-Friday 8AM-7PM EST<br/> Saturday 8AM-5PM EST</p>
-                      </li>
-                      <li>
-                        <span class="fonts__barlow-medium">Call To Order</span>
-                        <a class="Footer__link" href="tel:18006650821"><i class="pe-7s-call"></i> 1-800-665-0821</a>
-                      </li>
-                      <li>
-                        <span class="fonts__barlow-medium">Service & Support</span>
-                        <a class="Footer__link" href="tel:18006652317"><i class="pe-7s-call"></i> 1-800-665-2317</a>
-                      </li>
-                    </ul>
-                </div>
-              </div>
+			<!-- Content -->
+			<main class="flex" role="main">
+				<!-- Carousel -->
+				<div id="carouselId" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					<li data-target="#carouselId" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselId" data-slide-to="1"></li>
+					<li data-target="#carouselId" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<picture>
+							<source sizes="(max-width: 576px)" srcset="
+							https://via.placeholder.com/576x576?text=MobileFirst%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
+							<img class="d-block" src="https://via.placeholder.com/1500x400?text=First%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="First Slide">
+						</picture>
+						<div class="carousel-caption">
+							<h2>Happy Labor Day!</h2>
+							<h6>Celebrate with Savings</h6>
+							<div>
+							<a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/sheer-science/">SHOP NOW</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source sizes="(max-width: 576px)" srcset="
+							https://via.placeholder.com/576x576?text=MobileSecond%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
+							<img class="d-block" src="https://via.placeholder.com/1500x400?text=Second%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Second Slide">
+						</picture>
+						<div class="carousel-caption">
+							<h2>NEW!</h2>
+							<h6>Reset &amp; Replenish Pads </h6>
+							<h6>
+							<p>- Remove Dirt, Oil &amp; Makeup</p>
+							<p>- Infused with Hyaluronic Acid</p>
+							<p>- Hydrate &amp; Replenish the Skin</p>
+							</h6>
+							<div>
+								<a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/plexaderm-reset-replenish-pads/">SHOP NOW</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source sizes="(max-width: 576px)" srcset="
+							https://via.placeholder.com/576x576?text=MobileThird%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=464 464w">
+							<img class="d-block" src="https://via.placeholder.com/1500x400?text=Third%20Slide&amp;auto=compress%2Cformat&amp;q=65&amp;w=624" alt="Third Slide">
+						</picture>
+						<div class="carousel-caption">
+							<h2>NEW!</h2>
+							<h6>Elasta-Red Astaxanthin</h6>
+							<h6>
+							<p>- Powerful antioxidant †</p>
+							<p>- Protects against free radical damage †</p>
+							<p>- Promotes younger looking skin</p>
+							</h6>
+							<div>
+							<a class="btn btn-outline-secondary rounded-0 text-nowrap" href="/">SHOP NOW</a>
+							</div>
+						</div>
+					</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+					</a>
+				</div>
 
 
-              <div class="Footer__signup">
-                <div class="Footer__column-heading layout__margin-auto">
-                  <h4 class="Footer__column-heading fonts__barlow-regular">Sign up for news, offers & info.</h4>
-                </div>
-                <div class="Footer__signup-content layout__margin-auto">
-                  <div class="Footer__signup-column">
-                    <div>
-                      <form class="Newsletter__form" novalidate="">
-                        <div class="mainNewsletter__form-input-group">
-                          <input type="email" aria-label="email" class="Newsletter__input inputs__form-input___im0ta" name="email" placeholder="Email Address" required="">
-                          <button class="btn Newsletter__button fonts__barlow-medium" name="subscribe" type="submit">Submit</button>
-                        </div>
-                        <div class="Newsletter__form-error">Please enter a valid email address.</div>
-                        <div class="Newsletter__form-thanks">Thanks! You've signed up successfully.</div>
-                      </form>
-                    </div>
-                    <div class="email-signup-response-text js-email-signup-response-text"></div>
-                  </div>
-                  <div class="Footer__signup-column">
-                      <a aria-label="Facebook" class="Footer__social-link" href="https://www.facebook.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-facebook" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Facebook Icon</title><desc>Sheer Science on Facebook</desc><path d="M17.996 32H12V16H8v-5.514l4-.002-.007-3.248c0-4.498 1.22-7.236 6.519-7.236h4.412v5.515h-2.757c-2.064 0-2.163.771-2.163 2.209l-.008 2.76h4.959l-.584 5.514-4.37.002-.004 16z"></path></svg></span></a>
-                      <a aria-label="Twitter" class="Footer__social-link" href="https://twitter.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-twitter" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Twitter Icon</title><desc>Sheer Science on Twitter</desc><path d="M32 6.076a13.14 13.14 0 0 1-3.771 1.034 6.592 6.592 0 0 0 2.887-3.632 13.151 13.151 0 0 1-4.169 1.593 6.557 6.557 0 0 0-4.792-2.073 6.565 6.565 0 0 0-6.565 6.565c0 .515.058 1.016.17 1.496a18.64 18.64 0 0 1-13.532-6.86A6.536 6.536 0 0 0 1.339 7.5a6.563 6.563 0 0 0 2.921 5.465 6.54 6.54 0 0 1-2.974-.821l-.001.083a6.568 6.568 0 0 0 5.266 6.437 6.578 6.578 0 0 1-2.965.112 6.571 6.571 0 0 0 6.133 4.559 13.172 13.172 0 0 1-8.154 2.81c-.53 0-1.052-.031-1.566-.092a18.579 18.579 0 0 0 10.064 2.95c12.076 0 18.679-10.004 18.679-18.68 0-.285-.006-.568-.019-.849a13.347 13.347 0 0 0 3.276-3.398z"></path></svg></span></a>
-                      <a aria-label="Instagram" class="Footer__social-link" href="https://instagram.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-instagram" data-qa="icon"><svg viewBox="0 0 16 16" class="Icon__icon-svg" role="img"><title>Instagram Icon</title><desc>Sheer Science on Instagram</desc><path fill-rule="evenodd" d="M7.815 2.188c1.965 0 2.198.008 2.974.043.718.033 1.107.153 1.367.254.343.133.588.293.846.55.257.258.417.503.55.847.101.259.221.649.254 1.366.035.776.043 1.009.043 2.974 0 1.965-.008 2.198-.043 2.974-.033.718-.153 1.108-.254 1.367a2.28 2.28 0 0 1-.55.846 2.28 2.28 0 0 1-.846.55c-.26.101-.65.221-1.367.254-.776.035-1.009.043-2.974.043-1.965 0-2.198-.008-2.974-.043-.718-.033-1.107-.153-1.367-.253a2.28 2.28 0 0 1-.846-.55 2.28 2.28 0 0 1-.55-.847c-.101-.26-.221-.65-.254-1.367-.035-.776-.043-1.009-.043-2.974 0-1.965.008-2.198.043-2.974.033-.717.153-1.107.254-1.366a2.28 2.28 0 0 1 .55-.847 2.28 2.28 0 0 1 .846-.55c.26-.101.65-.22 1.367-.254.776-.035 1.009-.043 2.974-.043m0-1.326c1.999 0 2.25.009 3.034.045.784.035 1.319.16 1.787.342.484.188.894.44 1.304.849.409.409.66.82.848 1.303.182.468.307 1.003.343 1.787.035.785.044 1.035.044 3.034 0 2-.009 2.25-.044 3.035-.036.783-.16 1.318-.343 1.786-.188.484-.44.895-.848 1.304-.41.409-.82.66-1.304.849-.468.182-1.003.306-1.787.342-.785.036-1.035.044-3.034.044-1.999 0-2.25-.008-3.035-.044-.783-.036-1.318-.16-1.786-.342a3.608 3.608 0 0 1-1.304-.85c-.409-.408-.66-.819-.849-1.303C.66 12.575.535 12.04.5 11.257.464 10.472.455 10.22.455 8.222S.464 5.972.5 5.188C.535 4.404.66 3.869.841 3.4c.189-.484.44-.894.85-1.303.409-.41.819-.661 1.303-.85.468-.181 1.003-.306 1.786-.341C5.565.87 5.816.862 7.815.862zm.015 3.593a3.782 3.782 0 1 0 0 7.564 3.782 3.782 0 0 0 0-7.564zm0 6.237a2.455 2.455 0 1 1 0-4.91 2.455 2.455 0 0 1 0 4.91zm4.775-6.413a.876.876 0 1 0-1.753 0 .876.876 0 0 0 1.753 0z"></path></svg></span></a>
-                      <a aria-label="Pinterest" class="Footer__social-link" href="https://www.pinterest.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-pinterest" data-qa="icon"><svg viewBox="0 0 14 16" class="Icon__icon-svg" role="img"><title>Pinterest Icon</title><desc>Visit Sheer Science on Pinterest</desc><path d="M13.148 4.449C12.712 1.287 9.56-.323 6.198.054 3.54.352.89 2.501.78 5.574c-.067 1.876.465 3.284 2.25 3.679.773-1.368-.249-1.667-.409-2.658-.655-4.05 4.672-6.816 7.462-3.986 1.931 1.96.659 7.986-2.453 7.359-2.981-.598 1.46-5.395-.919-6.336-1.934-.766-2.961 2.34-2.044 3.884C4.129 10.171 2.971 12.671 3.44 16c1.52-1.103 2.033-3.215 2.453-5.418.764.465 1.173.947 2.147 1.022 3.593.278 5.601-3.587 5.108-7.155z"></path></svg></span></a>
-                      <a aria-label="LinkedIn" class="Footer__social-link" href="https://www.linkedin.com/company/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-linkedin" data-qa="icon"><svg viewBox="0 0 13 13" class="Icon__icon-svg" role="img"><title>Linkedin Icon</title><desc>Sheer Science on Linkedin</desc><path fill-rule="evenodd" d="M.661 3.987h2.403v8.376H.661V3.987zm1.14-1.048h-.017C.914 2.94.35 2.3.35 1.49.35.66.93.032 1.818.032c.887 0 1.432.626 1.45 1.453 0 .81-.563 1.453-1.466 1.453zm10.88 9.425H9.955V8.028c0-1.134-.426-1.908-1.363-1.908-.717 0-1.116.522-1.302 1.027-.07.18-.058.431-.058.684v4.533h-2.7s.035-7.68 0-8.377h2.7v1.315c.16-.575 1.022-1.396 2.399-1.396 1.708 0 3.05 1.206 3.05 3.8v4.658z"></path></svg></span></a>
-                      <a aria-label="YouTube" class="Footer__social-link" href="https://www.youtube.com/channel/UCvjxT5R3HviugBbIJQNkToQ" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-youtube" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Youtube Icon</title><desc>Sheer Science on Youtube</desc><path d="M23.6 4.9H8.4C0 4.9 0 7.3 0 13.1v5.7C0 24.4 1.2 27 8.4 27h15.3c6.5 0 8.4-1.6 8.4-8.2v-5.7c-.1-6.1-.4-8.2-8.5-8.2zm-11.3 16V11l9.5 4.9-9.5 5z"></path></svg></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="BottomNav__container">
-            <div class="BottomNav__container-inner layout__gutters">
-              <span class="BottomNav__disclaimer layout__margin-auto">† These statements have not been evaluated by the food and drug administration. This product is not intended to diagnose, treat, cure or prevent any disease.</span>
-              <span class="BottomNav__disclaimer layout__margin-auto">* Free Standard Shipping applies on all orders within the contiguous Unites States. Additional shipping and processing fees may apply to orders shipping to Alaska and Hawaii. International Shipping rates are calculated by weight and destination and will vary.</span>
-            </div>
-            <div class="BottomNav__container-inner layout__gutters">
-              <span class="BottomNav__copyright">©2019 Sheer Science, All rights reserved</span>
-            </div>
-          </div>
-        </footer>
-        <!-- Footer.// -->
+				<div class="container pt-4">
+					<div class="row">
+					<div class="col-md-4">
+						<figure class="card card-product">
+							<div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
+							<figcaption class="info-wrap">
+							<h4 class="title fonts__barlow-medium fonts__barlow-regular">PLEXADERM® RAPID REDUCTION SERUM™</h4>
+							<p class="desc">Some small description goes here</p>
+							<div class="rating-wrap">
+								<div class="label-rating">132 reviews</div>
+								<div class="label-rating">154 orders </div>
+							</div> <!-- rating-wrap.// -->
+							</figcaption>
+							<div class="bottom-wrap">
+							<a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
+							<div class="swatch-dropdown">
+								<label for="@selectId"></label>
+								<select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
+								<option value="" data-display-text="Select Color">Select Color</option>
+								<option value="Black">Black</option>
+								<option value="Dark Brown">Dark Brown</option>
+								<option value="Medium Brown">Medium Brown</option>
+								<option value="Light Brown">Light Brown</option>
+								<option value="Brown">Brown</option>
+								<option value="Auburn">Auburn</option>
+								<option value="Medium Blonde">Medium Blonde</option>
+								<option value="Blonde">Blonde</option>
+								</select>
+							</div>
+							<div class="price-wrap h5">
+								<span class="price-new">$1280</span> <del class="price-old">$1980</del>
+							</div> <!-- price-wrap.// -->
+							</div> <!-- bottom-wrap.// -->
+						</figure>
+					</div> <!-- col // -->
+					<div class="col-md-4">
+						<figure class="card card-product">
+							<div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
+							<figcaption class="info-wrap">
+								<h4 class="title">PLEX PERFECT DAILY MOISTURIZER</h4>
+								<p class="desc">Some small description goes here</p>
+								<div class="rating-wrap">
+									<div class="label-rating">132 reviews</div>
+									<div class="label-rating">154 orders </div>
+								</div> <!-- rating-wrap.// -->
+							</figcaption>
+							<div class="bottom-wrap">
+								<a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>
+								<div class="swatch-dropdown">
+									<label for="@selectId"></label>
+									<select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
+									<option value="" data-display-text="Select Color">Select Color</option>
+									<option value="Black">Black</option>
+									<option value="Dark Brown">Dark Brown</option>
+									<option value="Medium Brown">Medium Brown</option>
+									<option value="Light Brown">Light Brown</option>
+									<option value="Brown">Brown</option>
+									<option value="Auburn">Auburn</option>
+									<option value="Medium Blonde">Medium Blonde</option>
+									<option value="Blonde">Blonde</option>
+									</select>
+								</div>	
+								<div class="price-wrap h5">
+									<span class="price-new">$1280</span> <del class="price-old">$1980</del>
+								</div> <!-- price-wrap.// -->
+							</div> <!-- bottom-wrap.// -->
+						</figure>
+					</div> <!-- col // -->
+					<div class="col-md-4">
+						<figure class="card card-product">
+							<div class="img-wrap"><img src="https://via.placeholder.com/350x350?text=Product"></div>
+							<figcaption class="info-wrap">
+								<h4 class="title">PLEXADERM HYALURONIC MOISTURIZER</h4>
+								<p class="desc">Some small description goes here</p>
+								<div class="rating-wrap">
+									<div class="label-rating">132 reviews</div>
+									<div class="label-rating">154 orders </div>
+								</div> <!-- rating-wrap.// -->
+							</figcaption>
+							<div class="bottom-wrap">
+								<a href="/" class="btn btn-sm btn-primary float-right">Add to Cart</a>	
+								<div class="swatch-dropdown">
+									<label for="@selectId"></label>
+									<select name="Color" id="@selectId" class="color-select" data-productId="@baseItem.ProductId">
+									<option value="" data-display-text="Select Color">Select Color</option>
+									<option value="Black">Black</option>
+									<option value="Dark Brown">Dark Brown</option>
+									<option value="Medium Brown">Medium Brown</option>
+									<option value="Light Brown">Light Brown</option>
+									<option value="Brown">Brown</option>
+									<option value="Auburn">Auburn</option>
+									<option value="Medium Blonde">Medium Blonde</option>
+									<option value="Blonde">Blonde</option>
+									</select>
+								</div>
+								<div class="price-wrap h5">
+									<span class="price-new">$1280</span> <del class="price-old">$1980</del>
+								</div> <!-- price-wrap.// -->
+							</div> <!-- bottom-wrap.// -->
+						</figure>
+					</div> <!-- col // -->
+					</div> <!-- row.// -->             
+				</div> 
+				<!--container.//-->
+			</main>
+			<!-- Content.// -->
+		</div>
+			<!-- Footer -->
+			<footer class="Footer__container">
+				<div class="Footer__main layout__gutters container">
+					<div class="Footer__content">
+					<div class="Footer__columns">
+						<div class="Footer__column">
+							<h4 class="Footer__column-heading fonts__barlow-regular">Company</h4>
+							<ul aria-label="Company" class="Footer__column-links">
+							<li>
+								<a class="Footer__link" href="/about-sheer-science/">Message from our CEO</a>
+							</li>
+							<li>
+								<a class="Footer__link" href="/about-sheer-science/">Mission</a>
+							</li>
+							<li>
+								<a class="Footer__link" href="/privacy-policy/">Privacy Policy</a>
+							</li>
+							<li>
+								<a class="Footer__link" href="/about-sheer-science/">Satisfaction Guarantee</a>
+							</li>
+							<li>
+								<a class="Footer__link" href="/terms-conditions/">Terms & Conditions</a>
+							</li>
+							</ul>
+						</div>
+						<div class="Footer__column">
+							<h4 class="Footer__column-heading fonts__barlow-regular">Community</h4>
+							<ul aria-label="Community" class="Footer__column-links">
+								<li>
+									<a class="Footer__link" href="/sheer-voice-blog/">Blog</a>
+								</li>
+								<li>
+									<a class="Footer__link" href="/faq/">FAQs</a>
+								</li>
+								<li>
+									<a class="Footer__link" href="/booking/">Talent</a>
+								</li>
+							</ul>
+						</div>
+						<div class="Footer__column">
+							<h4 class="Footer__column-heading fonts__barlow-regular">Shipping & Returns</h4>
+							<ul aria-label="Shipping and Returns" class="Footer__column-links">
+							<li>
+									<a class="Footer__link" href="/return-policy/">International Orders</a>
+							</li>
+							<li>
+								<a class="Footer__link" href="/return-policy/">Return Policy</a>
+							</li>
+							<li>
+								<a class="Footer__link" href="/return-policy/">Shipping Policy</a>
+							</li>
+							<li>
+								<span class="fonts__barlow-medium">Free Shipping on all US ORDERS</span>
+							</li>
+							</ul>
 
-        <!-- Cart -->
-        <div class="Modal__overlay Modal__overlay--hidden Modal__overlay--cart" role="presentation">
-            <aside aria-describedby="description-cart" aria-modal="true" role="dialog">
-              <section class="Cart__container Cart__container--can-transition">
-                <header class="Cart__header">
-                  <div class="Cart__header-info">
-                    <h2 class="Cart__heading fonts__barlow-regular" id="description-cart">Your cart</h2><span>1 Item</span>
-                  </div>
-                  <button aria-label="Hide" class="Cart__hide-button">
-                    <span aria-hidden="true" class="Icon__icon Cart__hide-button-icon" data-icon="close-thin" data-qa="icon"><svg viewBox="0 0 14 14" class="Icon__icon-svg" role="img"><title>Close</title><g fill-rule="nonzero"><path d="M.485 1.546A.75.75 0 1 1 1.545.485L13.52 12.458a.75.75 0 0 1-1.061 1.06L.485 1.547z"></path><path d="M.485 12.458a.75.75 0 1 0 1.06 1.06L13.52 1.547A.75.75 0 0 0 12.458.485L.485 12.458z"></path></g></svg></span>
-                  </button>
-                </header>
-                <div aria-live="polite" class="Notification__container Notification__container--hidden"><span class="Notification__message"><span></span></span>
-                  <button aria-label="Close" class="Notification__close"><span aria-hidden="true" class="Icon__icon Notification__close-icon" data-icon="close" data-qa="icon"><svg viewBox="0 0 11.6 11.6" class="Icon__icon-svg" role="img"><title>Close</title><path d="M11.6 1.4L10.2 0 5.8 4.4 1.4 0 0 1.4l4.4 4.4L0 10.2l1.4 1.4 4.4-4.4 4.4 4.4 1.4-1.4-4.4-4.4z"></path></svg></span>
-                  </button>
-                </div>
+						</div>
+						<div class="Footer__column">
+							<h4 class="Footer__column-heading fonts__barlow-regular">Support</h4>
+							<ul aria-label="Support" class="Footer__column-links">
+								<li>
+									<span class="fonts__barlow-medium">Email</span>
+									<a class="Footer__link" href="/">CustomerCare@SheerScience.com</a>
+								</li>
+								<li>
+									<span class="fonts__barlow-medium">Customer Care</span>
+									<p>Monday-Friday 8AM-7PM EST<br/> Saturday 8AM-5PM EST</p>
+								</li>
+								<li>
+									<span class="fonts__barlow-medium">Call To Order</span>
+									<a class="Footer__link" href="tel:18006650821"><i class="pe-7s-call"></i> 1-800-665-0821</a>
+								</li>
+								<li>
+									<span class="fonts__barlow-medium">Service & Support</span>
+									<a class="Footer__link" href="tel:18006652317"><i class="pe-7s-call"></i> 1-800-665-2317</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-                <div class="Cart__cart-content">
-                  <div class="Cart__cart-content-wrapper">
-                    <div class="Cart__empty-cart visually-hidden">
-                      <h2 class="Cart__empty-cart-heading">Your cart is empty</h2>
-                      <a href="/index.html" class="btn--big fonts__barlow-regular btn-primary">Shop now</a>
-                    </div>
-      
-                    <div class="Cart_line-item--container">
-                      <div data-line-item="true" class="LineItemCard">
-                        <div class="ProductImageContainer">
-                          <img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
-                        </div>
-                        <div data-qa="product-info" class="ProductInfoContainer">
-                          <div class="DescriptionContainer">
-                            <h4 class="ProductName">GoFlo Prostate</h4>
-                            <span class="OptionText-wdax5f-4 cxVSoJ">Size: Bottle</span>
-                          </div>
-                          <div class="QuantityContainer">
-                            <span class="QuantityControl">
-                            <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
-                              <span class="QuantityIcon QuantityIconDecrease">-</span>
-                              </button>
-                              <output class="QuantityCount">1</output>
-                              <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
-                            </button>
-                            </span>
-                          </div>
-                          <div class="SummaryContainer">
-                            <div class="PriceContainer">
-                              <output class="Price">$29.95</output>
-                            </div>
-                            <div class="ShipsByContainer">
-                              <output></output>
-                            </div>
-                            <button aria-label="Remove" data-remove-button="true" class="RemoveButton">
-                              <img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
-                              <span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                    <div class="Cart_line-item--container">
-                        <div data-line-item="true" class="LineItemCard">
-                          <div class="ProductImageContainer">
-                            <img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
-                          </div>
-                          <div data-qa="product-info" class="ProductInfoContainer">
-                            <div class="DescriptionContainer">
-                              <h4 class="ProductName">Kerafy Hair Building Fibers</h4>
-                              <span class="OptionText">Buy 2 get 1 free</span>
-                            </div>
-                            <div class="QuantityContainer">
-                              <span class="QuantityControl">
-                              <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
-                                <span class="QuantityIcon QuantityIconDecrease">-</span>
-                                </button>
-                                <output class="QuantityCount">2</output>
-                                <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
-                              </button>
-                              </span>
-                            </div>
-                            <div class="SummaryContainer">
-                              <div class="PriceContainer">
-                                <output class="Price">$59.90</output>
-                              </div>
-                              <div class="ShipsByContainer">
-                                <output></output>
-                              </div>
-                              <button aria-label="Remove" data-remove-button="true" class="RemoveButton">
-                                <img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
-                                <span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="Cart_line-item--container">
-                          <div data-line-item="true" class="LineItemCard">
-                            <div class="ProductImageContainer">
-                              <img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
-                            </div>
-                            <div data-qa="product-info" class="ProductInfoContainer">
-                              <div class="DescriptionContainer">
-                                <h4 class="ProductName">Plexaderm Rapid Reduction Serum</h4>
-                                <span class="OptionText">1 Bottle</span>
-                              </div>
-                              <div class="QuantityContainer">
-                                <span class="QuantityControl">
-                                <button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
-                                  <span class="QuantityIcon QuantityIconDecrease">-</span>
-                                  </button>
-                                  <output class="QuantityCount">1</output>
-                                  <button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
-                                </button>
-                                </span>
-                              </div>
-                              <div class="SummaryContainer">
-                                <div class="PriceContainer">
-                                  <output class="Price">$59.95</output>
-                                </div>
-                                <div class="ShipsByContainer-wdax5f-18 bGmvME">
-                                  <output></output>
-                                </div>
-                                <button aria-label="Remove" data-remove-button="true" class="RemoveButton">
-                                  <img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
-                                  <span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+					<div class="Footer__signup">
+						<div class="Footer__column-heading layout__margin-auto">
+							<h4 class="Footer__column-heading fonts__barlow-regular">Sign up for news, offers & info.</h4>
+						</div>
+						<div class="Footer__signup-content layout__margin-auto">
+							<div class="Footer__signup-column">
+							<div>
+								<form class="Newsletter__form" novalidate="">
+									<div class="mainNewsletter__form-input-group">
+									<input type="email" aria-label="email" class="Newsletter__input inputs__form-input___im0ta" name="email" placeholder="Email Address" required="">
+									<button class="btn Newsletter__button fonts__barlow-medium" name="subscribe" type="submit">Submit</button>
+									</div>
+									<div class="Newsletter__form-error">Please enter a valid email address.</div>
+									<div class="Newsletter__form-thanks">Thanks! You've signed up successfully.</div>
+								</form>
+							</div>
+							<div class="email-signup-response-text js-email-signup-response-text"></div>
+							</div>
+							<div class="Footer__signup-column">
+								<a aria-label="Facebook" class="Footer__social-link" href="https://www.facebook.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-facebook" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Facebook Icon</title><desc>Sheer Science on Facebook</desc><path d="M17.996 32H12V16H8v-5.514l4-.002-.007-3.248c0-4.498 1.22-7.236 6.519-7.236h4.412v5.515h-2.757c-2.064 0-2.163.771-2.163 2.209l-.008 2.76h4.959l-.584 5.514-4.37.002-.004 16z"></path></svg></span></a>
+								<a aria-label="Twitter" class="Footer__social-link" href="https://twitter.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-twitter" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Twitter Icon</title><desc>Sheer Science on Twitter</desc><path d="M32 6.076a13.14 13.14 0 0 1-3.771 1.034 6.592 6.592 0 0 0 2.887-3.632 13.151 13.151 0 0 1-4.169 1.593 6.557 6.557 0 0 0-4.792-2.073 6.565 6.565 0 0 0-6.565 6.565c0 .515.058 1.016.17 1.496a18.64 18.64 0 0 1-13.532-6.86A6.536 6.536 0 0 0 1.339 7.5a6.563 6.563 0 0 0 2.921 5.465 6.54 6.54 0 0 1-2.974-.821l-.001.083a6.568 6.568 0 0 0 5.266 6.437 6.578 6.578 0 0 1-2.965.112 6.571 6.571 0 0 0 6.133 4.559 13.172 13.172 0 0 1-8.154 2.81c-.53 0-1.052-.031-1.566-.092a18.579 18.579 0 0 0 10.064 2.95c12.076 0 18.679-10.004 18.679-18.68 0-.285-.006-.568-.019-.849a13.347 13.347 0 0 0 3.276-3.398z"></path></svg></span></a>
+								<a aria-label="Instagram" class="Footer__social-link" href="https://instagram.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-instagram" data-qa="icon"><svg viewBox="0 0 16 16" class="Icon__icon-svg" role="img"><title>Instagram Icon</title><desc>Sheer Science on Instagram</desc><path fill-rule="evenodd" d="M7.815 2.188c1.965 0 2.198.008 2.974.043.718.033 1.107.153 1.367.254.343.133.588.293.846.55.257.258.417.503.55.847.101.259.221.649.254 1.366.035.776.043 1.009.043 2.974 0 1.965-.008 2.198-.043 2.974-.033.718-.153 1.108-.254 1.367a2.28 2.28 0 0 1-.55.846 2.28 2.28 0 0 1-.846.55c-.26.101-.65.221-1.367.254-.776.035-1.009.043-2.974.043-1.965 0-2.198-.008-2.974-.043-.718-.033-1.107-.153-1.367-.253a2.28 2.28 0 0 1-.846-.55 2.28 2.28 0 0 1-.55-.847c-.101-.26-.221-.65-.254-1.367-.035-.776-.043-1.009-.043-2.974 0-1.965.008-2.198.043-2.974.033-.717.153-1.107.254-1.366a2.28 2.28 0 0 1 .55-.847 2.28 2.28 0 0 1 .846-.55c.26-.101.65-.22 1.367-.254.776-.035 1.009-.043 2.974-.043m0-1.326c1.999 0 2.25.009 3.034.045.784.035 1.319.16 1.787.342.484.188.894.44 1.304.849.409.409.66.82.848 1.303.182.468.307 1.003.343 1.787.035.785.044 1.035.044 3.034 0 2-.009 2.25-.044 3.035-.036.783-.16 1.318-.343 1.786-.188.484-.44.895-.848 1.304-.41.409-.82.66-1.304.849-.468.182-1.003.306-1.787.342-.785.036-1.035.044-3.034.044-1.999 0-2.25-.008-3.035-.044-.783-.036-1.318-.16-1.786-.342a3.608 3.608 0 0 1-1.304-.85c-.409-.408-.66-.819-.849-1.303C.66 12.575.535 12.04.5 11.257.464 10.472.455 10.22.455 8.222S.464 5.972.5 5.188C.535 4.404.66 3.869.841 3.4c.189-.484.44-.894.85-1.303.409-.41.819-.661 1.303-.85.468-.181 1.003-.306 1.786-.341C5.565.87 5.816.862 7.815.862zm.015 3.593a3.782 3.782 0 1 0 0 7.564 3.782 3.782 0 0 0 0-7.564zm0 6.237a2.455 2.455 0 1 1 0-4.91 2.455 2.455 0 0 1 0 4.91zm4.775-6.413a.876.876 0 1 0-1.753 0 .876.876 0 0 0 1.753 0z"></path></svg></span></a>
+								<a aria-label="Pinterest" class="Footer__social-link" href="https://www.pinterest.com/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-pinterest" data-qa="icon"><svg viewBox="0 0 14 16" class="Icon__icon-svg" role="img"><title>Pinterest Icon</title><desc>Visit Sheer Science on Pinterest</desc><path d="M13.148 4.449C12.712 1.287 9.56-.323 6.198.054 3.54.352.89 2.501.78 5.574c-.067 1.876.465 3.284 2.25 3.679.773-1.368-.249-1.667-.409-2.658-.655-4.05 4.672-6.816 7.462-3.986 1.931 1.96.659 7.986-2.453 7.359-2.981-.598 1.46-5.395-.919-6.336-1.934-.766-2.961 2.34-2.044 3.884C4.129 10.171 2.971 12.671 3.44 16c1.52-1.103 2.033-3.215 2.453-5.418.764.465 1.173.947 2.147 1.022 3.593.278 5.601-3.587 5.108-7.155z"></path></svg></span></a>
+								<a aria-label="LinkedIn" class="Footer__social-link" href="https://www.linkedin.com/company/" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-linkedin" data-qa="icon"><svg viewBox="0 0 13 13" class="Icon__icon-svg" role="img"><title>Linkedin Icon</title><desc>Sheer Science on Linkedin</desc><path fill-rule="evenodd" d="M.661 3.987h2.403v8.376H.661V3.987zm1.14-1.048h-.017C.914 2.94.35 2.3.35 1.49.35.66.93.032 1.818.032c.887 0 1.432.626 1.45 1.453 0 .81-.563 1.453-1.466 1.453zm10.88 9.425H9.955V8.028c0-1.134-.426-1.908-1.363-1.908-.717 0-1.116.522-1.302 1.027-.07.18-.058.431-.058.684v4.533h-2.7s.035-7.68 0-8.377h2.7v1.315c.16-.575 1.022-1.396 2.399-1.396 1.708 0 3.05 1.206 3.05 3.8v4.658z"></path></svg></span></a>
+								<a aria-label="YouTube" class="Footer__social-link" href="https://www.youtube.com/channel/UCvjxT5R3HviugBbIJQNkToQ" target="blank"><span aria-hidden="true" class="Icon__icon Footer__social-link-icon" data-icon="social-youtube" data-qa="icon"><svg viewBox="0 0 32 32" class="Icon__icon-svg" role="img"><title>Youtube Icon</title><desc>Sheer Science on Youtube</desc><path d="M23.6 4.9H8.4C0 4.9 0 7.3 0 13.1v5.7C0 24.4 1.2 27 8.4 27h15.3c6.5 0 8.4-1.6 8.4-8.2v-5.7c-.1-6.1-.4-8.2-8.5-8.2zm-11.3 16V11l9.5 4.9-9.5 5z"></path></svg></span></a>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="BottomNav__container">
+					<div class="BottomNav__container-inner layout__gutters">
+					<span class="BottomNav__disclaimer layout__margin-auto">† These statements have not been evaluated by the food and drug administration.<br>This product is not intended to diagnose, treat, cure or prevent any disease.</span>
+					<span class="BottomNav__disclaimer layout__margin-auto">* Free Standard Shipping applies on all orders within the contiguous Unites States. Additional shipping and processing fees may apply to orders shipping to Alaska and Hawaii. International Shipping rates are calculated by weight and destination and will vary.</span>
+					</div>
+					<div class="BottomNav__container-inner layout__gutters">
+					<span class="BottomNav__copyright">©2019 Sheer Science, All rights reserved</span>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer.// -->
 
-                    <div class="Container__Summary">
-                      <ul class="Container__Summary-list">
-                        <li data-summary-item="subtotal" class="SummaryItem">
-                          <span class="SummaryItemLabel">Subtotal</span>
-                          <span class="SummaryItemValue">$195.00</span>
-                        </li>
-                        <li data-summary-item="discount" class="SummaryItem">
-                          <span class="SummaryItemLabel">Discount<span class="SummaryDiscountCode">(LABOR19)</span></span>
-                          <span class="SummaryItemValue">-$10.00</span>
-                        </li>
-                        <li data-summary-item="shipping" class="SummaryItem">
-                          <span class="SummaryItemLabel">Shipping</span>
-                          <span class="SummaryItemValue">Free</span>
-                        </li>
-                        <li data-summary-item="total" class="SummaryItem">
-                          <span class="SummaryItemLabel">Estimated total</span>
-                          <span class="SummaryItemValue">$195.00</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div data-qa="checkout-cta" class="CheckoutCTAContainer">
-                      <a href="/checkout/" class="btn btn--big fonts__barlow-regular btn-primary">
-                        <svg viewBox="0 0 13 16" class="CheckoutLockIcon Icon__icon--small">
-                          <title>lock</title>
-                          <desc>Created with Sketch.</desc>
-                          <path fill="#FFF" fill-rule="nonzero" d="M8.92 5.333v-1.17A2.383 2.383 0 0 0 6.539 1.78h-.155A2.383 2.383 0 0 0 4 4.163v1.168c-.598.048-1.194.112-1.789.192V4.162A4.169 4.169 0 0 1 6.391 0h.155a4.169 4.169 0 0 1 4.164 4.163v1.362a30.542 30.542 0 0 0-1.79-.192zM.939 7.205a29.751 29.751 0 0 1 11.064 0c.49.093.844.523.84 1.021v6.278a.933.933 0 0 1-.757.916l-.567.107a27.149 27.149 0 0 1-10.097 0l-.57-.107a.933.933 0 0 1-.76-.916V8.133c.001-.448.32-.833.76-.916l.087-.012zm4.487 5.859a2.87 2.87 0 0 0 2.086 0 .231.231 0 0 0 .135-.298l-.543-1.532a1.021 1.021 0 1 0-1.268 0l-.543 1.532a.231.231 0 0 0 .133.298z"></path>
-                        </svg>Checkout</a>
-                    </div>
-                  </div>
+			<!-- Cart -->
+			<div class="Modal__overlay Modal__overlay--hidden Modal__overlay--cart" role="presentation">
+					<aside aria-describedby="description-cart" aria-modal="true" role="dialog">
+					<section class="Cart__container Cart__container--can-transition">
+						<header class="Cart__header">
+							<div class="Cart__header-info">
+							<h2 class="Cart__heading fonts__barlow-regular" id="description-cart">Your cart</h2><span>1 Item</span>
+							</div>
+							<button aria-label="Hide" class="Cart__hide-button">
+							<span aria-hidden="true" class="Icon__icon Cart__hide-button-icon" data-icon="close-thin" data-qa="icon"><svg viewBox="0 0 14 14" class="Icon__icon-svg" role="img"><title>Close</title><g fill-rule="nonzero"><path d="M.485 1.546A.75.75 0 1 1 1.545.485L13.52 12.458a.75.75 0 0 1-1.061 1.06L.485 1.547z"></path><path d="M.485 12.458a.75.75 0 1 0 1.06 1.06L13.52 1.547A.75.75 0 0 0 12.458.485L.485 12.458z"></path></g></svg></span>
+							</button>
+						</header>
+						<div aria-live="polite" class="Notification__container Notification__container--hidden"><span class="Notification__message"><span></span></span>
+							<button aria-label="Close" class="Notification__close"><span aria-hidden="true" class="Icon__icon Notification__close-icon" data-icon="close" data-qa="icon"><svg viewBox="0 0 11.6 11.6" class="Icon__icon-svg" role="img"><title>Close</title><path d="M11.6 1.4L10.2 0 5.8 4.4 1.4 0 0 1.4l4.4 4.4L0 10.2l1.4 1.4 4.4-4.4 4.4 4.4 1.4-1.4-4.4-4.4z"></path></svg></span>
+							</button>
+						</div>
 
-                </div>
-              </section>
-            </aside>
-        </div>
-        <!-- Cart.// -->
-    </div>
-  </div>
-  
+						<div class="Cart__cart-content">
+							<div class="Cart__cart-content-wrapper">
+							<div class="Cart__empty-cart visually-hidden">
+								<h2 class="Cart__empty-cart-heading">Your cart is empty</h2>
+								<a href="/index.html" class="btn--big fonts__barlow-regular btn-primary">Shop now</a>
+							</div>
+			
+							<div class="Cart_line-item--container">
+								<div data-line-item="true" class="LineItemCard">
+									<div class="ProductImageContainer">
+									<img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
+									</div>
+									<div data-qa="product-info" class="ProductInfoContainer">
+									<div class="DescriptionContainer">
+										<h4 class="ProductName">GoFlo Prostate</h4>
+										<span class="OptionText-wdax5f-4 cxVSoJ">Size: Bottle</span>
+									</div>
+									<div class="QuantityContainer">
+										<span class="QuantityControl">
+										<button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
+											<span class="QuantityIcon QuantityIconDecrease">-</span>
+											</button>
+											<output class="QuantityCount">1</output>
+											<button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
+										</button>
+										</span>
+									</div>
+									<div class="SummaryContainer">
+										<div class="PriceContainer">
+											<output class="Price">$29.95</output>
+										</div>
+										<div class="ShipsByContainer">
+											<output></output>
+										</div>
+										<button aria-label="Remove" data-remove-button="true" class="RemoveButton">
+											<img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
+											<span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
+										</button>
+									</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="Cart_line-item--container">
+									<div data-line-item="true" class="LineItemCard">
+									<div class="ProductImageContainer">
+										<img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
+									</div>
+									<div data-qa="product-info" class="ProductInfoContainer">
+										<div class="DescriptionContainer">
+											<h4 class="ProductName">Kerafy Hair Building Fibers</h4>
+											<span class="OptionText">Buy 2 get 1 free</span>
+										</div>
+										<div class="QuantityContainer">
+											<span class="QuantityControl">
+											<button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
+											<span class="QuantityIcon QuantityIconDecrease">-</span>
+											</button>
+											<output class="QuantityCount">2</output>
+											<button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
+											</button>
+											</span>
+										</div>
+										<div class="SummaryContainer">
+											<div class="PriceContainer">
+											<output class="Price">$59.90</output>
+											</div>
+											<div class="ShipsByContainer">
+											<output></output>
+											</div>
+											<button aria-label="Remove" data-remove-button="true" class="RemoveButton">
+											<img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
+											<span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
+											</button>
+										</div>
+									</div>
+									</div>
+								</div>
+								<div class="Cart_line-item--container">
+									<div data-line-item="true" class="LineItemCard">
+										<div class="ProductImageContainer">
+											<img alt="" src="https://via.placeholder.com/350x424?text=Product&amp;auto=compress%2Cformat&amp;q=65&amp;w=180" data-qa="product-image">
+										</div>
+										<div data-qa="product-info" class="ProductInfoContainer">
+											<div class="DescriptionContainer">
+											<h4 class="ProductName">Plexaderm Rapid Reduction Serum</h4>
+											<span class="OptionText">1 Bottle</span>
+											</div>
+											<div class="QuantityContainer">
+											<span class="QuantityControl">
+											<button aria-label="Decrease quantity" data-quantity-button="decrease" disabled="" class="QuantityButton">
+												<span class="QuantityIcon QuantityIconDecrease">-</span>
+												</button>
+												<output class="QuantityCount">1</output>
+												<button aria-label="Increase quantity" data-quantity-button="increase" class="QuantityButton"><span class="QuantityIcon QuantityIconIncrease">+</span>
+											</button>
+											</span>
+											</div>
+											<div class="SummaryContainer">
+											<div class="PriceContainer">
+												<output class="Price">$59.95</output>
+											</div>
+											<div class="ShipsByContainer-wdax5f-18 bGmvME">
+												<output></output>
+											</div>
+											<button aria-label="Remove" data-remove-button="true" class="RemoveButton">
+												<img alt="" src="https://casper.com/assets-spa/images/cart/remove-icon.svg" class="RemoveButtonIcon">
+												<span aria-hidden="true" class="RemoveButtonLabel">Remove</span>
+											</button>
+											</div>
+										</div>
+									</div>
+									</div>
+
+							<div class="Container__Summary">
+								<ul class="Container__Summary-list">
+									<li data-summary-item="subtotal" class="SummaryItem">
+									<span class="SummaryItemLabel">Subtotal</span>
+									<span class="SummaryItemValue">$195.00</span>
+									</li>
+									<li data-summary-item="discount" class="SummaryItem">
+									<span class="SummaryItemLabel">Discount<span class="SummaryDiscountCode">(LABOR19)</span></span>
+									<span class="SummaryItemValue">-$10.00</span>
+									</li>
+									<li data-summary-item="shipping" class="SummaryItem">
+									<span class="SummaryItemLabel">Shipping</span>
+									<span class="SummaryItemValue">Free</span>
+									</li>
+									<li data-summary-item="total" class="SummaryItem">
+									<span class="SummaryItemLabel">Estimated total</span>
+									<span class="SummaryItemValue">$195.00</span>
+									</li>
+								</ul>
+							</div>
+							<div data-qa="checkout-cta" class="CheckoutCTAContainer">
+								<a href="/checkout/" class="btn btn--big fonts__barlow-regular btn-primary">
+									<svg viewBox="0 0 13 16" class="CheckoutLockIcon Icon__icon--small">
+									<title>lock</title>
+									<desc>Created with Sketch.</desc>
+									<path fill="#FFF" fill-rule="nonzero" d="M8.92 5.333v-1.17A2.383 2.383 0 0 0 6.539 1.78h-.155A2.383 2.383 0 0 0 4 4.163v1.168c-.598.048-1.194.112-1.789.192V4.162A4.169 4.169 0 0 1 6.391 0h.155a4.169 4.169 0 0 1 4.164 4.163v1.362a30.542 30.542 0 0 0-1.79-.192zM.939 7.205a29.751 29.751 0 0 1 11.064 0c.49.093.844.523.84 1.021v6.278a.933.933 0 0 1-.757.916l-.567.107a27.149 27.149 0 0 1-10.097 0l-.57-.107a.933.933 0 0 1-.76-.916V8.133c.001-.448.32-.833.76-.916l.087-.012zm4.487 5.859a2.87 2.87 0 0 0 2.086 0 .231.231 0 0 0 .135-.298l-.543-1.532a1.021 1.021 0 1 0-1.268 0l-.543 1.532a.231.231 0 0 0 .133.298z"></path>
+									</svg>Checkout</a>
+							</div>
+							</div>
+
+						</div>
+					</section>
+					</aside>
+			</div>
+			<!-- Cart.// -->
+	</div>
 </body>
 </html>
 

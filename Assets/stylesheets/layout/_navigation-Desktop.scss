@@ -268,7 +268,8 @@
          @include on-event {
             padding-left: .25rem;
             color: #1e306e;
-        }
+            text-decoration: $link-hover-decoration;
+         }
       }
       
    }

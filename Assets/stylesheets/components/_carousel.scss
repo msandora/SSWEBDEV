@@ -21,8 +21,11 @@
 			}
 			@include respond-to('desktop') {
 				min-height: 360px;
+			}
+			@media only screen and (min-width: 1600px) {
 				width: 100%;
 			}
+
 		}
 		@include respond-to('phone-only') {
 			&:before{
@@ -95,10 +98,12 @@
 }
 
 
-#reviewContainer {
+.testimonial {
+	position:relative;
 	height: unset;
 	display: flex;
 	overflow: hidden;
+	margin: 30px 0;
 	.carousel-caption {
 		color:#000;
 		position: relative;

@@ -68,31 +68,30 @@
     height: 3rem;
     border-bottom: 1px solid #e6e6e6;
 		@include respond-to('tablet-portrait') {
-			-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-			justify-content: space-between;
-			padding-right: .25rem;
-			padding-left: 1.25rem;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		padding-right: .25rem;
+		padding-left: 1.25rem;
     }
     @media screen and (min-width: 1024px) {
-			height: 3.125rem;
+		height: 3.125rem;
     }
     .Cart__header-info {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: baseline;
-			-ms-flex-align: baseline;
-			align-items: baseline;
-			@include font-size(18px);
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: baseline;
+		-ms-flex-align: baseline;
+		align-items: baseline;
+		@include font-size(18px);
     }
     .Cart__heading {
-			margin-top: .125rem;
-			margin-right: .75rem;
-			margin-bottom: 0;
-			text-align: center;
-			color: $brand-color;
-			@include font-size(18px);
+		margin-right: .75rem;
+		margin-bottom: 0;
+		text-align: center;
+		color: $brand-color;
+		@include font-size(18px);
     }
 }
 .Cart__hide-button {
@@ -254,3 +253,14 @@
 		margin-right: 0.5rem;
 	}
 }
+
+.CheckoutCTAContainer{
+	.CheckoutLockIcon {
+		position: relative;
+		top: -2px;
+	}
+	span{
+		color: $white-base;
+	}
+}
+

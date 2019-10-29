@@ -15,6 +15,9 @@
 	.MarketingContainer__promotion--content {
 		margin: 0 2vw;
 		@include font-size(14px);
+		@include respond-to('phone-only') {
+			@include font-size(11px);
+		}
 		color: $white-base;
 		a{
 			color: $white-base;
@@ -58,6 +61,7 @@
 			transform: translateY(-2rem);
 		}
 	}
+
 	.Header__inner {
 		position: relative;
 		display: -webkit-box;
@@ -311,13 +315,16 @@
 			pointer-events: none
 		}
 	}
+	& div:first-child {
+		margin-left: auto;
+	}
 }
-.Header__nav-actions--to-hide {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	margin-left: auto;
-}
+// .Header__nav-actions--to-hide {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	margin-left: auto;
+// }
 
 
 .Header__action-button {
