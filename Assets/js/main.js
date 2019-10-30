@@ -2,7 +2,6 @@
 Sheer Science Redesign
 -----------------------------------------------------*/
 
-
 function create_custom_dropdowns() {
   $('.swatch-dropdown select').each(function(i, select) {
     if (!$(this).next().hasClass('custom-dropdown')) {
@@ -128,7 +127,6 @@ jQuery(document).ready(function () {
     //Mobile Navigation Dropdowns
     $('.MenuListMobile__nav-menu-item').click(function () {
       var status = $(this).children('.MenuListMobile__nav-group').attr('data-status');
-  
       // close everything first
       $('.MenuListMobile__nav-group').attr('data-status', 'closed');
       $('.MenuListMobile__nav-menu-item').removeClass('MenuListMobile__nav-menu-item--is-active');
@@ -147,55 +145,22 @@ jQuery(document).ready(function () {
       }
     });
 
-  // var executed = false;
-
-  // var numItems = $('.HeaderNavMenu__item--hover').length;
-  // $('.HeaderNavMenu__item--hover').each(function(){
-  //     $(this).hover(function(){
-  //       var status = $('.Header__overlay').attr('data-status');
-  //       $(this).find( ".HeaderNavMenu__link" ).addClass('HeaderNavMenu__link--active');
-  //       if (status == 'closed') {
-  //         $('#NavOverlay').addClass("Header__overlay-visible").removeClass("layout__visually-hidden");
-  //         $(".Header__nav-primary--container").addClass('Header__nav-primary--container-dropdown-visible');
-  //         $(".Header__overlay").attr('data-status', 'open');
-  //         if (!executed) {
-  //             executed = true;
-  //             // do something
-  //             var dropdownHeight = $(this).find( ".HeaderNavMenu__dropdown" ).height(); dropdownHeight++
-  //             $('head').append('<style>.Header__nav-primary--container:after{height:' + dropdownHeight + 'px !important;}</style>');
-  //         }
-  //       }
-  //     }, function(){
-  //       var status = $(".Header__overlay").attr('data-status');
-  //       $(this).find( ".HeaderNavMenu__link" ).removeClass('HeaderNavMenu__link--active');
-  //       if (status == 'open') {
-  //         $('#NavOverlay').removeClass("Header__overlay-visible").addClass("layout__visually-hidden");
-  //         $(".Header__nav-primary--container").removeClass('Header__nav-primary--container-dropdown-visible');
-  //         $(".Header__overlay").attr('data-status', 'closed');
-  //       }
-  //     });
-  // });
-
-
 
     // Adds/Dismisses overlay when hovering nav buttons on desktop
-
     $('.HeaderNavMenu__item--hover').hover(function(){
       var status = $('.Header__overlay').attr('data-status');
       $(this).find( ".HeaderNavMenu__link" ).addClass('HeaderNavMenu__link--active');
       if (status == 'closed') {
         $('#NavOverlay').addClass("Header__overlay-visible").removeClass("layout__visually-hidden");
-        $(".Header__nav-primary--container").addClass('Header__nav-primary--container-dropdown-visible');
+        // $(".Header__nav-primary--container").addClass('Header__nav-primary--container-dropdown-visible');
         $(".Header__overlay").attr('data-status', 'open');
-        var dropdownHeight = $(this).find( ".HeaderNavMenu__dropdown" ).height(); dropdownHeight++
-        $('head').append('<style>.Header__nav-primary--container:after{height:' + dropdownHeight + 'px !important;}</style>');
       }
     }, function () {  // Dismiss
       var status = $(".Header__overlay").attr('data-status');
       $(this).find( ".HeaderNavMenu__link" ).removeClass('HeaderNavMenu__link--active');
       if (status == 'open') {
         $('#NavOverlay').removeClass("Header__overlay-visible").addClass("layout__visually-hidden");
-        $(".Header__nav-primary--container").removeClass('Header__nav-primary--container-dropdown-visible');
+        // $(".Header__nav-primary--container").removeClass('Header__nav-primary--container-dropdown-visible');
         $(".Header__overlay").attr('data-status', 'closed');
       }
     });

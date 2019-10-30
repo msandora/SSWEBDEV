@@ -2,29 +2,6 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-// Promotions banner
-.MarketingContainer__marketing-container {
-	display: flex;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	height: $promo-height;
-	background-color: $brand-color;
-	transition: margin-top .4s ease-out;
-	z-index: 105;
-	.MarketingContainer__promotion--content {
-		margin: 0 2vw;
-		@include font-size(14px);
-		@include respond-to('phone-only') {
-			@include font-size(11px);
-		}
-		color: $white-base;
-		a{
-			color: $white-base;
-		}
-	}
-}
-
 // Header Elements
 .Header__container {
 	position: fixed;
@@ -90,7 +67,31 @@
 	}
 }
 
-// Mobile Menu Button (Top Left)
+// Promotions banner
+.MarketingContainer__marketing-container {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	height: $promo-height;
+	background-color: $brand-color;
+	transition: margin-top .4s ease-out;
+	z-index: 105;
+	.MarketingContainer__promotion--content {
+		margin: 0 2vw;
+		@include font-size(14px);
+		@include respond-to('phone-only') {
+			@include font-size(11px);
+		}
+		color: $white-base;
+		a{
+			color: $white-base;
+		}
+	}
+}
+
+
+// Mobile Hamburger Menu Button
 .Header__nav-mobile-menu {
 	position: relative;
 	display: -webkit-box;
@@ -175,15 +176,16 @@
 	width: 30%;
 	.Header__logo-img{
 		width: 9rem;
-		margin-bottom: .25rem;
+		margin-bottom: .10rem;
 		fill: $brand-color;
 		@media screen and (max-width: 768px) {
-			margin-left: 0.5rem;
+			margin-left: 0.2rem;
+		}
+		@include on-event {
+			padding-left: 0.3rem;
 		}
 	}
-	@include on-event {
-		padding-left: 0.3rem;
-	}
+
 }
 
 // Transparency behind dropdowns
