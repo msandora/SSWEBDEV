@@ -61,7 +61,13 @@
 			transform: translateY(-2rem);
 		}
 	}
-
+	.Header__contain{
+		position: relative;
+		border-bottom: 1px solid $gray-lighter;
+		height: $header-height;
+		background: $white-base;
+		z-index: 103;
+	}
 	.Header__inner {
 		position: relative;
 		display: -webkit-box;
@@ -71,10 +77,12 @@
 		-ms-flex-align: center;
 		align-items: center;
 		height: $header-height;
-		background: $white-base;
-		z-index: 103;
-		border-bottom: 1px solid $gray-lighter;
-		border-top: 1px solid $gray-lighter;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			max-width: 1130px;
+			width: 100%;
+		}
 		@include respond-to('tablet-portrait') {
 			padding-right: .75rem;
 			padding-left: .75rem;
@@ -315,16 +323,13 @@
 			pointer-events: none
 		}
 	}
-	& div:first-child {
-		margin-left: auto;
-	}
 }
-// .Header__nav-actions--to-hide {
-// 	display: -webkit-box;
-// 	display: -ms-flexbox;
-// 	display: flex;
-// 	margin-left: auto;
-// }
+.Header__nav-actions--to-hide {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-left: auto;
+}
 
 
 .Header__action-button {

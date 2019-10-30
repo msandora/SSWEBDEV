@@ -53,10 +53,20 @@
 		display: table;
 		height: inherit;
 		width: 78%;
-		@include respond-to('tablet-portrait') {
-			width: 38%;
-			right: 51%;
+
+		@media (min-width: 576px) {
+			width: 540px;
 		}
+		@media (min-width: 768px) {
+			width: 720px;
+		}
+		@media (min-width: 992px) {
+			width: 960px;
+		}
+		@media (min-width: 768px) {
+			width: 1130px;
+		}
+
 		h2 {
 			color: $brand-color;
 			font-family: $font-primary;
