@@ -1,13 +1,11 @@
 /*----------------------------------------------------
 Sheer Science Redesign
 -----------------------------------------------------*/
-console.log("All Systems Go!");
-
 
 function create_custom_dropdowns() {
   $('.swatch-dropdown select').each(function(i, select) {
-    if (!$(this).next().hasClass('dropdown')) {
-      $(this).after('<div class="dropdown ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><span class="active-swatch"></span><div class="list"><ul></ul></div></div>');
+    if (!$(this).next().hasClass('custom-dropdown')) {
+      $(this).after('<div class="form-control custom-dropdown ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><span class="active-swatch"></span><div class="list"><ul></ul></div></div>');
       var dropdown = $(this).next();
       var options = $(select).find('option');
       var selected = $(this).find('option:selected');
@@ -15,19 +13,17 @@ function create_custom_dropdowns() {
       options.each(function(j, o) {
         var display = $(o).data('display-text') || '';
         var swatch = $(o).val().replace(/\s+/g, '-').toLowerCase();
-        if (display != 'Select Color') {
+        if (display != 'Select Color' && display != 'Select') {
           dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '<img class="swatch-color" src="/SheerScience/Assets/img/' + swatch + '-swatch.png"></li>');
         }
       });
     }
   });
 }
-
 // Event listeners
-
 // Open/close
-$(document).on('click', '.swatch-dropdown .dropdown', function(event) {
-  $('.dropdown').not($(this)).removeClass('open');
+$(document).on('click', '.swatch-dropdown .custom-dropdown', function(event) {
+  $('.custom-dropdown').not($(this)).removeClass('open');
   $(this).toggleClass('open');
   if ($(this).hasClass('open')) {
     $(this).find('.option').attr('tabindex', 0);
@@ -39,26 +35,26 @@ $(document).on('click', '.swatch-dropdown .dropdown', function(event) {
 });
 // Close when clicking outside
 $(document).on('click', function(event) {
-  if ($(event.target).closest('.dropdown').length === 0) {
-    $('.dropdown').removeClass('open');
-    $('.dropdown .option').removeAttr('tabindex');
+  if ($(event.target).closest('.custom-dropdown').length === 0) {
+    $('.custom-dropdown').removeClass('open');
+    $('.custom-dropdown .option').removeAttr('tabindex');
   }
   event.stopPropagation();
 });
 // Option click
-$(document).on('click', '.dropdown .option', function(event) {
+$(document).on('click', '.custom-dropdown .option', function(event) {
   $(this).closest('.list').find('.selected').removeClass('selected');
   $(this).addClass('selected');
   var text = $(this).data('display-text') || $(this).text();
-  $(this).closest('.dropdown').find('.current').text(text);
-  $(this).closest('.dropdown').prev('select').val($(this).data('value')).trigger('change');
+  $(this).closest('.custom-dropdown').find('.current').text(text);
+  $(this).closest('.custom-dropdown').prev('select').val($(this).data('value')).trigger('change');
   var currentSwatch = $(this).children('span').attr('class');
    $('<span class="swatch-color swatch-' + currentSwatch + '"></span>').appendTo(".active-swatch");
-  //  $('<span class="swatch-color ' + currentSwatch + '"></span>').appendTo($(this).parent('.dropdown').find(".active-swatch"));
+  //  $('<span class="swatch-color ' + currentSwatch + '"></span>').appendTo($(this).parent('.custom-dropdown').find(".active-swatch"));
 });
 
 // Keyboard events
-$(document).on('keydown', '.dropdown', function(event) {
+$(document).on('keydown', '.custom-dropdown', function(event) {
   var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
   // Space or Enter
   if (event.keyCode == 32 || event.keyCode == 13) {
@@ -95,7 +91,17 @@ $(document).on('keydown', '.dropdown', function(event) {
 });
 
 
+
+
+
 jQuery(document).ready(function () {
+    if ($(".MarketingContainer__marketing-container")[0] && $(".Header__overlay")[0]){
+      $('main.flex').addClass('Header__site-padding-top-with-promo');
+    } 
+    else if ($(".Header__overlay")[0]){
+      $('main.flex').addClass('Header__site-padding-top-without-promo');
+    }
+
     // Initialize custom dropdown field for swatch picker
     create_custom_dropdowns();
 
@@ -106,6 +112,7 @@ jQuery(document).ready(function () {
           $('.Header__nav-group--mobile').attr('aria-hidden', 'true');
         } else {
           $('.Header__nav-group--mobile').attr('aria-hidden', 'false');
+          $('.Header__nav-group--mobile').scrollTop(0);
         }
         $('.Header__container').toggleClass("Header__container--headroom");
         $(this).toggleClass("Header__nav-mobile-menu--active");
@@ -119,21 +126,20 @@ jQuery(document).ready(function () {
 
     //Mobile Navigation Dropdowns
     $('.MenuListMobile__nav-menu-item').click(function () {
-      var status = $(this).children(".MenuListMobile__nav-group").attr('data-status');
-  
+      var status = $(this).children('.MenuListMobile__nav-group').attr('data-status');
       // close everything first
-      $(".MenuListMobile__nav-group").attr('data-status', 'closed');
+      $('.MenuListMobile__nav-group').attr('data-status', 'closed');
       $('.MenuListMobile__nav-menu-item').removeClass('MenuListMobile__nav-menu-item--is-active');
       $('.MenuListMobile__mobile-nav-container').find('ul.MenuListMobile__nav-group').addClass('MenuListMobile__nav-group--is-hidden');
 
       if (status == 'closed') {
           // open it
-          $(this).children(".MenuListMobile__nav-group").attr('data-status', 'open');
+          $(this).children('.MenuListMobile__nav-group').attr('data-status', 'open');
           $(this).addClass('MenuListMobile__nav-menu-item--is-active');
           $(this).find('ul').removeClass('MenuListMobile__nav-group--is-hidden');
       } else {
           // close it
-          $(this).children(".MenuListMobile__nav-group").attr('data-status', 'closed');
+          $(this).children('.MenuListMobile__nav-group').attr('data-status', 'closed');
           $(this).removeClass('MenuListMobile__nav-menu-item--is-active');
           $(this).find('ul').addClass('MenuListMobile__nav-group--is-hidden');
       }
@@ -141,12 +147,12 @@ jQuery(document).ready(function () {
 
 
     // Adds/Dismisses overlay when hovering nav buttons on desktop
-    $(".HeaderNavMenu__item--hover").hover(function(){
-      var status = $(".Header__overlay").attr('data-status');
+    $('.HeaderNavMenu__item--hover').hover(function(){
+      var status = $('.Header__overlay').attr('data-status');
       $(this).find( ".HeaderNavMenu__link" ).addClass('HeaderNavMenu__link--active');
       if (status == 'closed') {
         $('#NavOverlay').addClass("Header__overlay-visible").removeClass("layout__visually-hidden");
-        $(".Header__nav-primary--container").addClass('Header__nav-primary--container-dropdown-visible');
+        // $(".Header__nav-primary--container").addClass('Header__nav-primary--container-dropdown-visible');
         $(".Header__overlay").attr('data-status', 'open');
       }
     }, function () {  // Dismiss
@@ -154,7 +160,7 @@ jQuery(document).ready(function () {
       $(this).find( ".HeaderNavMenu__link" ).removeClass('HeaderNavMenu__link--active');
       if (status == 'open') {
         $('#NavOverlay').removeClass("Header__overlay-visible").addClass("layout__visually-hidden");
-        $(".Header__nav-primary--container").removeClass('Header__nav-primary--container-dropdown-visible');
+        // $(".Header__nav-primary--container").removeClass('Header__nav-primary--container-dropdown-visible');
         $(".Header__overlay").attr('data-status', 'closed');
       }
     });
@@ -173,60 +179,71 @@ jQuery(document).ready(function () {
     });
 });
 
-$(function() {
-	var header = $(".Header__container");
-	var pos = header.position();						   
-	$(window).scroll(function() {
-		var windowpos = $(window).scrollTop();
-		if (windowpos >= pos.top & windowpos >=100) {
-			header.addClass("headroom--not-top Header__container--unpinned");
-		} else {
-			header.removeClass("headroom--not-top Header__container--unpinned");	
-		}
-	});
+
+/*----------------------------------------------------
+  When promotion is present...
+  this hides/display as user scrolls up/down
+-----------------------------------------------------*/
+$(function () {
+  if ($(".MarketingContainer__marketing-container")[0]) {
+      var header = $(".Header__container");
+      var pos = header.position();
+      $(window).scroll(function () {
+          var windowpos = $(window).scrollTop();
+          if (windowpos >= pos.top & windowpos >= 100) {
+              header.addClass("headroom--not-top Header__container--unpinned");
+          } else {
+              header.removeClass("headroom--not-top Header__container--unpinned");
+          }
+      });
+  }
 });
 
 
-
-
+/*----------------------------------------------------
+  Remember which checkboxes have 
+  been selected with local storage
+-----------------------------------------------------*/
 function App() { }
-    
-App.prototype.setState = function(key, state) {
-  localStorage.setItem(key, state);
+
+App.prototype.setState = function (key, state) {
+    localStorage.setItem(key, state);
 }
 
-App.prototype.getState = function(key) {
-  return localStorage.getItem(key);
+App.prototype.getState = function (key) {
+    return localStorage.getItem(key);
 }
 
 function init() {
-  var app = new App();
-  
-  // Get all checkboxes that we want to check
-  var checkboxes = document.querySelectorAll('#accordion input[type="checkbox"]');
-   
-  // Loop through all checkboxes
-  for (var i = 0; i < checkboxes.length; i++) {
-    
-    // The current checkbox in the loop
-    var checkbox = checkboxes[i];
-    
-    // Determine if the checkbox is saved in LocalStorage
-    var isSaved = app.getState(checkbox.id);
-      
-    // Set the selected state
-    if (isSaved === 'true') {
-      checkbox.checked = true;
+    var app = new App();
+
+    // Get all checkboxes that we want to check
+    var checkboxes = document.querySelectorAll('#accordion input[type="checkbox"]');
+
+    // Loop through all checkboxes
+    for (var i = 0; i < checkboxes.length; i++) {
+
+        // The current checkbox in the loop
+        var checkbox = checkboxes[i];
+
+        // Determine if the checkbox is saved in LocalStorage
+        var isSaved = app.getState(checkbox.id);
+
+        // Set the selected state
+        if (isSaved === 'true') {
+            checkbox.checked = true;
+        }
+
+        // Create an event listener for each checkbox
+        checkbox.addEventListener('click', function (e) {
+            // We save the checkbox id as the key in localStorage
+            // We save the checkbox checked state as the value
+            var _checkbox = e.target;
+            app.setState(_checkbox.id, _checkbox.checked)
+        });
     }
-    
-    // Create an event listener for each checkbox
-    checkbox.addEventListener('click', function(e) {
-      // We save the checkbox id as the key in localStorage
-      // We save the checkbox checked state as the value
-      var _checkbox = e.target;
-      app.setState(_checkbox.id, _checkbox.checked)
-    });
-  }
 }
 
 init();
+
+console.log("All Systems Go!");

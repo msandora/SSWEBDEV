@@ -1,0 +1,70 @@
+
+.dermaHeader {
+	background-color: white;
+	@include font-size(29px);
+	line-height: 30px;
+}
+  
+.dermaBanner {
+	background-color: #1a305b;
+	@include font-size(25px);
+	line-height: 26px;
+}
+
+@include respond-to('tablet-portrait') {
+	.dermaHeader {
+		@include font-size(27px);
+		line-height: 28px;
+	}
+	.dermaBanner {
+		@include font-size(23px);
+		line-height: 24px;
+	}
+	.dermaContent {
+		@include font-size(16px);
+		line-height: 17px;
+	}
+}
+  
+.dermaContent {
+	background-color: #6281af;
+	@include font-size(18px);
+	line-height: 19px;
+	.container {
+		overflow: hidden;
+		.column {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+				-ms-flex-align: center;
+					align-items: center;
+			padding: 0;
+		}
+	}
+	.column div:first-child {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.grid-image-widget img {
+		width: 100%;
+		max-width: 100%;
+	}
+	h5 {
+		margin-bottom: 0.8rem;
+	}
+	p {
+		margin-bottom: 0.8rem;
+	}
+}
+
+@media (max-width: 1210px) {
+	.dermaContent .col-md-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+

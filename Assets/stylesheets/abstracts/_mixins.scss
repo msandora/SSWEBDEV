@@ -3,9 +3,7 @@
 // -----------------------------------------------------------------------------
 
 /// Event wrapper
-/// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -22,6 +20,17 @@
     }
   }
 }
+// Usage
+// .Header__logo {
+// 	@include on-event {
+// 		padding-left: 0.3rem;
+// 	}
+// }
+// Output
+// .Header__logo:hover, .Header__logo:active, .Header__logo.dropdown.open, .Header__logo:focus {
+//   padding-left: 0.3rem;
+// }
+
 
 /// Make a context based selector a little more friendly
 /// @author Hugo Giraudel
@@ -66,7 +75,6 @@
 
 /// Mixin to manage responsive breakpoints
 /// BReakpoints can be found in _variables.scss
-/// @author Hugo Giraudel
 /// @param {String} $breakpoint - Breakpoint name
 /// @require $breakpoints
 

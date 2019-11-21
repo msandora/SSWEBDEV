@@ -47,6 +47,7 @@
 
 /* blog-article */
 .blog-article {
+    line-height: 1.4rem;
     .img-circle{
         border-radius: 50%;
         border: 1px solid $brand-color;
@@ -70,8 +71,9 @@
             margin: 1.25rem 0;
         }
         a {
-            display:block;
-            margin: 1.25rem 0;
+            display: inline-block;
+            margin: 1rem 0;
+            width: 100%;
         }
     }
     .related-post-thumbnail-container {

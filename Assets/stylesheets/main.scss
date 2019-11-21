@@ -25,17 +25,17 @@
         'layout/navigation-Mobile';
 
 // 5. Components
-@import 'components/button',
+@import 'components/buttons',
         'components/carousel',
         'components/keyword-search',
-        'components/cart',
         'components/newsletter',
-        'components/checkmarks';
+        'components/cart',
+        'components/forms';
 ;
 
 // 6. Page-specific styles
 @import 'pages/home',
-        'pages/kerafy-swatches',
+        'pages/dermatologist',
         'pages/blog';
 
 // 7. Themes

@@ -16,7 +16,7 @@
 			padding-right: 2.5rem;
 			padding-left: 2.5rem;
 		}
-		@media(min-width: 1024px) {
+		@include respond-to('tablet-landscape') {
 			.Footer__content {
 				display: flex;
 				flex-wrap: wrap;
@@ -58,8 +58,12 @@
 	.Footer__link {
 		display: block;
 		margin-bottom: 0.8rem;
-		color: $white_70;
+		color: $off-white;
+		text-decoration: underline;
 		transition: opacity .15s ease-out;
+		@include on-event {
+            text-decoration: $link-hover-decoration;
+        }
 	}
 }
 
@@ -70,16 +74,6 @@
 	.Footer__signup-column {
 		text-align:center;
 	}
-	@media(min-width: 768px) and(max-width: 1023px) {
-		max-width: none;
-		.Footer__signup-content {
-			display: flex;
-			justify-content: space-between;
-			.Footer__signup-column {
-				width: 19.375rem;
-			}
-		}
-	}
 }
 
 .BottomNav__container {
@@ -89,13 +83,11 @@
 		display: flex;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		border-top: 1px solid $brand-color;
+		border-top: 1px solid $brand-color-dark;
 		flex-direction: column;
+		justify-content: center;
+		text-align: center;
 
-		@include respond-to('tablet-portrait') {
-			justify-content: center;
-			text-align: center;
-		}
 		.BottomNav__copyright {
 			display: inline-block;
 			padding-bottom: 1rem;
@@ -108,7 +100,6 @@
 			@include font-size(12px);
 			max-width: 47rem;
 			&:first-child {
-				max-width: 27rem;
 				margin-bottom: 0.7rem;
 			}
 		}
@@ -138,17 +129,20 @@
 	&:last-child {
 		margin-right: 0;
 	}
-	@include on-event {
-		border: 2px solid $brand-color-dark;
-	}
-	@media(min-width: 350px) {
-		margin-right: .75rem;
-	}
 	.Footer__social-link-icon {
 		width: 1rem;
 		height: 1rem;
 		svg{
 			fill: $white-base;
 		}   
+	}
+	@include on-event {
+		border: 2px solid $brand-color-dark;
+		svg{
+			fill: $brand-color-dark;
+		}
+	}
+	@media(min-width: 350px) {
+		margin-right: .75rem;
 	}
 }

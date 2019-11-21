@@ -9,7 +9,6 @@
        display: none;
    }
    .Header__nav-primary {
-     background: $white-base;
      display: -webkit-box;
      display: -ms-flexbox;
      display: flex;
@@ -35,55 +34,6 @@
   }
 }
 
-.HeaderNavMenu__link {
-  height: 100%;
-  @include respond-to('tablet-portrait') {
-      padding: 0 .75rem;
-  }
-  @media (min-width: 1024px) {
-        padding: 0 1.25rem;
-        -webkit-transition: color .15s ease-out;
-        -o-transition: color .15s ease-out;
-        transition: color .15s ease-out
-  }
-
-}
-
-.header__header-link {
-   @include font-size(15px);
-   letter-spacing: .033125rem;
-   white-space: nowrap;
-   color: $brand-color;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-      user-select: none;
-   @media screen and (min-width: 768px) and (max-width: 1023px) {
-      @include font-size(13px);
-   }
-
-  @include on-event {
-   color: $brand-color-darker;
-   text-decoration: $link-hover-decoration;
-  }
-
-}
-
-.header__header-utility-link {
-   @include respond-to('tablet-portrait') {
-      font-size: .875rem;
-      letter-spacing: .01875rem;
-      color: #525252;
-      -webkit-transition: color .15s ease-out;
-      -o-transition: color .15s ease-out;
-      transition: color .15s ease-out;
-   }
-   @media (min-width: 1024px) {
-      @include on-event {
-         color: $link-hover-color;
-      }
-   }
-}
 
 .Header__nav-mobile-menu--active {
    color: $brand-color-darker;
@@ -94,27 +44,74 @@
    display: flex;
    align-items: center;
    height: 100%;
-   &:after {
-      content: "";
+   .header__header-link {
+      @include font-size(15px);
+      letter-spacing: .033125rem;
+      white-space: nowrap;
+      color: $brand-color;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+         user-select: none;
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+         @include font-size(13px);
+      }
+   
+     @include on-event {
+      color: $brand-color-darker;
+      text-decoration: $link-hover-decoration;
+     }
+   }
+}
+
+.HeaderNavMenu__link {
+   height: 100%;
+   @include respond-to('tablet-portrait') {
+       padding: 0 .75rem;
+   }
+   @include respond-to('tablet-landscape') {
+         padding: 0 1.25rem;
+         -webkit-transition: color .15s ease-out;
+         -o-transition: color .15s ease-out;
+         transition: color .15s ease-out
+   }
+ }
+
+ .HeaderNavLink__link--main-nav {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   height: 100%;
+   padding: 0 0.7rem;
+   @include respond-to('tablet-portrait') {
+      padding: 0 .75rem;
+   }
+   @include respond-to('tablet-landscape') {
+      padding: 0 1rem;
+      -webkit-transition: color .15s ease-out;
+      -o-transition: color .15s ease-out;
+      transition: color .15s ease-out;
+   }
+}
+
+.HeaderNavMenu__item--hover {
+   .NavDesktop__subMenu{
       position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 22rem;
+      top: 0;
+      left: -100%;
+      width: 300%;
       background-color: $white-base;
       transform: scaleY(0);
       transform-origin: top;
-      pointer-events: none;
       transition: transform .3s ease-out;
       will-change: transform;
       border-bottom: 1px solid $gray-lighter;
    }
-   &.Header__nav-primary--container-dropdown-visible {
-      &:before {
-         opacity: 1;
-      }
-      &:after {
+   &:hover, &:focus-within, &:focus{
+      .NavDesktop__subMenu {
          box-shadow: 0 .25rem .5rem -.25rem rgba(0, 0, 0, .1);
          transform: none;
       }
@@ -133,8 +130,7 @@
      visibility: hidden;
      opacity: 0;
      width: 100%;
-     overflow: hidden;
-     background-color: $white-base;
+   //   overflow: hidden;
      pointer-events: auto;
      transition: opacity .3s ease, visibility .3s ease;
      will-change: opacity, transform;
@@ -167,7 +163,6 @@
 }
 
 .HeaderNavMenu__dropdown {
-  border-top: 1px solid $gray-lighter;
   
   @include respond-to('tablet-portrait') {
      .HeaderNavMenu__dropdown--hover {
@@ -197,25 +192,6 @@
   }
 }
 
-.HeaderNavLink__link--main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 0.7rem;
-  @include respond-to('tablet-portrait') {
-     padding: 0 .75rem;
-  }
-  @media (min-width: 1024px) {
-     padding: 0 1rem;
-     -webkit-transition: color .15s ease-out;
-     -o-transition: color .15s ease-out;
-     transition: color .15s ease-out;
-  }
-}
 
 .NavDesktop__subMenu {
    display: grid;
@@ -262,13 +238,14 @@
          @include respond-to('tablet-portrait') {
             padding: .4375rem 0;
          }
-         @media (min-width: 1024px) {
+         @include respond-to('tablet-landscape') {
             padding: .375rem 0;
          }
          @include on-event {
             padding-left: .25rem;
             color: #1e306e;
-        }
+            text-decoration: $link-hover-decoration;
+         }
       }
       
    }
