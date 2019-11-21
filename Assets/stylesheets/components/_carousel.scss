@@ -66,7 +66,11 @@
 		@media (min-width: 768px) {
 			width: 1130px;
 		}
-
+		@include respond-to('desktop') {
+			.text-secondary {
+				width: 50%
+			}
+		}
 		h2 {
 			color: $brand-color;
 			font-family: $font-primary;

@@ -55,12 +55,9 @@
 		align-items: center;
 		height: $header-height;
 		width: 100%;
-
-		@media (min-width: 768px) {
+		@include respond-to('tablet-portrait') {
 			max-width: 1130px;
 			width: 100%;
-		}
-		@include respond-to('tablet-portrait') {
 			padding-right: .75rem;
 			padding-left: .75rem;
 		}
@@ -256,7 +253,7 @@
 	-o-transition: color .15s ease-out;
 	transition: color .15s ease-out;
 	margin-left: auto;
-	@media (min-width: 1024px) {
+	@include respond-to('tablet-landscape') {
 		padding: 0 1rem;
 	}
 	.CartIcon__cart-icon-graphic {
@@ -347,7 +344,7 @@
 		display: -ms-flexbox;
 		display: flex;
 	}
-	@media (min-width: 1024px) {
+	@include respond-to('tablet-landscape') {
 		padding: 0 1rem;
 	}
 }

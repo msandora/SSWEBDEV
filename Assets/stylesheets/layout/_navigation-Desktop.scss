@@ -35,44 +35,6 @@
 }
 
 
-
-.header__header-link {
-   @include font-size(15px);
-   letter-spacing: .033125rem;
-   white-space: nowrap;
-   color: $brand-color;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-      user-select: none;
-   @media screen and (min-width: 768px) and (max-width: 1023px) {
-      @include font-size(13px);
-   }
-
-  @include on-event {
-   color: $brand-color-darker;
-   text-decoration: $link-hover-decoration;
-  }
-}
-
-
-
-.header__header-utility-link {
-   @include respond-to('tablet-portrait') {
-      font-size: .875rem;
-      letter-spacing: .01875rem;
-      color: #525252;
-      -webkit-transition: color .15s ease-out;
-      -o-transition: color .15s ease-out;
-      transition: color .15s ease-out;
-   }
-   @media (min-width: 1024px) {
-      @include on-event {
-         color: $link-hover-color;
-      }
-   }
-}
-
 .Header__nav-mobile-menu--active {
    color: $brand-color-darker;
    text-decoration: $link-hover-decoration;
@@ -82,23 +44,39 @@
    display: flex;
    align-items: center;
    height: 100%;
+   .header__header-link {
+      @include font-size(15px);
+      letter-spacing: .033125rem;
+      white-space: nowrap;
+      color: $brand-color;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+         user-select: none;
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+         @include font-size(13px);
+      }
+   
+     @include on-event {
+      color: $brand-color-darker;
+      text-decoration: $link-hover-decoration;
+     }
+   }
 }
-
-
-
 
 .HeaderNavMenu__link {
    height: 100%;
    @include respond-to('tablet-portrait') {
        padding: 0 .75rem;
    }
-   @media (min-width: 1024px) {
+   @include respond-to('tablet-landscape') {
          padding: 0 1.25rem;
          -webkit-transition: color .15s ease-out;
          -o-transition: color .15s ease-out;
          transition: color .15s ease-out
    }
  }
+
  .HeaderNavLink__link--main-nav {
    display: -webkit-box;
    display: -ms-flexbox;
@@ -111,16 +89,13 @@
    @include respond-to('tablet-portrait') {
       padding: 0 .75rem;
    }
-   @media (min-width: 1024px) {
+   @include respond-to('tablet-landscape') {
       padding: 0 1rem;
       -webkit-transition: color .15s ease-out;
       -o-transition: color .15s ease-out;
       transition: color .15s ease-out;
    }
 }
-
-
-
 
 .HeaderNavMenu__item--hover {
    .NavDesktop__subMenu{
@@ -142,7 +117,6 @@
       }
    }
 }
-
 
 @include respond-to('tablet-portrait') {
    .HeaderNavMenu__item{
@@ -264,7 +238,7 @@
          @include respond-to('tablet-portrait') {
             padding: .4375rem 0;
          }
-         @media (min-width: 1024px) {
+         @include respond-to('tablet-landscape') {
             padding: .375rem 0;
          }
          @include on-event {

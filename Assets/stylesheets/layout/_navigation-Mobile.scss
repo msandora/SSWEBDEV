@@ -100,8 +100,8 @@
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	padding: 2.1875rem 1.5625rem;
-	background-color: $white-base;
+    padding: 1rem 1.6rem;
+	background-color: $brand-color;
 	.Header__nav-utility--groups {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -124,6 +124,21 @@
             padding: 0 0 1.5625rem;
             &:last-child {
                 padding: 0;
+            }
+            .header__header-utility-link {
+                @include respond-to('tablet-portrait') {
+                    font-size: .875rem;
+                    letter-spacing: .01875rem;
+                    color: #525252;
+                    -webkit-transition: color .15s ease-out;
+                    -o-transition: color .15s ease-out;
+                    transition: color .15s ease-out;
+                }
+                @include respond-to('tablet-landscape') {
+                    @include on-event {
+                        color: $link-hover-color;
+                    }
+                }
             }
         }
 	}

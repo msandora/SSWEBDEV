@@ -16,7 +16,7 @@
 			padding-right: 2.5rem;
 			padding-left: 2.5rem;
 		}
-		@media(min-width: 1024px) {
+		@include respond-to('tablet-landscape') {
 			.Footer__content {
 				display: flex;
 				flex-wrap: wrap;
@@ -58,7 +58,8 @@
 	.Footer__link {
 		display: block;
 		margin-bottom: 0.8rem;
-		color: $white_70;
+		color: $off-white;
+		text-decoration: underline;
 		transition: opacity .15s ease-out;
 		@include on-event {
             text-decoration: $link-hover-decoration;
@@ -86,9 +87,7 @@
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
-		@include respond-to('phone-only') {
-			text-align: left;
-		}
+
 		.BottomNav__copyright {
 			display: inline-block;
 			padding-bottom: 1rem;
