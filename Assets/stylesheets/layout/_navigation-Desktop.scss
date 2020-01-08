@@ -163,7 +163,6 @@
 }
 
 .HeaderNavMenu__dropdown {
-  
   @include respond-to('tablet-portrait') {
      .HeaderNavMenu__dropdown--hover {
         position: absolute;
@@ -191,7 +190,6 @@
      }
   }
 }
-
 
 .NavDesktop__subMenu {
    display: grid;
@@ -233,23 +231,16 @@
          transition: .1s;
       }
       .NavDesktop__category--product-link {
-         padding: .5rem 0;
+         padding: 0 0 1rem 0;
          @include font-size(15px);
-         @include respond-to('tablet-portrait') {
-            padding: .4375rem 0;
-         }
-         @include respond-to('tablet-landscape') {
-            padding: .375rem 0;
-         }
+
          @include on-event {
             padding-left: .25rem;
             color: #1e306e;
             text-decoration: $link-hover-decoration;
          }
       }
-      
    }
-
 }
 
 .NavDesktop__subMenuPromo {

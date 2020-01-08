@@ -102,3 +102,12 @@
         }
     }
 }
+
+.blogBanner {
+    .carousel-caption{
+        display: flex;
+        .alignment{
+            align-self: flex-end;
+        }
+    }
+}

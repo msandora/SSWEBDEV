@@ -8,17 +8,18 @@
 html {
   box-sizing: border-box;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /**
  * Basic styles for wrapper elements
  */
-html, body, .app, .wrapper {
-  height: 100%;
-}
+
 body {
 	margin: 0px;
 	background: $white-base;
-	font-family: $font-primary;
+  font-family: $font-primary;
+  position: relative
 }
 
 .wrapper {
@@ -28,7 +29,6 @@ body {
 .content {
   flex: 1 0 auto;
 }
-
 footer {
   flex-shrink: 0;
   margin-top: auto;

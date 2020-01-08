@@ -18,7 +18,7 @@
 		}
 		@include respond-to('tablet-landscape') {
 			.Footer__content {
-				display: flex;
+				display: flex; 
 				flex-wrap: wrap;
 				justify-content: space-between;
 			}
@@ -56,8 +56,8 @@
 	width: 100%;
 	line-height: 20px;
 	.Footer__link {
-		display: block;
-		margin-bottom: 0.8rem;
+		display: inline-block;
+		margin-bottom: 1rem;
 		color: $off-white;
 		text-decoration: underline;
 		transition: opacity .15s ease-out;
@@ -97,10 +97,11 @@
 			}
 		}
 		.BottomNav__disclaimer {
-			@include font-size(12px);
+			@include font-size(13px);
 			max-width: 47rem;
-			&:first-child {
-				margin-bottom: 0.7rem;
+			margin-bottom: 0.7rem;
+			&:last-child {
+				margin-bottom: 0rem; 
 			}
 		}
 		.BottomNav__link {
@@ -123,7 +124,7 @@
 	justify-content: center;
 	width: 2.125rem;
 	height: 2.125rem;
-	margin-right: .4375rem;
+    margin-right: 1.3rem;
 	border: 1px solid $white_70;
 	border-radius: 50%;
 	&:last-child {
@@ -141,8 +142,5 @@
 		svg{
 			fill: $brand-color-dark;
 		}
-	}
-	@media(min-width: 350px) {
-		margin-right: .75rem;
 	}
 }

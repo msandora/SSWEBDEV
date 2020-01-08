@@ -25,7 +25,6 @@
 			@media only screen and (min-width: 1600px) {
 				width: 100%;
 			}
-
 		}
 		@include respond-to('phone-only') {
 			&:before{
@@ -50,29 +49,15 @@
 		text-transform: capitalize;
 		left: 11%;
 		right: 11%;
-		display: table;
 		height: inherit;
 		width: 78%;
-
-		@media (min-width: 576px) {
-			width: 540px;
-		}
-		@media (min-width: 768px) {
-			width: 720px;
-		}
-		@media (min-width: 992px) {
-			width: 960px;
-		}
-		@media (min-width: 768px) {
-			width: 1130px;
-		}
 		@include respond-to('desktop') {
-			.text-secondary {
-				width: 50%
+			.alignment {
+				width: 50%;
 			}
 		}
-		h2 {
-			color: $brand-color;
+		h1, h2 {
+			color: $white-base;
 			font-family: $font-primary;
 			font-weight: normal;  
 			margin-bottom: 0.5rem;   
@@ -94,16 +79,21 @@
 			margin: 0.5rem 1rem 0;
 		}
 	}
-	.alignment {
-		display: table-cell;
-		vertical-align: top;
-	}
 	.carousel-control-next,
 	.carousel-control-prev {
-		width: 10%;
+		width: 11%;
+		top: 41%;
+		bottom: 41%;
 	}
-	&.blogBanner .alignment {
-		vertical-align: bottom !important;
+	@include respond-to('tablet-landscape') {
+		.carousel-control-prev {
+			left: 3%;
+			width: 80px;
+		}
+		.carousel-control-next{
+			right: 3%;
+			width: 80px;
+		}
 	}
 	.btn-outline-secondary {
 		color: #FFF !important;
