@@ -105,9 +105,12 @@
 
 .blogBanner {
     .carousel-caption{
-        display: flex;
+        // display: flex;
+        display: table;
         .alignment{
-            align-self: flex-end;
+            // align-self: flex-end;
+            display: table-cell;
+            vertical-align: bottom !important;
         }
     }
 }

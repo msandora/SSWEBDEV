@@ -9018,6 +9018,10 @@ ol, ul {
   margin: 0px;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 /**
 * Basic typography style for copy text
 */
@@ -9710,6 +9714,7 @@ body {
 
 .BottomNav__container {
   background-color: #364d72;
+  padding: 15px;
 }
 
 .BottomNav__container .BottomNav__container-inner {
@@ -9739,14 +9744,12 @@ body {
 }
 
 .BottomNav__container .BottomNav__container-inner .BottomNav__disclaimer {
-  font-size: 13px;
-  font-size: 0.8125rem;
   max-width: 47rem;
-  margin-bottom: 0.7rem;
+  margin: 0 auto 0.7rem;
 }
 
 .BottomNav__container .BottomNav__container-inner .BottomNav__disclaimer:last-child {
-  margin-bottom: 0rem;
+  margin: 0 auto;
 }
 
 .BottomNav__container .BottomNav__container-inner .BottomNav__link {
@@ -9863,7 +9866,7 @@ body {
 .Header__nav-primary--container .header__header-link {
   font-size: 15px;
   font-size: 0.9375rem;
-  letter-spacing: .033125rem;
+  letter-spacing: 0.033125rem;
   white-space: nowrap;
   color: #3e5983;
   -webkit-user-select: none;
@@ -9890,15 +9893,15 @@ body {
 
 @media (min-width: 768px) {
   .HeaderNavMenu__link {
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
   }
 }
 
 @media (min-width: 1024px) {
   .HeaderNavMenu__link {
     padding: 0 1.25rem;
-    -webkit-transition: color .15s ease-out;
-    transition: color .15s ease-out;
+    -webkit-transition: color 0.15s ease-out;
+    transition: color 0.15s ease-out;
   }
 }
 
@@ -9915,15 +9918,15 @@ body {
 
 @media (min-width: 768px) {
   .HeaderNavLink__link--main-nav {
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
   }
 }
 
 @media (min-width: 1024px) {
   .HeaderNavLink__link--main-nav {
     padding: 0 1rem;
-    -webkit-transition: color .15s ease-out;
-    transition: color .15s ease-out;
+    -webkit-transition: color 0.15s ease-out;
+    transition: color 0.15s ease-out;
   }
 }
 
@@ -9937,10 +9940,10 @@ body {
           transform: scaleY(0);
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transition: -webkit-transform .3s ease-out;
-  transition: -webkit-transform .3s ease-out;
-  transition: transform .3s ease-out;
-  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   will-change: transform;
   border-bottom: 1px solid #eeeeee;
 }
@@ -9967,25 +9970,25 @@ body {
     opacity: 0;
     width: 100%;
     pointer-events: auto;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     will-change: opacity, transform;
   }
   .HeaderNavMenu__link--active ~ .HeaderNavMenu__dropdown--hover {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition-delay: .15s;
-            transition-delay: .15s;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
   }
   .HeaderNavMenu__link-container--active ~ .HeaderNavMenu__dropdown--hover {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition-delay: .15s;
-            transition-delay: .15s;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
   }
 }
 
@@ -9993,10 +9996,10 @@ body {
   .HeaderNavMenu__item--hover:hover .HeaderNavMenu__dropdown--hover {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity .3s ease,visibility .3s ease;
-    transition: opacity .3s ease,visibility .3s ease;
-    -webkit-transition-delay: .15s;
-    transition-delay: .15s;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
   }
 }
 
@@ -10015,8 +10018,8 @@ body {
     overflow: hidden;
     background-color: white;
     pointer-events: auto;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     will-change: opacity, transform;
   }
   .HeaderNavMenu__dropdown .HeaderNavMenu__dropdown--hover .HeaderNavMenu__dropdown-content {
@@ -10025,10 +10028,10 @@ body {
   .HeaderNavMenu__dropdown .HeaderNavMenu__link--active ~ .HeaderNavMenu__dropdown--hover {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition-delay: .15s;
-            transition-delay: .15s;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
   }
 }
 
@@ -10069,7 +10072,7 @@ body {
 }
 
 .NavDesktop__subMenuList .NavDesktop__subMenuHeader {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -10086,9 +10089,9 @@ body {
 
 .NavDesktop__subMenuList .NavDesktop-subSubMenu a {
   position: relative;
-  opacity: .9;
-  -webkit-transition: .1s;
-  transition: .1s;
+  opacity: 0.9;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .NavDesktop__subMenuList .NavDesktop-subSubMenu .NavDesktop__category--product-link {
@@ -10098,7 +10101,7 @@ body {
 }
 
 .NavDesktop__subMenuList .NavDesktop-subSubMenu .NavDesktop__category--product-link:hover, .NavDesktop__subMenuList .NavDesktop-subSubMenu .NavDesktop__category--product-link:active, .NavDesktop__subMenuList .NavDesktop-subSubMenu .NavDesktop__category--product-link.custom-dropdown.open, .NavDesktop__subMenuList .NavDesktop-subSubMenu .NavDesktop__category--product-link:focus {
-  padding-left: .25rem;
+  padding-left: 0.25rem;
   color: #1e306e;
   text-decoration: underline;
 }
@@ -10112,7 +10115,7 @@ body {
 
 .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--headline {
   display: block;
-  padding: 0 0 .75rem;
+  padding: 0 0 0.75rem;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -10133,14 +10136,14 @@ body {
 
 .NavDesktop__subMenuPromo .NavDesktop__visual--link .NavDesktop__visual--image .NavDesktop__visual--tag {
   position: absolute;
-  top: .4375rem;
-  left: -.125rem;
+  top: 0.4375rem;
+  left: -0.125rem;
   height: 1.2rem;
   z-index: 1;
   display: block;
-  padding-left: .5rem;
-  border-top-left-radius: .25rem;
-  border-bottom-left-radius: .25rem;
+  padding-left: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
   background-color: #f6db86;
 }
 
@@ -10149,14 +10152,14 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  border: .6875rem solid #f6db86;
+  border: 0.6875rem solid #f6db86;
   border-right: 0.85rem solid rgba(0, 0, 0, 0);
 }
 
 .NavDesktop__subMenuPromo .NavDesktop__visual--link .NavDesktop__visual--image .NavDesktop__visual--tag .NavDesktop__visual-tag--title {
   font-size: 13px;
   font-size: 0.8125rem;
-  letter-spacing: .029375rem;
+  letter-spacing: 0.029375rem;
   color: #3e5983;
 }
 
@@ -10167,39 +10170,44 @@ body {
 
 .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--img {
   display: block;
-  max-width: 100%;
-  max-height: 300px;
+  max-width: 580px;
   line-height: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   opacity: 1;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 1200px) {
+  .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--img {
+    max-width: 650px;
+  }
 }
 
 .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--subheadline {
   display: inline-block;
-  padding: .75rem 0 .25rem;
+  padding: 0.75rem 0 0.25rem;
   font-size: 15px;
   font-size: 0.9375rem;
-  letter-spacing: .0375rem;
+  letter-spacing: 0.0375rem;
 }
 
 .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--description {
   display: block;
-  padding: 0 0 .25rem;
+  padding: 0 0 0.25rem;
   font-size: 14px;
   font-size: 0.875rem;
-  letter-spacing: .0375rem;
+  letter-spacing: 0.0375rem;
 }
 
 .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--footnote {
   display: block;
   font-size: 13px;
   font-size: 0.8125rem;
-  letter-spacing: .0375rem;
+  letter-spacing: 0.0375rem;
 }
 
 .NavDesktop__subMenuPromo .NavDesktop__subMenuPromo--footnote em {
@@ -11620,14 +11628,12 @@ input:checked ~ .checkmark:after {
 }
 
 .blogBanner .carousel-caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: table;
 }
 
 .blogBanner .carousel-caption .alignment {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  display: table-cell;
+  vertical-align: bottom !important;
 }
 
 main.Header__site-padding-top-none {
