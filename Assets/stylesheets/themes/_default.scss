@@ -3,7 +3,6 @@
 // default one.
 // -----------------------------------------------------------------------------
 
-// I did not know where to put this stuff so its here for now
 main {
 	&.Header__site-padding-top-none {
 		padding-top: 0rem;
@@ -23,86 +22,6 @@ main {
 	   flex-flow: column nowrap;
     }
 }
-
-
-.card-product {
-	.img-wrap {
-		border-radius: 3px 3px 0 0;
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-		img {
-			max-height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-		}
-	}
-	.info-wrap {
-		overflow: hidden;
-		padding: 15px;
-		border-top: 1px solid $gray-lighter;
-		.title {
-			font-size: 110%;
-		}
-		.desc {
-			font-size: 90%;
-		}
-	}
-	.bottom-wrap {
-		padding: 15px;
-		border-top: 1px solid $gray-lighter;
-	}
-	.label-rating {
-		margin-right: 10px;
-		color: #333;
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.price-old {
-		color: #999;
-	}
-}
-
-
- /********************
-	Icons
-*********************/
-.Icon__icon {
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	pointer-events: none
-}
-.Icon__icon--x-small {
-	width: .5rem;
-	height: .5rem
-}
-.Icon__icon--small {
-	width: 1rem;
-	height: 1rem
-}
-.Icon__icon--medium {
-	width: 1.5rem;
-	height: 1.5rem
-}
-.Icon__icon--large {
-	width: 2rem;
-	height: 2rem
-}
-.Icon__icon--x-large {
-	width: 3rem;
-	height: 3rem
-}
-.Icon__icon-svg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	fill: $brand-color;
-}
-
-
 
 .layout__margin-auto {
 	margin-right: auto;
@@ -148,40 +67,6 @@ main {
 	}
 }
 
-
-.layout__page-section {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-	@media (min-width: 560px) {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-}
-
-.layout__page-section-large {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
-	@media (min-width: 768px) and (max-width: 1023px) {
-		padding-top: 5rem;
-		padding-bottom: 5rem;
-	}
-	@media (min-width: 1024px) and (max-width: 1279px) {
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-	}
-	@media (min-width: 1280px) {
-		padding-top: 7rem;
-		padding-bottom: 7rem;
-	}
-}
-
-
-
-@media (min-width: 1600px) {
-	.layout__page-section-inset {
-		width: 80rem;
-	}
-}
 .layout__visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -194,40 +79,4 @@ main {
 	clip: rect(1px, 1px, 1px, 1px);
 	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
-}
-@media (max-width: 767px) {
-	.layout__two-or-three-cols {
-		width: 14rem
-	}
-}
-@include respond-to('tablet-portrait') {
-	.layout__two-or-three-cols {
-		-webkit-box-flex: 1;
-		-ms-flex: 1;
-		flex: 1;
-		max-width: calc(33.33333% - .67rem);
-	}
-}
-.layout__two-or-three-cols:not(:first-child) {
-	margin-left: 1rem;
-}
-.layout__two-cols-only {
-	display: inline-block;
-	@media (max-width: 767px) {
-			width: 100%;
-	}
-	@include respond-to('tablet-portrait') {
-			width: calc(50% - .5rem);
-	}
-}
-
-@media (max-width: 767px) {
-	.layout__two-cols-only:last-of-type {
-		margin-top: 7rem
-	}
-}
-@include respond-to('tablet-portrait') {
-	.layout__two-cols-only:last-of-type {
-		margin-left: 1rem
-	}
 }

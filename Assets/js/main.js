@@ -14,7 +14,7 @@ function create_custom_dropdowns() {
         var display = $(o).data('display-text') || '';
         var swatch = $(o).val().replace(/\s+/g, '-').toLowerCase();
         if (display != 'Select Color' && display != 'Select') {
-          dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '<img class="swatch-color" src="/SSWEBDEV/Assets/img/' + swatch + '-swatch.png"></li>');
+          dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '<img class="swatch-color" src="/SS_Dev/Assets/img/' + swatch + '-swatch.png"></li>');
         }
       });
     }

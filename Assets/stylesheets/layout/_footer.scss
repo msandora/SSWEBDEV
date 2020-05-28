@@ -78,7 +78,6 @@
 
 .BottomNav__container {
 	background-color: $brand-color-mid;
-	padding: 15px;
 
 	.BottomNav__container-inner {
 		display: flex;
@@ -98,7 +97,7 @@
 			}
 		}
 		.BottomNav__disclaimer {
-			max-width: 47rem;
+			max-width: 60rem;
 			margin: 0 auto 0.7rem;
 			&:last-child {
 				margin: 0 auto;
@@ -124,7 +123,7 @@
 	justify-content: center;
 	width: 2.125rem;
 	height: 2.125rem;
-    margin-right: 1.3rem;
+	margin-right: 1.3rem;
 	border: 1px solid $white_70;
 	border-radius: 50%;
 	&:last-child {

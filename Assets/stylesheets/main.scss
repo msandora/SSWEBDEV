@@ -16,7 +16,8 @@
 // 3. Base stuff
 @import 'base/base',
         'base/typography',
-        'base/helpers';
+        'base/helpers',
+        'base/icons';
 
 // 4. Layout-related sections
 @import 'layout/header',
@@ -38,5 +39,6 @@
         'pages/blog';
 
 // 7. Themes
-@import 'themes/default';
+@import 'themes/default',
+        'themes/devOnly';
 
