@@ -8,7 +8,8 @@
 html {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 /**
@@ -16,10 +17,10 @@ html, body {
  */
 
 body {
-	margin: 0px;
-	background: $white-base;
+  margin: 0px;
+  background: $white-base;
   font-family: $font-primary;
-  position: relative
+  position: relative;
 }
 
 .wrapper {
@@ -39,7 +40,7 @@ footer {
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */     
+ */
 *,
 *::before,
 *::after {
@@ -61,7 +62,8 @@ a {
 /**
  * Default settings for list elements
  */
-ol, ul {
+ol,
+ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;

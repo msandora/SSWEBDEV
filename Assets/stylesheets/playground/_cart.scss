@@ -1,0 +1,275 @@
+.Modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 107;
+  overflow-y: auto;
+  background: $black_60;
+  &.Modal__overlay--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.5s;
+  }
+  &.Modal__overlay--hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s;
+  }
+  &.Modal__overlay--cart {
+    z-index: 105;
+    background: $black_60;
+  }
+}
+
+.Cart__container {
+  background: $off-white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 106;
+  width: 100%;
+  max-width: 30rem;
+  overflow-y: auto;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  &.Cart__container--can-transition {
+    -webkit-transition: -webkit-transform 0.5s ease-out;
+    transition: -webkit-transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  }
+  &.Cart__container--open {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.Cart__header {
+  background: $off-white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #e6e6e6;
+  @include respond-to('tablet-portrait') {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-right: 0.25rem;
+    padding-left: 1.25rem;
+  }
+  @include respond-to('tablet-landscape') {
+    height: 3.125rem;
+  }
+  .Cart__header-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    @include font-size(18px);
+  }
+  .Cart__heading {
+    margin-right: 0.75rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: $brand-color;
+    @include font-size(18px);
+  }
+}
+.Cart__hide-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  .Cart__hide-button-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    fill: #151515;
+  }
+}
+
+.Cart__cart-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: calc(100% - 3rem);
+  @include respond-to('tablet-landscape') {
+    min-height: calc(100% - 3.125rem);
+  }
+  .Cart__cart-content-wrapper {
+    padding: 0 1.25rem 1.75rem;
+  }
+}
+
+.Cart_line-item--container {
+  .LineItemCard {
+    border-bottom: 1px solid rgb(230, 230, 230);
+    display: flex;
+    padding: 1.25rem 0;
+    .ProductImageContainer {
+      position: relative;
+      flex-shrink: 0;
+      width: 5rem;
+      height: 5rem;
+      margin-right: 1.25rem;
+      img {
+        width: 100%;
+      }
+    }
+    .ProductInfoContainer {
+      position: relative;
+      width: 100%;
+      line-height: 1.3;
+      .ProductName {
+        @include font-size(16px);
+        margin: 0 1.5rem 0 0;
+      }
+      .QuantityControl {
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        float: left;
+        width: 6rem;
+        margin-top: 0.75rem;
+        text-align: center;
+        box-shadow: rgba(189, 187, 187, 0.5) 0px 0px 0.25rem 0px;
+        border-radius: 0.25rem;
+        button {
+          position: relative;
+          color: $brand-color;
+          width: 2rem;
+          height: 2rem;
+          &:disabled {
+            color: rgb(230, 230, 230);
+          }
+        }
+        .QuantityCount {
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          width: 2rem;
+          height: 2rem;
+          background: #e6e6e6;
+        }
+      }
+
+      .SummaryContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .PriceContainer {
+          display: flex;
+          float: right;
+          margin-top: 1rem;
+        }
+        .RemoveButton {
+          position: absolute;
+          top: -0.25rem;
+          right: -0.25rem;
+          line-height: 0;
+          fill: rgb(21, 21, 21);
+          padding: 0.5rem;
+          transition: fill -0.15s ease-out 0s;
+          .RemoveButtonIcon {
+            width: 0.875rem;
+            height: 0.875rem;
+          }
+          .RemoveButtonLabel {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Cart__empty-cart {
+  text-align: center;
+  .Cart__empty-cart-heading {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    @include font-size(18px);
+    letter-spacing: 0;
+    color: #525252;
+    @media screen and (min-width: 350px) {
+      @include font-size(19px);
+    }
+  }
+}
+
+.Container__Summary-list {
+  position: relative;
+  margin-bottom: 1rem;
+  .SummaryItem {
+    display: flex;
+    margin: 0.5rem 0;
+  }
+  .SummaryDiscountCode {
+    margin-left: 0.9rem;
+  }
+  span {
+    width: 50%;
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.Cart__checkout-container {
+  .CheckoutLockIcon {
+    margin-right: 0.5rem;
+  }
+}
+
+.CheckoutCTAContainer {
+  .btn {
+    line-height: 14px;
+  }
+  &:hover {
+    .CheckoutLockIcon {
+      fill: $brand-color;
+    }
+  }
+  .CheckoutLockIcon {
+    fill: $white-base;
+    position: relative;
+    top: -2px;
+    left: -2px;
+  }
+  span {
+    color: $white-base;
+  }
+}

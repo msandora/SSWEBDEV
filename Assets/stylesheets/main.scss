@@ -28,9 +28,6 @@
 // 5. Components
 @import 'components/buttons',
         'components/carousel',
-        'components/keyword-search',
-        'components/newsletter',
-        'components/cart',
         'components/forms';
 
 // 6. Page-specific styles
@@ -39,6 +36,10 @@
         'pages/blog';
 
 // 7. Themes
-@import 'themes/default',
-        'themes/devOnly';
+@import 'themes/default';
 
+// 8. Playground / Development
+@import 'playground/devOnly',
+        'playground/keyword-search',
+        'playground/newsletter',
+        'playground/cart';

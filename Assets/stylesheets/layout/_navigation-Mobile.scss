@@ -1,170 +1,167 @@
 .Header__nav-group--mobile {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: calc(100vh - 3rem);
-    padding-bottom: 2rem;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    text-align: left;
-    -webkit-transition: visibility .25s ease-in-out, -webkit-transform .25s ease-in-out;
-    transition: visibility .25s ease-in-out, -webkit-transform .25s ease-in-out;
-    -o-transition: transform .25s ease-in-out, visibility .25s ease-in-out;
-    transition: transform .25s ease-in-out, visibility .25s ease-in-out;
-    transition: transform .25s ease-in-out, visibility .25s ease-in-out, -webkit-transform .25s ease-in-out;
-    @include respond-to('tablet-portrait') {
-        display: none;
-    } 
-    &.Header__nav-group--collapsed {
-        @media screen and (max-width: 767px) {
-            visibility: hidden;
-            -webkit-transform: translateY(-100%) translateY(-3rem);
-            -ms-transform: translateY(-100%) translateY(-3rem);
-            transform: translateY(-100%) translateY(-3rem);
-        }
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: calc(100vh - 3rem);
+  padding-bottom: 2rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: left;
+  -webkit-transition: visibility 0.25s ease-in-out,
+    -webkit-transform 0.25s ease-in-out;
+  transition: visibility 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, visibility 0.25s ease-in-out,
+    -webkit-transform 0.25s ease-in-out;
+  @include respond-to('tablet-portrait') {
+    display: none;
+  }
+  &.Header__nav-group--collapsed {
+    @media screen and (max-width: 767px) {
+      visibility: hidden;
+      -webkit-transform: translateY(-100%) translateY(-3rem);
+      -ms-transform: translateY(-100%) translateY(-3rem);
+      transform: translateY(-100%) translateY(-3rem);
     }
-    .Header__nav-primary {
-        margin-bottom: 8rem;
-        overflow-x: hidden;
-    }  
+  }
+  .Header__nav-primary {
+    margin-bottom: 8rem;
+    overflow-x: hidden;
+  }
 }
-
 
 .MenuListMobile__mobile-nav-container {
-    width: 100%;
-    .MenuListMobile__nav-menu-item {
-        border-bottom: 1px solid #e6e6e6;
-        background-color: $white-base;
-        -webkit-transition: background-color .15s ease-out;
-        -o-transition: background-color .15s ease-out;
-        transition: background-color .15s ease-out;
-        &.MenuListMobile__nav-menu-item--is-active {
-            background-color: $off-white;
-        }
+  width: 100%;
+  .MenuListMobile__nav-menu-item {
+    border-bottom: 1px solid #e6e6e6;
+    background-color: $white-base;
+    -webkit-transition: background-color 0.15s ease-out;
+    -o-transition: background-color 0.15s ease-out;
+    transition: background-color 0.15s ease-out;
+    &.MenuListMobile__nav-menu-item--is-active {
+      background-color: $off-white;
     }
+  }
 
-    .MenuListMobile__nav-menu-item-header {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 100%;
-        padding: 1.125rem 1.5625rem;
-        font-size: 1.5rem;
-        line-height: 1; 
-        color: $brand-color;
-        -webkit-transition: background-color .15s ease-out;
-        -o-transition: background-color .15s ease-out;
-        transition: background-color .15s ease-out;
-         @include on-event {
-            color: $brand-color;
-            text-decoration: none; 
-        }
-        .MenuListMobile__nav-menu-item--toggler {
-            position: relative;
-            -ms-flex-item-align: center;
-            align-self: center;
-            width: .625rem;
-            height: .625rem;
-            margin-left: auto;
-            .MenuListMobile__icon-contract,
-            .MenuListMobile__icon-expand {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                width: .625rem;
-                height: .625rem;
-                fill: #1e306e;
-                -webkit-transition: opacity .15s ease-out;
-                -o-transition: opacity .15s ease-out;
-                transition: opacity .15s ease-out;
-            }
-        }
+  .MenuListMobile__nav-menu-item-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.125rem 1.5625rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $brand-color;
+    -webkit-transition: background-color 0.15s ease-out;
+    -o-transition: background-color 0.15s ease-out;
+    transition: background-color 0.15s ease-out;
+    @include on-event {
+      color: $brand-color;
+      text-decoration: none;
     }
+    .MenuListMobile__nav-menu-item--toggler {
+      position: relative;
+      -ms-flex-item-align: center;
+      align-self: center;
+      width: 0.625rem;
+      height: 0.625rem;
+      margin-left: auto;
+      .MenuListMobile__icon-contract,
+      .MenuListMobile__icon-expand {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 0.625rem;
+        height: 0.625rem;
+        fill: #1e306e;
+        -webkit-transition: opacity 0.15s ease-out;
+        -o-transition: opacity 0.15s ease-out;
+        transition: opacity 0.15s ease-out;
+      }
+    }
+  }
 }
 
-
-.MenuListMobile__nav-menu-item--is-active{
-    .MenuListMobile__icon-expand {
-        display: none;
-    }  
+.MenuListMobile__nav-menu-item--is-active {
+  .MenuListMobile__icon-expand {
+    display: none;
+  }
 }
 
 .Header__nav-utility--mobile {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	width: 100%;
-    padding: 1rem 1.6rem;
-	background-color: $brand-color;
-	.Header__nav-utility--groups {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-		width: 50%;
-        height: 100%;
-		@include respond-to('tablet-portrait') {
-            width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 1rem 1.6rem;
+  background-color: $brand-color;
+  .Header__nav-utility--groups {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    @include respond-to('tablet-portrait') {
+      width: auto;
+    }
+    &:last-child {
+      padding-left: 0.5rem;
+      @include respond-to('tablet-portrait') {
+        padding-left: 0;
+      }
+    }
+    .Header__nav-utility--item {
+      padding: 0 0 1.5625rem;
+      &:last-child {
+        padding: 0;
+      }
+      .header__header-utility-link {
+        @include respond-to('tablet-portrait') {
+          font-size: 0.875rem;
+          letter-spacing: 0.01875rem;
+          color: #525252;
+          -webkit-transition: color 0.15s ease-out;
+          -o-transition: color 0.15s ease-out;
+          transition: color 0.15s ease-out;
         }
-        &:last-child {
-            padding-left: .5rem;
-            @include respond-to('tablet-portrait') {
-                padding-left: 0;
-            }
+        @include respond-to('tablet-landscape') {
+          @include on-event {
+            color: $link-hover-color;
+          }
         }
-        .Header__nav-utility--item {
-            padding: 0 0 1.5625rem;
-            &:last-child {
-                padding: 0;
-            }
-            .header__header-utility-link {
-                @include respond-to('tablet-portrait') {
-                    font-size: .875rem;
-                    letter-spacing: .01875rem;
-                    color: #525252;
-                    -webkit-transition: color .15s ease-out;
-                    -o-transition: color .15s ease-out;
-                    transition: color .15s ease-out;
-                }
-                @include respond-to('tablet-landscape') {
-                    @include on-event {
-                        color: $link-hover-color;
-                    }
-                }
-            }
-        }
-	}
+      }
+    }
+  }
 }
 
 .MenuListMobile__mobile-nav-container {
-
-    .MenuNavGroup__category {
-        padding: 0 1.5625rem 1.25rem;
-        .MenuNavGroup__category--product-item {
-            padding: .8rem 0;
-            font-size: 1.25rem;
-        }
-        .MenuNavGroup__category--product-link {
-            display: inline-block;
-            color: #151515;
-            width: 100%;
-        }
-        .MenuNavGroup__category--product-item-btn {
-            padding-top: 0.5rem;
-            text-align: center;
-        }
-        &.MenuListMobile__nav-group--is-hidden{
-            display: none;
-        }
+  .MenuNavGroup__category {
+    padding: 0 1.5625rem 1.25rem;
+    .MenuNavGroup__category--product-item {
+      padding: 0.8rem 0;
+      font-size: 1.25rem;
     }
-
+    .MenuNavGroup__category--product-link {
+      display: inline-block;
+      color: #151515;
+      width: 100%;
+    }
+    .MenuNavGroup__category--product-item-btn {
+      padding-top: 0.5rem;
+      text-align: center;
+    }
+    &.MenuListMobile__nav-group--is-hidden {
+      display: none;
+    }
+  }
 }
-

@@ -4,79 +4,78 @@
 // -----------------------------------------------------------------------------
 
 main {
-	&.Header__site-padding-top-none {
-		padding-top: 0rem;
-	}
-	&.Header__site-padding-top-without-promo {
-		padding-top: $header-height;
-	}
-	&.Header__site-padding-top-with-promo {
-		padding-top: $header-height + $promo-height;
-	}
-	&.Header__site-padding-top-only-promo {
-		padding-top: $promo-height;
-	}
-   	&.flex {
-       min-height: calc(100vh - 16rem);
-       flex: 1 0 auto;
-	   flex-flow: column nowrap;
-    }
+  &.Header__site-padding-top-none {
+    padding-top: 0rem;
+  }
+  &.Header__site-padding-top-without-promo {
+    padding-top: $header-height;
+  }
+  &.Header__site-padding-top-with-promo {
+    padding-top: $header-height + $promo-height;
+  }
+  &.Header__site-padding-top-only-promo {
+    padding-top: $promo-height;
+  }
+  &.flex {
+    min-height: calc(100vh - 16rem);
+    flex: 1 0 auto;
+    flex-flow: column nowrap;
+  }
 }
 
 .layout__margin-auto {
-	margin-right: auto;
-	margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .layout__clearfix:after {
-	content: "";
-	display: block;
-	clear: both;
+  content: '';
+  display: block;
+  clear: both;
 }
 .layout__gutters {
-	padding-right: 1.25rem;
-	padding-left: 1.25rem;
-		.layout__gutters {
-			padding-right: 2.5rem;
-			padding-left: 2.5rem;
-		}
-		@include respond-to('tablet-portrait') {
-			padding-right: 3rem;
-			padding-left: 3rem;
-		}
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  .layout__gutters {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  @include respond-to('tablet-portrait') {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
 }
 
-
 .layout__content-gutters {
-	padding-right: 1rem;
-	padding-left: 1rem;
-	@media (min-width: 350px) and (max-width: 767px) {
-		padding-right: 1.5rem;
-		padding-left: 1.5rem;
-	}
-	@media (min-width: 768px) and (max-width: 1023px) {
-		padding-right: 2rem;
-		padding-left: 2rem;
-	}
-	@media (min-width: 1024px) and (max-width: 1279px) {
-		padding-right: 2.5rem;
-		padding-left: 2.5rem;
-	}
-	@media (min-width: 1280px) {
-		padding-right: 4rem;
-		padding-left: 4rem;
-	}
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @media (min-width: 350px) and (max-width: 767px) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  @media (min-width: 1280px) {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
 }
 
 .layout__visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	overflow: hidden;
-	white-space: nowrap;
-	border: 0;
-	display: none;
-	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-	clip-path: inset(50%);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  display: none;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
 }

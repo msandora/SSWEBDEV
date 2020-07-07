@@ -1,116 +1,116 @@
 .blog-filters {
-    .form-group, label {
-        margin-bottom:0;
+  .form-group,
+  label {
+    margin-bottom: 0;
+  }
+  input[type='checkbox'] {
+    height: 25px;
+  }
+  .card-header {
+    padding: 0;
+    &:after {
+      font-family: 'FontAwesome';
+      content: '\f068';
+      position: absolute;
+      right: 19px;
+      top: 10px;
+      color: $brand-color;
     }
-    input[type=checkbox] {
-        height:25px;
+    &.collapsed:after {
+      content: '\f067';
+      color: $brand-color;
     }
-    .card-header {
-        padding:0;
-        &:after {
-            font-family: 'FontAwesome';
-            content: "\f068";
-            position: absolute;
-            right: 19px;
-            top: 10px;
-            color: $brand-color;
-        }
-        &.collapsed:after {
-            content: "\f067"; 
-            color: $brand-color;
-        }
-    }
-    .btn-link:hover {
-        text-decoration: none;
-    }
+  }
+  .btn-link:hover {
+    text-decoration: none;
+  }
 }
 
-.blog-results{
-    .card {
-        height: 96%;
-    }
-    .card-body {
-        padding: 0.7rem;
-    }
-    .card-columns {
-        /* Fix extra spacing on firefox  */
-        column-gap:0;
-    }
+.blog-results {
+  .card {
+    height: 96%;
+  }
+  .card-body {
+    padding: 0.7rem;
+  }
+  .card-columns {
+    /* Fix extra spacing on firefox  */
+    column-gap: 0;
+  }
 }
 
-.pagination{
-    .page-link{
-        color: $brand-color;
-    }
+.pagination {
+  .page-link {
+    color: $brand-color;
+  }
 }
-
 
 /* blog-article */
 .blog-article {
-    line-height: 1.4rem;
-    .img-circle{
-        border-radius: 50%;
-        border: 1px solid $brand-color;
-        height: 2.5rem;
+  line-height: 1.4rem;
+  .img-circle {
+    border-radius: 50%;
+    border: 1px solid $brand-color;
+    height: 2.5rem;
+  }
+  .media-body {
+    padding-left: 1rem;
+    strong {
+      color: $brand-color;
     }
-    .media-body {
-        padding-left: 1rem;
-        strong {
-            color: $brand-color;
-        }
-        p {
-            line-height: 1.2rem;
-            padding: 0 4rem 0 0;
-        }
+    p {
+      line-height: 1.2rem;
+      padding: 0 4rem 0 0;
     }
+  }
 }
 
 .blog-sidebar {
-    .recent-posts {
-        h4 {
-            margin: 1.25rem 0;
-        }
-        a {
-            display: inline-block;
-            margin: 1rem 0;
-            width: 100%;
-        }
+  .recent-posts {
+    h4 {
+      margin: 1.25rem 0;
     }
-    .related-post-thumbnail-container {
-        float: left;
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        overflow: hidden;
-        margin: 0 15px 0 0;
-        img {
-            float: left;
-            width: 60px;
-            height: auto;
-        }
+    a {
+      display: inline-block;
+      margin: 1rem 0;
+      width: 100%;
     }
-    .related-post-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        height: 60px;
-        h4 {
-            line-height: 18px;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-        }
+  }
+  .related-post-thumbnail-container {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+    margin: 0 15px 0 0;
+    img {
+      float: left;
+      width: 60px;
+      height: auto;
     }
+  }
+  .related-post-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60px;
+    h4 {
+      line-height: 18px;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+  }
 }
 
 .blogBanner {
-    .carousel-caption{
-        // display: flex;
-        display: table;
-        .alignment{
-            // align-self: flex-end;
-            display: table-cell;
-            vertical-align: bottom !important;
-        }
+  .carousel-caption {
+    // display: flex;
+    display: table;
+    .alignment {
+      // align-self: flex-end;
+      display: table-cell;
+      vertical-align: bottom !important;
     }
+  }
 }

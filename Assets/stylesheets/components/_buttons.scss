@@ -2,69 +2,66 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
-
-button{
-	background: transparent;
-	border: 0;
-    cursor:pointer;
-    &:focus{
-        outline: none;
-    }
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
-button, input {
-    border-radius: 0;
+button,
+input {
+  border-radius: 0;
 }
 .btn {
-    width: auto;
-    height: calc(1.5em + .75rem + 4px);
-    padding: .375rem .75rem;
-    &:focus{
-        outline: none;
-    }
+  width: auto;
+  padding: 0.375rem 0.75rem;
+  &:focus {
+    outline: none;
+  }
 }
 .btn-primary {
-    color: $white-base;
-    background: $brand-color;
-    border: 1px solid $brand-color;
-    @include on-event {
-        color: $link-color;
-        background-color: $white-base;
-        border-color: $brand-color;
-    }
-
-}
-
-.btn-primary:not(:disabled):not(.disabled).active, 
-.btn-primary:not(:disabled):not(.disabled):active, 
-.show>.btn-primary.dropdown-toggle {
+  color: $white-base;
+  background: $brand-color;
+  border: 1px solid $brand-color;
+  @include on-event {
     color: $link-color;
     background-color: $white-base;
     border-color: $brand-color;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: $link-color;
+  background-color: $white-base;
+  border-color: $brand-color;
 }
 
 .btn[disabled] {
-	background: $gray-light;
-    pointer-events: none;
-    border: 1px solid $gray;
+  background: $gray-light;
+  pointer-events: none;
+  border: 1px solid $gray;
 }
 @media (pointer: fine) {
-	.btn[disabled]:hover {
-		background: $link-hover-color;
-		pointer-events: none
-	}
+  .btn[disabled]:hover {
+    background: $link-hover-color;
+    pointer-events: none;
+  }
 }
 
 .btn--big {
-	position: relative;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    -webkit-appearance: none;
-    width: 100%;
-    border-radius: 0.25rem;
-    transition: background-color 0.15s ease-out 0s, color 0.15s ease-out 0s;
-    padding: 0.75rem 1.5rem 0.8125rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease-out 0s, color 0.15s ease-out 0s;
+  padding: 0.75rem 1.5rem 0.8125rem;
 }
-
