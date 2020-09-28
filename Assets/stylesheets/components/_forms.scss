@@ -5,7 +5,7 @@
 .form-control {
   border: solid 1px $brand-color;
   text-overflow: ellipsis;
-  /* Below is required for text-overflow to do anything */
+  /*! Below is required for text-overflow to do anything */
   white-space: nowrap;
   overflow: hidden;
 }

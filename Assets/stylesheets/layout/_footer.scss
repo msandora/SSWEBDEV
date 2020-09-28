@@ -78,8 +78,6 @@
 
 .BottomNav__container {
   background-color: $brand-color-mid;
-  padding: 15px;
-
   .BottomNav__container-inner {
     display: flex;
     padding-top: 1rem;
@@ -88,7 +86,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
     .BottomNav__copyright {
       display: inline-block;
       padding-bottom: 1rem;

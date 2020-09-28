@@ -1,4 +1,4 @@
-/* 
+/*! 
   text-shadow: 0 1px 0 #fff;
 */
 
@@ -108,3 +108,26 @@
 // 		margin-left: 1rem
 // 	}
 // }
+.carousel {
+  padding: 0;
+}
+@media (min-width: 576px) {
+  .carousel {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .carousel {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .carousel {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel {
+    max-width: 1140px;
+  }
+}

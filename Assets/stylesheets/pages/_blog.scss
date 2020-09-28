@@ -34,7 +34,7 @@
     padding: 0.7rem;
   }
   .card-columns {
-    /* Fix extra spacing on firefox  */
+    /*! Fix extra spacing on firefox  */
     column-gap: 0;
   }
 }
@@ -45,7 +45,7 @@
   }
 }
 
-/* blog-article */
+/*! blog-article */
 .blog-article {
   line-height: 1.4rem;
   .img-circle {
@@ -105,10 +105,7 @@
 
 .blogBanner {
   .carousel-caption {
-    // display: flex;
-    display: table;
     .alignment {
-      // align-self: flex-end;
       display: table-cell;
       vertical-align: bottom !important;
     }
